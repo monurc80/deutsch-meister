@@ -7,6 +7,7 @@ window.home = function home(){
   ['lesson','📖','Günlük ders','Kısa konu anlatımı ve pratik'],
   ['cards','🃏','Kelime kartları','Hatırla, çevir ve pekiştir'],
   ['newwords','🌱','Yeni kelimeler','Yeni sözcükleri keşfet'],
+  ...(data.level>=4?[['phrases','🧩','Kalıplar','Doğal ifadeleri cümle içinde öğren']]:[]),
   ['speak','🎧','Konuşma','Dinle ve cevap vermeyi dene'],
   ['grammar','🧩','Dil bilgisi','Kuralları örneklerle öğren'],
   ['exam','✍️','Mini sınav','Bilgini kontrol et'],
@@ -27,7 +28,7 @@ window.home = function home(){
  </div>
  <section class="panel">
   <div class="home-section-title"><div><h2>Öğrenme yolculuğun</h2><p>Hazır olduğunda bir sonraki seviyeye geç.</p></div><span class="pill">${LEVELS[data.level]} · ${pct}%</span></div>
-  <div class="home-levels"><div class="grid">${LEVELS.map((l,i)=>`<button class="level ${i===data.level?'sel':''} ${i>data.unlocked?'lock':''}" onclick="setLevel(${i})"><b>${i>data.unlocked?'🔒 ':''}${l}</b><span class="tiny">${i<2?'Temel Almanca':'Günlük iletişim ve anlatım'}</span></button>`).join('')}</div></div>
+  <div class="home-levels"><div class="grid">${LEVELS.map((l,i)=>`<button class="level ${i===data.level?'sel':''} ${i>data.unlocked?'lock':''}" onclick="setLevel(${i})"><b>${i>data.unlocked?'🔒 ':''}${l}</b><span class="tiny">${['Başlangıç · temel iletişim','Temel · günlük yaşam','A2 · geçmiş ve günlük anlatım','A2 · bağımsız temel iletişim','B1 · iş ve gündelik yaşam','B1 · toplum ve fikirler','B2 · akademik ve mesleki anlatım','B2 · soyut ve karmaşık konular'][i]}</span></button>`).join('')}</div></div>
   <p class="muted tiny" style="margin:15px 0 8px">${done} / ${total} kelime öğrendin</p><div class="bar"><span style="width:${pct}%"></span></div>
   <p class="tiny muted">Seviye geçişi için kelimelerin en az %80’ini bilmen ve 10 soruluk testi en az %80 başarıyla tamamlaman gerekir.</p>
  </section>
