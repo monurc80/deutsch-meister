@@ -78,7 +78,7 @@ function settings(){return `<section class="panel">${h('Kayıt ve yedekleme')}<p
 function addWord(){let w=document.getElementById('newWord').value.trim(),tr=document.getElementById('newTr').value.trim();if(!w||!tr){alert('İki alanı da doldur.');return}data.custom.push({id:'c'+Date.now(),word:w,tr,li:data.level});save();render();alert('Kelime eklendi.')}
 
 // YENİ KELİMELER: independent practice, shared persistent known/missed stats and backup.
-function nwAll(){return KAPITEL5.concat(DB.map(w=>({...w,id:'nw_'+w.id})),(data.custom||[]).filter(w=>w&&w.word&&w.tr))}
+function nwAll(){let a=KAPITEL5.concat(DB.map(w=>({...w,id:'nw_'+w.id})),(data.custom||[]).filter(w=>w&&w.word&&w.tr));return a.filter((w,i)=>a.findIndex(x=>norm(x.word)===norm(w.word))===i)}
 function currentPhraseList(){return (window.B_PHRASES||[]).concat(window.EXTRA_PHRASES||[]).filter(p=>p.li===data.level)}
 function speakPhrase(){let p=currentPhraseList();if(p.length)speak(p[phraseIndex%p.length].phrase)}
 function phraseMark(ok){let p=currentPhraseList();if(!p.length)return;let w=p[phraseIndex%p.length];daily();data.seen[w.id]=(data.seen[w.id]||0)+1;data.known[w.id]=ok;if(!ok)data.missed[w.id]=(data.missed[w.id]||0)+1;data.answered++;if(ok)data.correct++;save();phraseIndex++;phraseRevealed=false;render()}
