@@ -7,7 +7,7 @@ window.home = function home(){
   ['lesson','📖','Günlük ders','Kısa konu anlatımı ve pratik'],
   ['cards','🃏','Kelime kartları','Hatırla, çevir ve pekiştir'],
   ['newwords','🌱','Yeni kelimeler','Yeni sözcükleri keşfet'],
-  ...(data.level>=4?[['phrases','🧩','Kalıplar','Doğal ifadeleri cümle içinde öğren']]:[]),
+  ['phrases','🧩','Kalıplar','Doğal ifadeleri cümle içinde öğren'],
   ['speak','🎧','Konuşma','Dinle ve cevap vermeyi dene'],
   ['grammar','🧩','Dil bilgisi','Kuralları örneklerle öğren'],
   ['exam','✍️','Mini sınav','Bilgini kontrol et'],
