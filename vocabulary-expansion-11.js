@@ -12,7 +12,7 @@ window.EXTRA11_WORDS=[
 {"word":"die Voraussetzung","tr":"ön koşul","level":"A2.1","example":"Gute Deutschkenntnisse sind eine wichtige Voraussetzung."},
 {"word":"die Erfahrung","tr":"deneyim","level":"A2.1","example":"Diese Erfahrung war sehr hilfreich."},
 {"word":"die Entscheidung","tr":"karar","level":"A2.1","example":"Wir müssen eine Entscheidung treffen."},
-{"word":"die Ermäßigung","tr":"indirim","level":"A2.2","example":"学生 erhalten eine Ermäßigung."},
+{"word":"die Ermäßigung","tr":"indirim","level":"A2.2","example":"Studierende erhalten eine Ermäßigung."},
 {"word":"die Unterkunft","tr":"konaklama yeri","level":"A2.2","example":"Wir suchen eine günstige Unterkunft."},
 {"word":"die Veranstaltung","tr":"etkinlik","level":"A2.2","example":"Die Veranstaltung beginnt um 18 Uhr."},
 {"word":"die Anmeldung","tr":"kayıt, başvuru","level":"A2.2","example":"Die Anmeldung ist kostenlos."},
