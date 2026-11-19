@@ -1,0 +1,27 @@
+// A1-A2 vocabulary: mobility, postal services, payments and housing.
+window.EXTRA15_WORDS=[
+{"word":"der Fahrradhelm","tr":"bisiklet kaskı","level":"A1.1","example":"Beim Fahrradfahren trage ich einen Fahrradhelm."},
+{"word":"das Fahrradschloss","tr":"bisiklet kilidi","level":"A1.1","example":"Mein Fahrradschloss ist sehr sicher."},
+{"word":"der Fahrradständer","tr":"bisiklet park yeri","level":"A1.1","example":"Der Fahrradständer ist vor dem Geschäft."},
+{"word":"die Fahrradpumpe","tr":"bisiklet pompası","level":"A1.1","example":"Hast du eine Fahrradpumpe?" },
+{"word":"der Ersatzschlüssel","tr":"yedek anahtar","level":"A1.1","example":"Der Ersatzschlüssel liegt in der Schublade."},
+{"word":"die Hausnummer","tr":"kapı numarası","level":"A1.1","example":"Wie lautet Ihre Hausnummer?"},
+{"word":"der Briefumschlag","tr":"zarf","level":"A1.2","example":"Die Rechnung liegt im Briefumschlag."},
+{"word":"das Einschreiben","tr":"taahhütlü mektup","level":"A1.2","example":"Ich schicke den Vertrag als Einschreiben."},
+{"word":"die Paketstation","tr":"paket teslim dolabı","level":"A1.2","example":"Das Paket liegt in der Paketstation."},
+{"word":"der Abholschein","tr":"teslim alma belgesi","level":"A1.2","example":"Bitte bringen Sie den Abholschein mit."},
+{"word":"die Parkscheibe","tr":"park süresi göstergesi","level":"A1.2","example":"Legen Sie die Parkscheibe gut sichtbar ins Auto."},
+{"word":"die Parkgebühr","tr":"otopark ücreti","level":"A1.2","example":"Die Parkgebühr beträgt zwei Euro pro Stunde."},
+{"word":"die Autowerkstatt","tr":"oto tamir servisi","level":"A2.1","example":"Das Auto steht seit gestern in der Autowerkstatt."},
+{"word":"der Reifenwechsel","tr":"lastik değişimi","level":"A2.1","example":"Der Reifenwechsel dauert ungefähr eine Stunde."},
+{"word":"die Lieferbenachrichtigung","tr":"teslimat bildirimi","level":"A2.1","example":"Sie erhalten eine Lieferbenachrichtigung per SMS."},
+{"word":"die Rückgabefrist","tr":"iade süresi","level":"A2.1","example":"Die Rückgabefrist beträgt vierzehn Tage."},
+{"word":"die Zahlungsweise","tr":"ödeme şekli","level":"A2.1","example":"Welche Zahlungsweise bevorzugen Sie?"},
+{"word":"die Ratenzahlung","tr":"taksitli ödeme","level":"A2.1","example":"Eine Ratenzahlung ist auf Anfrage möglich."},
+{"word":"die Bearbeitungsnummer","tr":"işlem numarası","level":"A2.2","example":"Bitte geben Sie bei Rückfragen die Bearbeitungsnummer an."},
+{"word":"die Schadenshöhe","tr":"hasar tutarı","level":"A2.2","example":"Die Schadenshöhe wird noch ermittelt."},
+{"word":"die Kontoverbindung","tr":"banka hesap bilgileri","level":"A2.2","example":"Bitte senden Sie uns Ihre aktuelle Kontoverbindung."},
+{"word":"die Umweltzone","tr":"çevre/emisyon bölgesi","level":"A2.2","example":"In dieser Umweltzone dürfen nur bestimmte Fahrzeuge fahren."},
+{"word":"die Nebenkostenabrechnung","tr":"yan giderler hesap dökümü","level":"A2.2","example":"Die Nebenkostenabrechnung kommt einmal im Jahr."},
+{"word":"die Heizkostenabrechnung","tr":"ısınma giderleri hesap dökümü","level":"A2.2","example":"Die Heizkostenabrechnung liegt dem Schreiben bei."}
+];

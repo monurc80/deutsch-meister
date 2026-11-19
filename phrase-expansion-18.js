@@ -1,0 +1,26 @@
+// Practical phrases for mobility, delivery, parking and housing.
+window.EXTRA18_PHRASES=[
+{"id":"xp22_A1_1_01","phrase":"Mein Fahrrad braucht eine Reparatur.","tr":"Bisikletimin tamire ihtiyacı var.","example":"Mein Fahrrad braucht eine Reparatur. Kennen Sie eine Werkstatt?","level":"A1.1","li":0},
+{"id":"xp22_A1_1_02","phrase":"Wo kann ich mein Fahrrad abstellen?","tr":"Bisikletimi nereye park edebilirim?","example":"Entschuldigung, wo kann ich mein Fahrrad abstellen?","level":"A1.1","li":0},
+{"id":"xp22_A1_1_03","phrase":"Ich habe meinen Schlüssel verloren.","tr":"Anahtarımı kaybettim.","example":"Ich habe meinen Schlüssel verloren. Haben Sie ihn gesehen?","level":"A1.1","li":0},
+{"id":"xp22_A1_1_04","phrase":"Wie lautet Ihre Hausnummer?","tr":"Kapı numaranız kaç?","example":"Ich habe die Straße gefunden. Wie lautet Ihre Hausnummer?","level":"A1.1","li":0},
+{"id":"xp22_A1_2_05","phrase":"Bitte werfen Sie den Brief in den Briefkasten.","tr":"Lütfen mektubu posta kutusuna atın.","example":"Der Brief ist fertig. Bitte werfen Sie ihn in den Briefkasten.","level":"A1.2","li":1},
+{"id":"xp22_A1_2_06","phrase":"Das Paket kann in der Filiale abgeholt werden.","tr":"Paket şubeden teslim alınabilir.","example":"Sie waren nicht zu Hause. Das Paket kann in der Filiale abgeholt werden.","level":"A1.2","li":1},
+{"id":"xp22_A1_2_07","phrase":"Ich habe eine Benachrichtigung bekommen.","tr":"Bir bildirim aldım.","example":"Heute Morgen habe ich eine Benachrichtigung bekommen.","level":"A1.2","li":1},
+{"id":"xp22_A1_2_08","phrase":"Wie hoch ist die Parkgebühr?","tr":"Otopark ücreti ne kadar?","example":"Entschuldigung, wie hoch ist die Parkgebühr pro Stunde?","level":"A1.2","li":1},
+{"id":"xp22_A1_2_09","phrase":"Hier darf man nicht parken.","tr":"Buraya park etmek yasak.","example":"Hier darf man nicht parken. Das Schild ist deutlich.","level":"A1.2","li":1},
+{"id":"xp22_A2_1_10","phrase":"Der Reifen muss gewechselt werden.","tr":"Lastiğin değiştirilmesi gerekiyor.","example":"Vor der langen Fahrt muss der Reifen gewechselt werden.","level":"A2.1","li":2},
+{"id":"xp22_A2_1_11","phrase":"Ich möchte die Zahlung in Raten leisten.","tr":"Ödemeyi taksitle yapmak istiyorum.","example":"Der Gesamtbetrag ist hoch. Ich möchte die Zahlung in Raten leisten.","level":"A2.1","li":2},
+{"id":"xp22_A2_1_12","phrase":"Die Rückgabefrist ist bereits abgelaufen.","tr":"İade süresi çoktan doldu.","example":"Leider können wir den Artikel nicht zurücknehmen. Die Rückgabefrist ist bereits abgelaufen.","level":"A2.1","li":2},
+{"id":"xp22_A2_1_13","phrase":"Bitte nennen Sie mir die Bearbeitungsnummer.","tr":"Lütfen işlem numarasını bana söyleyin.","example":"Damit ich den Vorgang finde, nennen Sie mir bitte die Bearbeitungsnummer.","level":"A2.1","li":2},
+{"id":"xp22_A2_2_14","phrase":"Können Sie mir Ihre Kontoverbindung schicken?","tr":"Banka hesap bilgilerinizi gönderebilir misiniz?","example":"Für die Rückerstattung können Sie mir bitte Ihre Kontoverbindung schicken?","level":"A2.2","li":3},
+{"id":"xp22_A2_2_15","phrase":"Der Schaden muss dokumentiert werden.","tr":"Hasarın belgelenmesi gerekiyor.","example":"Vor der Reparatur muss der Schaden dokumentiert werden.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_16","phrase":"Wir benötigen eine genaue Kostenaufstellung.","tr":"Ayrıntılı bir masraf dökümüne ihtiyacımız var.","example":"Bitte schicken Sie uns eine genaue Kostenaufstellung.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_17","phrase":"Die Nebenkostenabrechnung ist noch nicht angekommen.","tr":"Yan giderler hesap dökümü henüz gelmedi.","example":"Ich habe schon nachgesehen, aber die Nebenkostenabrechnung ist noch nicht angekommen.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_18","phrase":"Der Wasserzähler befindet sich im Keller.","tr":"Su sayacı bodrumda bulunuyor.","example":"Der Wasserzähler befindet sich im Keller neben der Heizung.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_19","phrase":"Wegen des Stromausfalls funktioniert der Aufzug nicht.","tr":"Elektrik kesintisi nedeniyle asansör çalışmıyor.","example":"Bitte benutzen Sie die Treppe. Wegen des Stromausfalls funktioniert der Aufzug nicht.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_20","phrase":"Ich möchte einen Besichtigungstermin vereinbaren.","tr":"Bir yer görme randevusu ayarlamak istiyorum.","example":"Ich interessiere mich für die Wohnung und möchte einen Besichtigungstermin vereinbaren.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_21","phrase":"Der Hausmeister kümmert sich um die Reparatur.","tr":"Tamir işiyle bina görevlisi ilgileniyor.","example":"Keine Sorge, der Hausmeister kümmert sich um die Reparatur.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_22","phrase":"Bitte bewahren Sie den Abholschein auf.","tr":"Lütfen teslim alma belgesini saklayın.","example":"Bitte bewahren Sie den Abholschein bis zur Abholung auf.","level":"A2.2","li":3},
+{"id":"xp22_A2_2_23","phrase":"Die Lieferung wurde an eine Paketstation geschickt.","tr":"Teslimat bir paket teslim dolabına gönderildi.","example":"Da niemand zu Hause war, wurde die Lieferung an eine Paketstation geschickt.","level":"A2.2","li":3}
+];

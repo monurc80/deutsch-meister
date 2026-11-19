@@ -1,0 +1,27 @@
+// Fresh phrase practice across A1-B2.
+window.EXTRA17_PHRASES=[
+{"id":"xp21_A1_1_01","phrase":"Ich nehme eine Tüte, bitte.","tr":"Bir poşet alayım lütfen.","example":"Ich nehme eine Tüte, bitte. Meine Tasche ist voll.","level":"A1.1","li":0},
+{"id":"xp21_A1_1_02","phrase":"Das macht zusammen zwölf Euro.","tr":"Toplam on iki avro tutuyor.","example":"Zwei Brötchen und ein Kaffee. Das macht zusammen zwölf Euro.","level":"A1.1","li":0},
+{"id":"xp21_A1_1_03","phrase":"Ich bin heute zu Fuß gekommen.","tr":"Bugün yürüyerek geldim.","example":"Das Wetter ist schön, deshalb bin ich heute zu Fuß gekommen.","level":"A1.1","li":0},
+{"id":"xp21_A1_2_04","phrase":"Können Sie das Fenster öffnen?","tr":"Pencereyi açabilir misiniz?","example":"Es ist sehr warm hier. Können Sie das Fenster öffnen?","level":"A1.2","li":1},
+{"id":"xp21_A1_2_05","phrase":"Ich steige an der nächsten Haltestelle aus.","tr":"Bir sonraki durakta ineceğim.","example":"Bitte sagen Sie mir Bescheid, ich steige an der nächsten Haltestelle aus.","level":"A1.2","li":1},
+{"id":"xp21_A1_2_06","phrase":"Bitte warten Sie einen Augenblick.","tr":"Lütfen bir dakika bekleyin.","example":"Ich hole die Unterlagen. Bitte warten Sie einen Augenblick.","level":"A1.2","li":1},
+{"id":"xp21_A2_1_07","phrase":"Ich habe die Datei versehentlich gelöscht.","tr":"Dosyayı yanlışlıkla sildim.","example":"Entschuldigung, ich habe die Datei versehentlich gelöscht.","level":"A2.1","li":2},
+{"id":"xp21_A2_1_08","phrase":"Könnten wir den Termin telefonisch erledigen?","tr":"Randevu işini telefonla halledebilir miyiz?","example":"Wenn es Ihnen passt, könnten wir den Termin telefonisch erledigen?","level":"A2.1","li":2},
+{"id":"xp21_A2_1_09","phrase":"Ich habe mich für den Kurs angemeldet.","tr":"Kursa kaydoldum.","example":"Letzte Woche habe ich mich für den Deutschkurs angemeldet.","level":"A2.1","li":2},
+{"id":"xp21_A2_2_10","phrase":"Die Rechnung wurde bereits bezahlt.","tr":"Fatura zaten ödendi.","example":"Laut unserem System wurde die Rechnung bereits bezahlt.","level":"A2.2","li":3},
+{"id":"xp21_A2_2_11","phrase":"Bitte geben Sie Ihre aktuelle Adresse an.","tr":"Lütfen güncel adresinizi belirtin.","example":"Bitte geben Sie Ihre aktuelle Adresse im Formular an.","level":"A2.2","li":3},
+{"id":"xp21_A2_2_12","phrase":"Wir haben Ihre Anfrage erhalten.","tr":"Talebinizi aldık.","example":"Vielen Dank. Wir haben Ihre Anfrage erhalten.","level":"A2.2","li":3},
+{"id":"xp21_B1_1_13","phrase":"Die Lieferung verzögert sich um zwei Tage.","tr":"Teslimat iki gün gecikiyor.","example":"Aufgrund des Feiertags verzögert sich die Lieferung um zwei Tage.","level":"B1.1","li":4},
+{"id":"xp21_B1_1_14","phrase":"Wir schlagen eine alternative Vorgehensweise vor.","tr":"Alternatif bir yöntem öneriyoruz.","example":"Um Zeit zu sparen, schlagen wir eine alternative Vorgehensweise vor.","level":"B1.1","li":4},
+{"id":"xp21_B1_1_15","phrase":"Ich fasse die wichtigsten Punkte kurz zusammen.","tr":"En önemli noktaları kısaca özetliyorum.","example":"Bevor wir weitermachen, fasse ich die wichtigsten Punkte kurz zusammen.","level":"B1.1","li":4},
+{"id":"xp21_B1_2_16","phrase":"Die Änderung wirkt sich auf den Zeitplan aus.","tr":"Değişiklik takvimi etkiliyor.","example":"Die zusätzliche Prüfung wirkt sich auf den Zeitplan aus.","level":"B1.2","li":5},
+{"id":"xp21_B1_2_17","phrase":"Die Angelegenheit wurde intern weitergeleitet.","tr":"Konu kurum içinde ilgili birime iletildi.","example":"Ihre Anfrage wurde an die zuständige Abteilung weitergeleitet.","level":"B1.2","li":5},
+{"id":"xp21_B1_2_18","phrase":"Die Änderung hat weitreichende Folgen.","tr":"Değişikliğin kapsamlı sonuçları var.","example":"Die Änderung hat weitreichende Folgen für unsere Planung.","level":"B1.2","li":5},
+{"id":"xp21_B2_1_19","phrase":"Die vorliegenden Informationen reichen dafür nicht aus.","tr":"Mevcut bilgiler bunun için yeterli değil.","example":"Für eine abschließende Bewertung reichen die vorliegenden Informationen nicht aus.","level":"B2.1","li":6},
+{"id":"xp21_B2_1_20","phrase":"Es besteht weiterer Abstimmungsbedarf.","tr":"Daha fazla koordinasyon ihtiyacı bulunuyor.","example":"Zwischen den Abteilungen besteht noch weiterer Abstimmungsbedarf.","level":"B2.1","li":6},
+{"id":"xp21_B2_1_21","phrase":"Die Abweichung lässt sich nachvollziehbar erklären.","tr":"Sapma anlaşılır biçimde açıklanabilir.","example":"Mit den neuen Daten lässt sich die Abweichung nachvollziehbar erklären.","level":"B2.1","li":6},
+{"id":"xp21_B2_2_22","phrase":"Wir bitten darum, von weiteren Rückfragen abzusehen.","tr":"Başka sorular yöneltilmemesini rica ederiz.","example":"Da alle Punkte geklärt sind, bitten wir darum, von weiteren Rückfragen abzusehen.","level":"B2.2","li":7},
+{"id":"xp21_B2_2_23","phrase":"Die Tragweite dieser Entscheidung sollte nicht unterschätzt werden.","tr":"Bu kararın kapsamı ve etkisi küçümsenmemelidir.","example":"Angesichts der möglichen Folgen sollte die Tragweite dieser Entscheidung nicht unterschätzt werden.","level":"B2.2","li":7},
+{"id":"xp21_B2_2_24","phrase":"Unter diesen Umständen ist eine Neubewertung erforderlich.","tr":"Bu koşullar altında yeniden değerlendirme gereklidir.","example":"Aufgrund der neuen Erkenntnisse ist unter diesen Umständen eine Neubewertung erforderlich.","level":"B2.2","li":7}
+];
