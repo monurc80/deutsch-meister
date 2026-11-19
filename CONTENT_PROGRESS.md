@@ -6,40 +6,40 @@ Son kontrol: 19 Kasım 2026
 
 | İçerik | Hedef | Mevcut | İlerleme | Kalan |
 |---|---:|---:|---:|---:|
-| Benzersiz kelime başlıkları | 5.200 | 1.725 | %33,2 | 3.475 |
-| Benzersiz kalıp / ifade | 1.400 | 866 | %61,9 | 534 |
+| Benzersiz kelime başlıkları | 5.200 | 1.799 | %34,6 | 3.401 |
+| Benzersiz kalıp / ifade | 1.400 | 906 | %64,7 | 494 |
 
 ### Kelimeler — alt seviyelere göre
 
 | Alt seviye | Erişilebilir kelime |
 |---|---:|
-| A1.1 | 348 |
-| A1.2 | 219 |
-| A2.1 | 206 |
-| A2.2 | 213 |
+| A1.1 | 378 |
+| A1.2 | 253 |
+| A2.1 | 211 |
+| A2.2 | 218 |
 | B1.1 | 180 |
 | B1.2 | 169 |
 | B2.1 | 185 |
 | B2.2 | 205 |
-| **Toplam** | **1.725** |
+| **Toplam** | **1.799** |
 
-Kelime bankalarında 1.659 kaynak kaydı bulunur. KAPITEL5 listesindeki 105 kayıt da korunur; uygulamanın mevcut birleştirme ve tekrar ayıklama mantığıyla toplam erişilebilir kelime sayısı 1.725'tir.
+Kelime bankalarında 1.733 kaynak kaydı bulunur. KAPITEL5 listesindeki 105 kayıt da korunur; uygulamanın mevcut birleştirme ve tekrar ayıklama mantığıyla toplam erişilebilir kelime sayısı 1.799'dur.
 
 ### Kalıplar — alt seviyelere göre
 
 | Alt seviye | Benzersiz kalıp |
 |---|---:|
-| A1.1 | 98 |
-| A1.2 | 106 |
-| A2.1 | 103 |
-| A2.2 | 101 |
-| B1.1 | 112 |
-| B1.2 | 109 |
-| B2.1 | 122 |
-| B2.2 | 115 |
-| **Toplam** | **866** |
+| A1.1 | 103 |
+| A1.2 | 111 |
+| A2.1 | 108 |
+| A2.2 | 106 |
+| B1.1 | 117 |
+| B1.2 | 114 |
+| B2.1 | 127 |
+| B2.2 | 120 |
+| **Toplam** | **906** |
 
-Kalıp kaynaklarında 922 kayıt bulunur. Uygulamanın küçük harf, boşluk ve sondaki noktalama işaretlerini normalize eden kuralıyla 866 benzersiz kalıp kalır.
+Kalıp kaynaklarında 962 kayıt bulunur. Uygulamanın küçük harf, boşluk ve sondaki noktalama işaretlerini normalize eden kuralıyla 906 benzersiz kalıp kalır.
 
 ## İçerik kalite kuralları
 
@@ -60,5 +60,5 @@ Kalıp kaynaklarında 922 kayıt bulunur. Uygulamanın küçük harf, boşluk ve
 
 - Çalışma dalı: `content-expansion-2026-11`
 - PR: https://github.com/monurc80/deutsch-meister/pull/1
-- Bu kayıt hazırlanırken dal, `main` dalının 53 commit ilerisinde ve 1 commit gerisindeydi.
+- Bu kayıt hazırlanırken dal, `main` dalının 58 commit ilerisinde ve 1 commit gerisindeydi.
 - PR açık; birleştirme ve GitHub Pages yayını yapılmadı.
