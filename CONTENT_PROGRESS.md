@@ -60,5 +60,5 @@ Kalıp kaynaklarında 962 kayıt bulunur. Uygulamanın küçük harf, boşluk ve
 
 - Çalışma dalı: `content-expansion-2026-11`
 - PR: https://github.com/monurc80/deutsch-meister/pull/1
-- Bu kayıt hazırlanırken dal, `main` dalının 58 commit ilerisinde ve 1 commit gerisindeydi.
+- Dal, `main` dalından ayrışmış durumdadır; PR incelemesi açık tutulmaktadır.
 - PR açık; birleştirme ve GitHub Pages yayını yapılmadı.
