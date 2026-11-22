@@ -274,3 +274,25 @@ button:focus-visible,.nav button:focus-visible{outline:3px solid #e6ad96;outline
  #view .panel .row.between{flex-wrap:wrap}
  #view .panel .row.between>button{flex:1 1 100%}
 }
+
+/* Module and cumulative learning progress */
+.progress-overview{overflow:hidden}
+.progress-total{font:800 25px 'Plus Jakarta Sans',sans-serif;color:#765342}
+.progress-bar{height:8px;margin:8px 0 0;background:#eee9e1;border-radius:99px;overflow:hidden}
+.progress-bar span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#9baa8d,#d58b70);transition:width .45s ease}
+.level-progress-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:18px}
+.level-progress-card{display:block;text-align:left;padding:13px 14px;background:#fffdf9;border:1px solid #eee4d9;border-radius:15px;color:#60483d}
+.level-progress-card.active{border-color:#d6a18b;background:#fbf0e8}
+.level-progress-card span{display:block;font-size:12px;color:#8a7c71;font-weight:700}
+.level-progress-card b{display:block;font:800 20px 'Plus Jakarta Sans',sans-serif;margin-top:5px}
+.level-progress-card small{display:block;margin-top:7px;color:#93867b;font-size:10px}
+.module-progress-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.module-progress-item{display:flex;align-items:center;gap:11px;text-align:left;padding:13px;background:#fffdf9;border:1px solid #eee4d9;border-radius:16px;color:#60483d;min-width:0}
+.module-icon{flex:0 0 36px;width:36px;height:36px;display:grid;place-items:center;background:#f7eae1;border-radius:12px;font-size:17px}
+.module-info{flex:1;min-width:0}
+.module-info b{display:block;font-size:12px;color:#60483d}
+.module-info small{display:block;font-size:10px;color:#93867b;margin-top:3px}
+.module-info .progress-bar{height:5px;margin-top:7px}
+.module-progress-item>strong{font-size:12px;color:#8b6654}
+.module-arrow{font-size:22px;color:#b6a79a}
+@media(max-width:760px){.level-progress-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.module-progress-list{grid-template-columns:1fr}}
