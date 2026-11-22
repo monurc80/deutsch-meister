@@ -95,7 +95,7 @@ window.EXTRA_A_DIALOGS = [
 
 window.EXTRA_A_TEXTS = [
   [
-    ["Guten Tag! Ich heiße Elif und komme aus Izmir. Ich bin  twenty Jahre alt und lerne Deutsch. Meine Lehrerin heißt Frau Müller. Der Kurs beginnt um neun Uhr.","Merhaba! Benim adım Elif ve İzmirliyim. Yirmi yaşındayım ve Almanca öğreniyorum. Öğretmenimin adı Bayan Müller. Kurs saat dokuzda başlıyor."],
+    ["Guten Tag! Ich heiße Elif und komme aus Izmir. Ich bin zwanzig Jahre alt und lerne Deutsch. Meine Lehrerin heißt Frau Müller. Der Kurs beginnt um neun Uhr.","Merhaba! Benim adım Elif ve İzmirliyim. Yirmi yaşındayım ve Almanca öğreniyorum. Öğretmenimin adı Bayan Müller. Kurs saat dokuzda başlıyor."],
     ["Das ist meine Familie. Mein Vater heißt Cem und meine Mutter heißt Aylin. Ich habe einen Bruder. Wir wohnen zusammen in einer kleinen Wohnung.","Bu benim ailem. Babamın adı Cem, annemin adı Aylin. Bir erkek kardeşim var. Küçük bir dairede birlikte yaşıyoruz."]
   ],
   [
