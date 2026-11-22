@@ -68,7 +68,7 @@ window.EXTRA_A_GRAMMAR = [
 
 window.EXTRA_A_DIALOGS = [
   [
-    ["Wie schreibt man deinen Namen?","Adın nasıl yazılıyor?","Mein Name wird O-N-U-R geschrieben."],
+    ["Wie schreibt man deinen Namen?","Adın nasıl yazılıyor?","Mein Name wird M-A-R-I-A geschrieben."],
     ["Welche Sprachen sprichst du?","Hangi dilleri konuşuyorsun?","Ich spreche Türkisch und ein bisschen Deutsch."],
     ["Was machst du beruflich?","Mesleğin ne?","Ich bin Verkäufer."],
     ["Wie ist deine Telefonnummer?","Telefon numaran nedir?","Meine Telefonnummer ist ..."]
