@@ -201,7 +201,7 @@ window.EXTRA16_WORDS=[
     "level": "A2.1"
   },
   {
-    "word": "die Feierabend",
+    "word": "der Feierabend",
     "tr": "iş çıkışı",
     "level": "A2.1"
   },
@@ -351,7 +351,7 @@ window.EXTRA16_WORDS=[
     "level": "A2.1"
   },
   {
-    "word": "die Verein",
+    "word": "der Verein",
     "tr": "dernek",
     "level": "A2.1"
   },
