@@ -1,0 +1,27 @@
+// Original phrase practice expansion with everyday and formal contexts.
+window.EXTRA14_PHRASES=[
+{"id":"xp17_A1_1_01","phrase":"Wie komme ich zum Bahnhof?","tr":"Tren istasyonuna nasıl giderim?","example":"Entschuldigung, wie komme ich zum Bahnhof?","level":"A1.1","li":0},
+{"id":"xp17_A1_1_02","phrase":"Ich hätte gern ein Wasser.","tr":"Bir su rica edecektim.","example":"Ich hätte gern ein Wasser, bitte.","level":"A1.1","li":0},
+{"id":"xp17_A1_1_03","phrase":"Das ist sehr nett von Ihnen.","tr":"Bu sizin çok nazik bir davranışınız.","example":"Vielen Dank, das ist sehr nett von Ihnen.","level":"A1.1","li":0},
+{"id":"xp17_A1_2_04","phrase":"Können Sie das bitte wiederholen?","tr":"Bunu tekrar edebilir misiniz?","example":"Entschuldigung, können Sie das bitte wiederholen?","level":"A1.2","li":1},
+{"id":"xp17_A1_2_05","phrase":"Ich bin unterwegs.","tr":"Yoldayım.","example":"Ich bin unterwegs und komme bald an.","level":"A1.2","li":1},
+{"id":"xp17_A1_2_06","phrase":"Wie lange dauert das?","tr":"Bu ne kadar sürer?","example":"Wie lange dauert die Fahrt?","level":"A1.2","li":1},
+{"id":"xp17_A2_1_07","phrase":"Ich freue mich auf das Wochenende.","tr":"Hafta sonunu dört gözle bekliyorum.","example":"Nach dieser Woche freue ich mich auf das Wochenende.","level":"A2.1","li":2},
+{"id":"xp17_A2_1_08","phrase":"Das hängt vom Wetter ab.","tr":"Bu havaya bağlı.","example":"Ob wir fahren, hängt vom Wetter ab.","level":"A2.1","li":2},
+{"id":"xp17_A2_1_09","phrase":"Ich habe mich daran gewöhnt.","tr":"Buna alıştım.","example":"An den neuen Arbeitsweg habe ich mich gewöhnt.","level":"A2.1","li":2},
+{"id":"xp17_A2_2_10","phrase":"Es lohnt sich, früh aufzustehen.","tr":"Erken kalkmaya değer.","example":"Für den Ausflug lohnt es sich, früh aufzustehen.","level":"A2.2","li":3},
+{"id":"xp17_A2_2_11","phrase":"Ich bin damit einverstanden.","tr":"Bunu kabul ediyorum.","example":"Mit diesem Vorschlag bin ich einverstanden.","level":"A2.2","li":3},
+{"id":"xp17_A2_2_12","phrase":"Das kommt darauf an.","tr":"Duruma bağlı.","example":"Ob wir Zeit haben, kommt darauf an.","level":"A2.2","li":3},
+{"id":"xp17_B1_1_13","phrase":"eine Rückmeldung geben","tr":"geri bildirim vermek","example":"Bitte geben Sie mir bis Freitag eine Rückmeldung.","level":"B1.1","li":4},
+{"id":"xp17_B1_1_14","phrase":"etwas in Betracht ziehen","tr":"bir şeyi değerlendirmeye almak","example":"Wir ziehen eine Zusammenarbeit in Betracht.","level":"B1.1","li":4},
+{"id":"xp17_B1_1_15","phrase":"für etwas verantwortlich sein","tr":"bir şeyden sorumlu olmak","example":"Sie ist für die Planung verantwortlich.","level":"B1.1","li":4},
+{"id":"xp17_B1_2_16","phrase":"eine Frist verlängern","tr":"bir süreyi uzatmak","example":"Könnten Sie die Frist um eine Woche verlängern?","level":"B1.2","li":5},
+{"id":"xp17_B1_2_17","phrase":"im Voraus Bescheid geben","tr":"önceden haber vermek","example":"Bitte geben Sie uns im Voraus Bescheid.","level":"B1.2","li":5},
+{"id":"xp17_B1_2_18","phrase":"eine Beschwerde einreichen","tr":"şikâyette bulunmak","example":"Der Kunde möchte eine Beschwerde einreichen.","level":"B1.2","li":5},
+{"id":"xp17_B2_1_19","phrase":"etwas kritisch hinterfragen","tr":"bir şeyi eleştirel biçimde sorgulamak","example":"Wir sollten die Annahmen kritisch hinterfragen.","level":"B2.1","li":6},
+{"id":"xp17_B2_1_20","phrase":"zu dem Schluss kommen","tr":"şu sonuca varmak","example":"Nach der Analyse kamen wir zu dem Schluss, dass es sich lohnt.","level":"B2.1","li":6},
+{"id":"xp17_B2_1_21","phrase":"etwas in Relation setzen","tr":"bir şeyi başka bir şeyle ilişkilendirmek","example":"Man muss die Kosten in Relation zum Nutzen setzen.","level":"B2.1","li":6},
+{"id":"xp17_B2_2_22","phrase":"eine Maßnahme als unverhältnismäßig einstufen","tr":"bir önlemi orantısız olarak değerlendirmek","example":"Das Gericht könnte die Maßnahme als unverhältnismäßig einstufen.","level":"B2.2","li":7},
+{"id":"xp17_B2_2_23","phrase":"unter Berücksichtigung dessen","tr":"bu husus dikkate alındığında","example":"Unter Berücksichtigung dessen ändern wir unseren Vorschlag.","level":"B2.2","li":7},
+{"id":"xp17_B2_2_24","phrase":"eine fundierte Einschätzung abgeben","tr":"sağlam temellere dayalı değerlendirme yapmak","example":"Auf dieser Grundlage können wir eine fundierte Einschätzung abgeben.","level":"B2.2","li":7}
+];
