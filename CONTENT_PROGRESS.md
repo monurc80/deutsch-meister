@@ -7,7 +7,7 @@ Son kontrol: 24 Kasım 2026
 | İçerik | Hedef | Mevcut | İlerleme | Kalan |
 |---|---:|---:|---:|---:|
 | Benzersiz kelime başlıkları | 5.200 | 1.799 | %34,6 | 3.401 |
-| Benzersiz kalıp / ifade | 1.400 | 906 | %64,7 | 494 |
+| Benzersiz kalıp / ifade | 1.400 | 962 | %68,7 | 438 |
 
 ### Kelimeler — alt seviyelere göre
 
@@ -70,5 +70,4 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Önceki bankada zaten bulunan `Feierabend` ve `Verein` kayıtları, benzersiz `Mittagspause` ve `Kantine` kayıtlarıyla değiştirildi.
 - Güncellenen kelime dosyasının JavaScript sözdizimi ve zorunlu alan kontrolleri başarılı.
 - Kelime hedef sayısı değişmedi; düzeltmeler mevcut 110 kaydın niteliğini artırdı.
-
 - Kalıp bankasındaki 18 yinelenen ifade farklı ve bağlama uygun cümlelerle değiştirildi; tüm 962 kayıtta benzersiz ifade, Türkçe karşılık ve Almanca örnek cümle kontrolü başarılı.
