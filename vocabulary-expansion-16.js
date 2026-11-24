@@ -86,8 +86,8 @@ window.EXTRA16_WORDS=[
     "level": "A1.2"
   },
   {
-    "word": "der Salzkartoffel",
-    "tr": "haşlanmış patates",
+    "word": "die Salzkartoffeln",
+    "tr": "tuzlu suda haşlanmış patatesler",
     "level": "A1.2"
   },
   {
@@ -201,8 +201,8 @@ window.EXTRA16_WORDS=[
     "level": "A2.1"
   },
   {
-    "word": "der Feierabend",
-    "tr": "iş çıkışı",
+    "word": "die Mittagspause",
+    "tr": "öğle molası",
     "level": "A2.1"
   },
   {
@@ -351,8 +351,8 @@ window.EXTRA16_WORDS=[
     "level": "A2.1"
   },
   {
-    "word": "der Verein",
-    "tr": "dernek",
+    "word": "die Kantine",
+    "tr": "iş yeri yemekhanesi",
     "level": "A2.1"
   },
   {
