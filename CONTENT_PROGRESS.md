@@ -1,6 +1,6 @@
 # Deutsch Meister — İçerik İlerleme Kaydı
 
-Son kontrol: 19 Kasım 2026
+Son kontrol: 24 Kasım 2026
 
 ## Hedefler ve mevcut durum
 
@@ -62,3 +62,11 @@ Kalıp kaynaklarında 962 kayıt bulunur. Uygulamanın küçük harf, boşluk ve
 - PR: https://github.com/monurc80/deutsch-meister/pull/1
 - Dal, `main` dalından ayrışmış durumdadır; PR incelemesi açık tutulmaktadır.
 - PR açık; birleştirme ve GitHub Pages yayını yapılmadı.
+
+## 24 Kasım kalite kontrolü
+
+- `vocabulary-expansion-16.js` içindeki 110 kayıt önceki kelime bankalarıyla yeniden karşılaştırıldı; yinelenen başlık kalmadı.
+- `Salzkartoffel` artikel/tekil kullanımı düzeltilerek doğal çoğul biçim `die Salzkartoffeln` yapıldı.
+- Önceki bankada zaten bulunan `Feierabend` ve `Verein` kayıtları, benzersiz `Mittagspause` ve `Kantine` kayıtlarıyla değiştirildi.
+- Güncellenen kelime dosyasının JavaScript sözdizimi ve zorunlu alan kontrolleri başarılı.
+- Kelime hedef sayısı değişmedi; düzeltmeler mevcut 110 kaydın niteliğini artırdı.
