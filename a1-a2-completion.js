@@ -12,7 +12,7 @@ window.EXTRA_A_LESSONS = [
     {title:"Uhrzeit und Tageszeiten",rule:"Die Uhrzeit fragt man mit Wie spät ist es? oder Wie viel Uhr ist es? Termine nennt man oft mit um.",ex:"Es ist halb neun. Der Kurs beginnt um neun Uhr.",q:"Der Zug fährt ___ 8:15 Uhr.",a:"um",hint:"Uhrzeit mit um"},
     {title:"Possessivartikel",rule:"mein, dein, sein, ihr, unser, euer und Ihr zeigen Zugehörigkeit. Die Endung richtet sich nach Genus und Kasus.",ex:"Das ist mein Bruder. Ich besuche meine Tante.",q:"Anna sucht ___ Schlüssel. (ihr)",a:"ihren",hint:"Schlüssel: maskulin, Akkusativ"},
     {title:"Akkusativ bei häufigen Verben",rule:"Viele Verben wie haben, brauchen, kaufen, suchen und sehen verlangen den Akkusativ.",ex:"Wir brauchen einen Tisch. Sie sucht ihre Tasche.",q:"Er kauft ___ Computer. (ein)",a:"einen",hint:"Computer: maskulin, Akkusativ"},
-    {title:"Trennbare Verben im Satz",rule:"Im Hauptsatz steht der konjugierte Teil auf Position zwei; die Vorsilbe steht am Satzende.",ex:"Der Unterricht fängt um neun Uhr an.",q:"Ich ___ meine Mutter heute ___ . (anrufen)",a:"rufe ... an",hint:"anrufen: ich rufe ... an"},
+    {title:"Trennbare Verben im Satz",rule:"Im Hauptsatz steht der konjugierte Teil auf Position zwei; die Vorsilbe steht am Satzende.",ex:"Der Unterricht fängt um neun Uhr an.",q:"Ich ___ meine Mutter heute an. (anrufen)",a:"rufe",hint:"anrufen: ich rufe ... an"},
     {title:"Modalverben müssen und dürfen",rule:"Das Modalverb wird konjugiert; der Infinitiv steht am Satzende. müssen bedeutet zorunluluk, dürfen izin.",ex:"Du musst lernen. Hier darf man parken.",q:"Hier ___ man nicht rauchen. (dürfen)",a:"darf",hint:"man: darf"}
   ],
   [
