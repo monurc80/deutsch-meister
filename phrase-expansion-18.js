@@ -2,7 +2,7 @@
 window.EXTRA18_PHRASES=[
 {"id":"xp22_A1_1_01","phrase":"Mein Fahrrad braucht eine Reparatur.","tr":"Bisikletimin tamire ihtiyacı var.","example":"Mein Fahrrad braucht eine Reparatur. Kennen Sie eine Werkstatt?","level":"A1.1","li":0},
 {"id":"xp22_A1_1_02","phrase":"Wo kann ich mein Fahrrad abstellen?","tr":"Bisikletimi nereye park edebilirim?","example":"Entschuldigung, wo kann ich mein Fahrrad abstellen?","level":"A1.1","li":0},
-{"id":"xp22_A1_1_03","phrase":"Ich habe meinen Schlüssel verloren.","tr":"Anahtarımı kaybettim.","example":"Ich habe meinen Schlüssel verloren. Haben Sie ihn gesehen?","level":"A1.1","li":0},
+{"id":"xp22_A1_1_03","phrase":"Ich finde meinen Schlüssel nicht mehr.","tr":"Anahtarımı artık bulamıyorum.","example":"Ich muss die Tür öffnen, aber ich finde meinen Schlüssel nicht mehr.","level":"A1.1","li":0},
 {"id":"xp22_A1_1_04","phrase":"Wie lautet Ihre Hausnummer?","tr":"Kapı numaranız kaç?","example":"Ich habe die Straße gefunden. Wie lautet Ihre Hausnummer?","level":"A1.1","li":0},
 {"id":"xp22_A1_2_05","phrase":"Bitte werfen Sie den Brief in den Briefkasten.","tr":"Lütfen mektubu posta kutusuna atın.","example":"Der Brief ist fertig. Bitte werfen Sie ihn in den Briefkasten.","level":"A1.2","li":1},
 {"id":"xp22_A1_2_06","phrase":"Das Paket kann in der Filiale abgeholt werden.","tr":"Paket şubeden teslim alınabilir.","example":"Sie waren nicht zu Hause. Das Paket kann in der Filiale abgeholt werden.","level":"A1.2","li":1},
