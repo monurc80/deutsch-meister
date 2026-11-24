@@ -314,3 +314,17 @@ button:focus-visible,.nav button:focus-visible{outline:3px solid #e6ad96;outline
 #view .review-state{margin:4px 0}
 #view .card .review-state{margin-top:8px}
 @media(max-width:600px){.review-state{font-size:10px;padding:6px 9px}}
+
+
+/* Listening laboratory */
+.listening-progress{height:8px;background:#e8edf4;border-radius:20px;overflow:hidden;margin:10px 0 16px}
+.listening-progress span{display:block;height:100%;background:linear-gradient(90deg,#729b82,#d48b67);border-radius:20px;transition:width .25s}
+.listening-stage{min-height:118px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#f7f8f4;border:1px solid #e5e9df;border-radius:16px;padding:18px;margin:12px 0}
+.listening-text{font-size:clamp(1.12rem,2.8vw,1.65rem);font-weight:650;line-height:1.75;color:#263d35;overflow-wrap:anywhere}
+.listening-hidden{padding:15px;color:#738177;font-weight:600}
+.listening-controls{align-items:end;margin:12px 0}
+.listening-rate{display:flex!important;align-items:center;gap:8px;margin:0 0 0 auto!important;font-size:13px}
+.listening-rate select{width:auto;min-width:94px;padding:9px 10px}
+.listening-pronunciation{background:#f5f6f1;border:1px solid #e5e8de;border-radius:14px;padding:14px;margin:12px 0}
+.listening-pager{margin-top:16px;padding-top:12px;border-top:1px solid #edf0e9}
+@media(max-width:560px){.listening-controls{align-items:stretch}.listening-rate{margin:0!important;width:100%;justify-content:space-between}.listening-rate select{flex:1}.listening-mode button{flex:1}.listening-text{font-size:1.12rem}}
