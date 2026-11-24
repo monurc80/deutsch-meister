@@ -296,3 +296,10 @@ button:focus-visible,.nav button:focus-visible{outline:3px solid #e6ad96;outline
 .module-progress-item>strong{font-size:12px;color:#8b6654}
 .module-arrow{font-size:22px;color:#b6a79a}
 @media(max-width:760px){.level-progress-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.module-progress-list{grid-template-columns:1fr}}
+
+/* Personal error notebook */
+.error-item{margin:12px 0;padding:16px;background:#fffdf9;border:1px solid #eadfd4;border-left:4px solid #d98268;border-radius:16px}
+.error-item h3{margin:10px 0 8px;color:#60483d;font-size:16px}
+.error-item p{margin:6px 0;font-size:13px}
+.error-item .pill{background:#f7eae1;color:#875b49}
+.error-item button{margin-top:8px}
