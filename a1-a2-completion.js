@@ -33,7 +33,7 @@ window.EXTRA_A_LESSONS = [
 
 window.EXTRA_A_GRAMMAR = [
   [
-    ["W-Fragen","wer = kim; wo = nerede; woher = nereden; wohin = nereye; wann = ne zaman.","Wo","___her kommst du?"],
+    ["W-Fragen","wer = kim; wo = nerede; woher = nereden; wohin = nereye; wann = ne zaman.","Woher","___ kommst du?"],
     ["Personalpronomen","ich, du, er, sie, es, wir, ihr, sie/Sie. Das Verb wird passend konjugiert.","Wir","Mina und ich: ___ lernen Deutsch."],
     ["Präsens: regelmäßige Verben","lernen: ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen.","lernt","Er ___ Deutsch. (lernen)"],
     ["Pluralformen","Pluralformen sind unterschiedlich: das Kind – die Kinder; die Frau – die Frauen.","Kinder","ein Kind – zwei ___."],
@@ -70,7 +70,7 @@ window.EXTRA_A_DIALOGS = [
   [
     ["Wie schreibt man deinen Namen?","Adın nasıl yazılıyor?","Mein Name wird M-A-R-I-A geschrieben."],
     ["Welche Sprachen sprichst du?","Hangi dilleri konuşuyorsun?","Ich spreche Türkisch und ein bisschen Deutsch."],
-    ["Was machst du beruflich?","Mesleğin ne?","Ich bin Verkäufer."],
+    ["Was machst du beruflich?","Mesleğin ne?","Ich arbeite im Verkauf."],
     ["Wie ist deine Telefonnummer?","Telefon numaran nedir?","Meine Telefonnummer ist ..."]
   ],
   [
