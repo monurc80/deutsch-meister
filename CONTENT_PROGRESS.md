@@ -29,17 +29,17 @@ Kelime bankalarında 1.733 kaynak kaydı bulunur. KAPITEL5 listesindeki 105 kay�
 
 | Alt seviye | Benzersiz kalıp |
 |---|---:|
-| A1.1 | 103 |
-| A1.2 | 111 |
-| A2.1 | 108 |
-| A2.2 | 106 |
-| B1.1 | 117 |
-| B1.2 | 114 |
-| B2.1 | 127 |
-| B2.2 | 120 |
-| **Toplam** | **906** |
+| A1.1 | 110 |
+| A1.2 | 119 |
+| A2.1 | 127 |
+| A2.2 | 134 |
+| B1.1 | 114 |
+| B1.2 | 116 |
+| B2.1 | 121 |
+| B2.2 | 121 |
+| **Toplam** | **962** |
 
-Kalıp kaynaklarında 962 kayıt bulunur. Uygulamanın küçük harf, boşluk ve sondaki noktalama işaretlerini normalize eden kuralıyla 906 benzersiz kalıp kalır.
+Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temizlenmiş, mevcut normalizasyon kuralıyla yeniden kontrol edilmiştir.
 
 ## İçerik kalite kuralları
 
@@ -70,3 +70,5 @@ Kalıp kaynaklarında 962 kayıt bulunur. Uygulamanın küçük harf, boşluk ve
 - Önceki bankada zaten bulunan `Feierabend` ve `Verein` kayıtları, benzersiz `Mittagspause` ve `Kantine` kayıtlarıyla değiştirildi.
 - Güncellenen kelime dosyasının JavaScript sözdizimi ve zorunlu alan kontrolleri başarılı.
 - Kelime hedef sayısı değişmedi; düzeltmeler mevcut 110 kaydın niteliğini artırdı.
+
+- Kalıp bankasındaki 18 yinelenen ifade farklı ve bağlama uygun cümlelerle değiştirildi; tüm 962 kayıtta benzersiz ifade, Türkçe karşılık ve Almanca örnek cümle kontrolü başarılı.
