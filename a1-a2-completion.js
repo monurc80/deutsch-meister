@@ -16,7 +16,7 @@ window.EXTRA_A_LESSONS = [
     {title:"Modalverben müssen und dürfen",rule:"Das Modalverb wird konjugiert; der Infinitiv steht am Satzende. müssen bedeutet zorunluluk, dürfen izin.",ex:"Du musst lernen. Hier darf man parken.",q:"Hier ___ man nicht rauchen. (dürfen)",a:"darf",hint:"man: darf"}
   ],
   [
-    {title:"Perfekt mit haben und sein",rule:"Das Perfekt besteht aus haben/sein und Partizip II. Viele Bewegungs- und Zustandsänderungsverben bilden es mit sein.",ex:"Ich habe gekocht. Wir sind nach Hause gefahren.",q:"Sie ___ gestern spät angekommen.",a:"ist",hint:"ankommen: sein + angekommen"},
+    {title:"Perfekt mit haben und sein",rule:"Das Perfekt besteht aus haben/sein und Partizip II. Viele Bewegungs- und Zustandsänderungsverben bilden es mit sein.",ex:"Ich habe gekocht. Wir sind nach Hause gefahren.",q:"Maria ___ gestern spät angekommen.",a:"ist",hint:"ankommen: sein + angekommen"},
     {title:"Dativ nach bestimmten Verben",rule:"helfen, danken, gefallen und gehören stehen häufig mit Dativ.",ex:"Ich helfe meinem Vater. Das Buch gehört meiner Schwester.",q:"Der Lehrer hilft ___ Schüler.",a:"dem",hint:"helfen + Dativ; der Schüler → dem Schüler"},
     {title:"Wechselpräpositionen: Wo?",rule:"Bei einer Position beantwortet man Wo? mit Dativ: in dem Zimmer, auf dem Tisch, an der Wand.",ex:"Das Handy liegt auf dem Tisch.",q:"Die Kinder spielen in ___ Garten.",a:"dem",hint:"Wo? + Dativ"},
     {title:"Reflexive Verben",rule:"Reflexive Verben verwenden ein Reflexivpronomen: mich, dich, sich, uns, euch, sich.",ex:"Ich interessiere mich für Musik. Sie freut sich.",q:"Wir treffen ___ um acht Uhr.",a:"uns",hint:"wir → uns"},
@@ -24,7 +24,7 @@ window.EXTRA_A_LESSONS = [
   ],
   [
     {title:"Nebensätze mit dass",rule:"dass leitet einen Nebensatz ein. Das konjugierte Verb steht am Ende.",ex:"Ich glaube, dass der Zug pünktlich ist.",q:"Sie sagt, dass sie heute keine Zeit ___.",a:"hat",hint:"dass-Satz: Verb am Ende"},
-    {title:"Nebensätze mit wenn",rule:"wenn beschreibt eine Bedingung oder wiederholte Zeit. Das Verb steht im Nebensatz am Ende.",ex:"Wenn ich Zeit habe, besuche ich dich.",q:"Wenn es regnet, ___ wir zu Hause. (bleiben)",a:"bleiben",hint:"Verb am Ende des wenn-Satzes"},
+    {title:"Nebensätze mit wenn",rule:"wenn beschreibt eine Bedingung oder wiederholte Zeit. Das Verb steht im Nebensatz am Ende.",ex:"Wenn ich Zeit habe, besuche ich dich.",q:"Wenn es regnet, ___ wir zu Hause. (bleiben)",a:"bleiben",hint:"Hauptsatz nach dem wenn-Satz: Verb auf Position 2"},
     {title:"Präteritum von sein und haben",rule:"In Erzählungen und Alltagssprache verwendet man war und hatte häufig statt Perfekt.",ex:"Früher war ich schüchtern. Wir hatten keine Zeit.",q:"Als Kind ___ ich einen Hund. (haben)",a:"hatte",hint:"ich hatte"},
     {title:"Komparativ und als",rule:"Der Komparativ vergleicht zwei Dinge: schneller, größer, interessanter. Nach dem Komparativ steht oft als.",ex:"Der Zug ist schneller als der Bus.",q:"Mein Zimmer ist ___ als deins. (klein)",a:"kleiner",hint:"klein → kleiner"},
     {title:"Adjektive nach sein",rule:"Nach sein bleibt das Adjektiv unverändert: Das Haus ist groß. Die Häuser sind groß.",ex:"Die Prüfung war schwierig.",q:"Die Übungen sind ___. (leicht)",a:"leicht",hint:"Adjektiv nach sein ohne Endung"}
