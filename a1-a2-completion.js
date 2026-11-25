@@ -6,7 +6,7 @@ window.EXTRA_A_LESSONS = [
     {title:"Personalpronomen",rule:"ich, du, er, sie, es, wir, ihr, sie/Sie ersetzen Nomen. Das Verb richtet sich nach dem Pronomen.",ex:"Merve kommt aus Izmir. Sie wohnt in Izmir.",q:"Ali und ich lernen Deutsch. ___ lernen Deutsch.",a:"Wir",hint:"Ali und ich = wir"},
     {title:"Regelmäßige Verben im Präsens",rule:"Bei regelmäßigen Verben: ich -e, du -st, er/sie/es -t, wir -en, ihr -t, sie/Sie -en.",ex:"Ich mache die Hausaufgabe. Du machst die Hausaufgabe.",q:"Er ___ in Berlin. (wohnen)",a:"wohnt",hint:"er/sie/es: -t"},
     {title:"Plural der Nomen",rule:"Der Plural hat verschiedene Formen: -e, -er, -n/-en, -s oder keine Endung. Lerne den Plural mit dem Artikel.",ex:"der Tisch – die Tische; die Frau – die Frauen",q:"ein Kind – zwei ___",a:"Kinder",hint:"Kind: Plural auf -er"},
-    {title:"Nicht und kein",rule:"nicht verneint Verben, Adjektive oder bestimmte Satzteile. kein verneint ein Nomen ohne bestimmten Artikel.",ex:"Ich rauche nicht. Ich habe kein Auto.",q:"Ich habe ___ Bruder.",a:"keinen",hint:"Bruder ist maskulin; Akkusativ: keinen"}
+    {title:"Nicht und kein",rule:"nicht verneint Verben, Adjektive oder bestimmte Satzteile. kein verneint ein Nomen ohne bestimmten Artikel.",ex:"Ich rauche nicht. Ich habe kein Auto.",q:"Ich habe ___ Bruder, sondern eine Schwester.",a:"keinen",hint:"Bruder ist maskulin; Akkusativ: keinen"}
   ],
   [
     {title:"Uhrzeit und Tageszeiten",rule:"Die Uhrzeit fragt man mit Wie spät ist es? oder Wie viel Uhr ist es? Termine nennt man oft mit um.",ex:"Es ist halb neun. Der Kurs beginnt um neun Uhr.",q:"Der Zug fährt ___ 8:15 Uhr.",a:"um",hint:"Uhrzeit mit um"},
@@ -17,8 +17,8 @@ window.EXTRA_A_LESSONS = [
   ],
   [
     {title:"Perfekt mit haben und sein",rule:"Das Perfekt besteht aus haben/sein und Partizip II. Viele Bewegungs- und Zustandsänderungsverben bilden es mit sein.",ex:"Ich habe gekocht. Wir sind nach Hause gefahren.",q:"Maria ___ gestern spät angekommen.",a:"ist",hint:"ankommen: sein + angekommen"},
-    {title:"Dativ nach bestimmten Verben",rule:"helfen, danken, gefallen und gehören stehen häufig mit Dativ.",ex:"Ich helfe meinem Vater. Das Buch gehört meiner Schwester.",q:"Der Lehrer hilft ___ Schüler.",a:"dem",hint:"helfen + Dativ; der Schüler → dem Schüler"},
-    {title:"Wechselpräpositionen: Wo?",rule:"Bei einer Position beantwortet man Wo? mit Dativ: in dem Zimmer, auf dem Tisch, an der Wand.",ex:"Das Handy liegt auf dem Tisch.",q:"Die Kinder spielen in ___ Garten.",a:"dem",hint:"Wo? + Dativ"},
+    {title:"Dativ nach bestimmten Verben",rule:"helfen, danken, gefallen und gehören stehen häufig mit Dativ.",ex:"Ich helfe meinem Vater. Das Buch gehört meiner Schwester.",q:"Der Lehrer hilft ___ Schüler. (der)",a:"dem",hint:"helfen + Dativ; der Schüler → dem Schüler"},
+    {title:"Wechselpräpositionen: Wo?",rule:"Bei einer Position beantwortet man Wo? mit Dativ: in dem Zimmer, auf dem Tisch, an der Wand.",ex:"Das Handy liegt auf dem Tisch.",q:"Die Kinder spielen in ___ Garten. (der)",a:"dem",hint:"Wo? + Dativ"},
     {title:"Reflexive Verben",rule:"Reflexive Verben verwenden ein Reflexivpronomen: mich, dich, sich, uns, euch, sich.",ex:"Ich interessiere mich für Musik. Sie freut sich.",q:"Wir treffen ___ um acht Uhr.",a:"uns",hint:"wir → uns"},
     {title:"Imperativ für Bitten und Anweisungen",rule:"Du-Imperativ: Komm! Lies! Sei vorsichtig! Höfliche Aufforderungen verwenden Sie: Kommen Sie bitte!",ex:"Bitte öffnen Sie das Fenster. Warte kurz!",q:"___ bitte langsam! (sprechen, Sie)",a:"Sprechen Sie",hint:"Höflicher Imperativ"}
   ],
@@ -37,32 +37,32 @@ window.EXTRA_A_GRAMMAR = [
     ["Personalpronomen","ich, du, er, sie, es, wir, ihr, sie/Sie. Das Verb wird passend konjugiert.","Wir","Mina und ich: ___ lernen Deutsch."],
     ["Präsens: regelmäßige Verben","lernen: ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen.","lernt","Er ___ Deutsch. (lernen)"],
     ["Pluralformen","Pluralformen sind unterschiedlich: das Kind – die Kinder; die Frau – die Frauen.","Kinder","ein Kind – zwei ___."],
-    ["Negation: nicht oder kein","kein verneint Nomen ohne bestimmten Artikel; nicht verneint andere Satzteile.","kein","Ich habe ___ Auto."],
+    ["Negation: nicht oder kein","kein verneint Nomen ohne bestimmten Artikel; nicht verneint andere Satzteile.","kein","Ich habe ___ Auto, sondern ein Fahrrad."],
     ["Satzbau: Zeit vor Ort","Zeitangaben stehen oft vor Ortsangaben: Ich fahre morgen nach Berlin.","morgen","Ich fahre ___ nach Berlin. (morgen)"]
   ],
   [
-    ["Possessivartikel im Akkusativ","Possessivartikel bekommen maskuline Akkusativendung -en: meinen, deinen, seinen.","meinen","Ich suche ___ Schlüssel."],
+    ["Possessivartikel im Akkusativ","Possessivartikel bekommen maskuline Akkusativendung -en: meinen, deinen, seinen.","meinen","Ich suche ___ Schlüssel. (mein)"],
     ["Uhrzeit mit um","Für genaue Uhrzeiten verwendet man um: Der Film beginnt um 20 Uhr.","um","Der Bus kommt ___ 7:30 Uhr."],
-    ["Akkusativobjekt","haben, brauchen, kaufen, suchen und sehen stehen oft mit Akkusativ.","einen","Wir kaufen ___ Tisch."],
+    ["Akkusativobjekt","haben, brauchen, kaufen, suchen und sehen stehen oft mit Akkusativ.","einen","Wir kaufen ___ Tisch. (ein)"],
     ["Trennbare Verben","Im Hauptsatz steht die Vorsilbe am Satzende: Ich stehe früh auf.","auf","Ich räume mein Zimmer ___. (aufräumen)"],
-    ["Modalverb dürfen","dürfen drückt Erlaubnis oder Verbot aus: ich darf, du darfst, er darf.","darf","Hier ___ man fotografieren."],
+    ["Modalverb dürfen","dürfen drückt Erlaubnis oder Verbot aus: ich darf, du darfst, er darf.","darf","Hier ___ man fotografieren. (dürfen)"],
     ["Modalverb müssen","müssen drückt Notwendigkeit aus; der Infinitiv steht am Satzende.","muss","Ich ___ heute arbeiten."]
   ],
   [
     ["Perfekt: Partizip II","Regelmäßige Verben bilden oft ge- + Stamm + -t: machen → gemacht.","gemacht","Wir haben die Aufgabe ___."],
     ["Perfekt mit sein","gehen, kommen, fahren und ankommen bilden das Perfekt meist mit sein.","sind","Wir ___ spät angekommen."],
-    ["Dativverben","helfen, danken, gefallen und gehören verlangen den Dativ.","dem","Ich danke ___ Mann."],
-    ["Wechselpräpositionen: Wo?","Bei Wo? steht nach in, an, auf, unter usw. der Dativ.","dem","Das Buch liegt auf ___ Tisch."],
+    ["Dativverben","helfen, danken, gefallen und gehören verlangen den Dativ.","dem","Ich danke ___ Mann. (der)"],
+    ["Wechselpräpositionen: Wo?","Bei Wo? steht nach in, an, auf, unter usw. der Dativ.","dem","Das Buch liegt auf ___ Tisch. (der)"],
     ["Reflexivpronomen","ich mich; du dich; er/sie sich; wir uns; ihr euch; sie sich.","uns","Wir freuen ___ auf den Urlaub."],
     ["Imperativ Sie","Höfliche Aufforderungen: Infinitiv + Sie; bitte kann die Bitte abschwächen.","Warten Sie","___ bitte einen Moment!"]
   ],
   [
-    ["dass-Satz","dass leitet einen Nebensatz ein; das konjugierte Verb steht am Ende.","ist","Ich weiß, dass er müde ___."],
+    ["dass-Satz","dass leitet einen Nebensatz ein; das konjugierte Verb steht am Ende.","ist","Ich weiß, dass er müde ___. (sein, Präsens)"],
     ["wenn-Satz","Im wenn-Nebensatz steht das Verb am Ende. Der Hauptsatz kann davor oder danach stehen.","habe","Wenn ich Zeit ___, rufe ich dich an."],
-    ["Präteritum: sein","sein im Präteritum: ich war, du warst, er war, wir waren, ihr wart, sie waren.","war","Gestern ___ ich krank."],
+    ["Präteritum: sein","sein im Präteritum: ich war, du warst, er war, wir waren, ihr wart, sie waren.","war","Gestern ___ ich krank. (sein, Präteritum)"],
     ["Präteritum: haben","haben im Präteritum: ich hatte, du hattest, er hatte, wir hatten.","hatte","Als Kind ___ ich ein Fahrrad."],
-    ["Komparativ","Viele Adjektive bilden den Komparativ mit -er; manche mit Umlaut: alt – älter.","älter","Mein Bruder ist zwei Jahre ___."],
-    ["Adjektiv nach sein","Nach sein steht das Adjektiv prädikativ ohne Deklinationsendung.","freundlich","Die Nachbarn sind sehr ___."]
+    ["Komparativ","Viele Adjektive bilden den Komparativ mit -er; manche mit Umlaut: alt – älter.","älter","Mein Bruder ist zwei Jahre ___. (alt)"],
+    ["Adjektiv nach sein","Nach sein steht das Adjektiv prädikativ ohne Deklinationsendung.","freundlich","Die Nachbarn sind sehr ___. (freundlich)"]
   ]
 ];
 
