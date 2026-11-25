@@ -86,7 +86,29 @@ function resetErrorRetry(){errorRetryFeedback='';errorRetrySubmitted=false;rende
 function cancelErrorRetry(){errorRetryId=null;errorRetryFeedback='';errorRetrySubmitted=false;render()}
 function errorRetryPrompt(item){const prompt=String(item?.prompt??'');if(item?.type!=='Dinleme'||prompt.includes('_____'))return prompt;const expected=String(item?.expected??'');if(!expected)return prompt;const lower=prompt.toLocaleLowerCase('de'),needle=expected.toLocaleLowerCase('de'),at=lower.indexOf(needle);return at<0?prompt:prompt.slice(0,at)+'_____'+prompt.slice(at+expected.length)}
 function speakErrorRetry(){const item=(data.errors||[]).find(e=>e.id===errorRetryId);if(!item)return;const prompt=errorRetryPrompt(item),text=item.type==='Dinleme'&&prompt.includes('_____')?prompt.replace('_____',String(item.expected??'')):prompt;speak(text)}
-function submitErrorRetry(){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved),input=document.getElementById('errorRetryAnswer');if(!item||!input||errorRetrySubmitted)return;const answer=input.value.trim();if(!answer){alert('Önce yanıtını yaz.');return}const ok=norm(answer)===norm(item.expected);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=new Date().toISOString();item.lastSeen=item.resolvedAt;errorRetryFeedback='<div class="feedback goodtext">✓ Doğru! Bu hata pekiştirilen kayıtlarına taşındı.</div>'}else{recordError(item.type,item.level,item.prompt,item.expected,answer);errorRetryFeedback='<div class="feedback badtext">✗ Henüz doğru değil. Beklenen yanıt: <b>'+esc(item.expected)+'</b></div>'}errorRetrySubmitted=true;save();render()}
+function syncErrorRetryReview(item,correct){
+ const level=Number.isInteger(Number(item?.level))?Number(item.level):data.level;
+ if(item?.type==='Kelime'){
+  const word=nwAll().find(w=>w.li===level&&norm(w.word)===norm(item.prompt));
+  if(!word)return false;
+  const id=canonicalWordId(word.id);
+  if(!data.seen)data.seen={};if(!data.known)data.known={};if(!data.missed)data.missed={};
+  data.seen[id]=(Number(data.seen[id])||0)+1;data.known[id]=!!correct;
+  if(!correct)data.missed[id]=(Number(data.missed[id])||0)+1;
+  scheduleReview(id,!!correct,'word',word.li??level);return true;
+ }
+ if(item?.type==='Kalıp'){
+  const phrase=allPhraseItems().find(p=>p.li===level&&norm(p.phrase)===norm(item.prompt));
+  if(!phrase)return false;
+  const id=phraseProgressId(phrase);
+  if(!data.seen)data.seen={};if(!data.known)data.known={};if(!data.missed)data.missed={};
+  data.seen[id]=(Number(data.seen[id])||0)+1;data.known[id]=!!correct;
+  if(!correct)data.missed[id]=(Number(data.missed[id])||0)+1;
+  scheduleReview(phrase.phrase,!!correct,'phrase',phrase.li);return true;
+ }
+ return false;
+}
+function submitErrorRetry(){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved),input=document.getElementById('errorRetryAnswer');if(!item||!input||errorRetrySubmitted)return;const answer=input.value.trim();if(!answer){alert('Önce yanıtını yaz.');return}const ok=norm(answer)===norm(item.expected),linkedToReview=syncErrorRetryReview(item,ok);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=new Date().toISOString();item.lastSeen=item.resolvedAt;errorRetryFeedback='<div class="feedback goodtext">✓ Doğru! Bu hata pekiştirilen kayıtlarına taşındı.'+(linkedToReview?' Kelime/kalıp tekrar takvimi de güncellendi.':'')+'</div>'}else{recordError(item.type,item.level,item.prompt,item.expected,answer);errorRetryFeedback='<div class="feedback badtext">✗ Henüz doğru değil.'+(linkedToReview?' Kart bugünkü tekrar listesinde kalacak.':'')+' Beklenen yanıt: <b>'+esc(item.expected)+'</b></div>'}errorRetrySubmitted=true;save();render()}
 function daily(){let d=new Date().toLocaleDateString('sv-SE');if(data.day!==d){let prior=new Date();prior.setDate(prior.getDate()-1);let yesterday=prior.toLocaleDateString('sv-SE');data.streak=data.day===yesterday?data.streak+1:1;data.day=d;save()}}
 function speakCurrentCard(){let p=mode==='write'?pool():orderedCards();if(p.length)speak(p[idx%p.length].word)}
 function speakLesson(){let a=LESSON_BANK[data.level];speak(a[lessonStep%a.length].ex)}
