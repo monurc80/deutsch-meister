@@ -161,3 +161,16 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Ana `index.html` inline JavaScript sözdizimi doğrulandı. Sentetik regresyon kontrolleri; konuşma tekrar kaydı oluşturma, başarılı/başarısız öz değerlendirme, hata defterinden başarılı/başarısız tekrar ve konuşma kaydının vadesi geldiğinde akıllı tekrar kuyruğuna girmesi senaryolarında başarılı.
 - Kod commit'leri: `7746a0628763a53d9e151dcc92ebfc20afca3240` (konuşma tekrar akışı), `59644a3462197f244c3e9d6c31000cc199ca0634` (değerlendirme kaydında mikrofonu güvenli kapatma).
 - Gerçek tarayıcı, mobil cihaz ve mikrofonla uçtan uca test henüz yapılmadı. Tarayıcı desteği bulunmayan ortamlarda metinle cevap verme seçeneği korunuyor.
+
+
+
+## 25 Kasım yazma ve cümle kurma modülü
+
+- Yeni `sentence-writing.js` veri paketiyle A1.1–B2.2 seviyelerinde günlük yaşam, alışveriş, randevu, iş, planlama, görüş bildirme ve resmî iletişim gibi senaryolarda cümle kurma görevleri eklendi. A1.1–A2.2 için seviye başına 5, B1.1–B2.2 için seviye başına 3 görev bulunur.
+- Yeni `Cümle kurma` sekmesinde kullanıcı Türkçe yönerge ve kelime ipuçlarından hareketle Almanca cümle yazar; örnek cümleyi dinleyip karşılaştırabilir. Serbest yanıtlar otomatik doğru/yanlış veya CEFR puanına çevrilmez; kullanıcı öz değerlendirmesiyle tamamlanır.
+- Yeterli bulunan çalışma mevcut `moduleProgress.writing` alanına kaydedilir ve `exercise:Yazma` türünde aralıklı tekrar takvimine eklenir. Tekrar çalışılması gereken yanıt hata defterine yazılır ve aynı gün tekrarına alınır.
+- Yazma hataları hata defterinden serbest metin ve öz değerlendirme ile yeniden çalışılabilir; örnek yanıt gösterimi desteklenir. Akıllı tekrar kuyruğu Yazma türünü mevcut egzersiz tekrar yapısı üzerinden işler.
+- Yerel kayıt anahtarı, mevcut ilerleme alanları ve Supabase tablo/şeması değiştirilmedi; yeni bir zorunlu migrasyon eklenmedi. AI olmadan yazma alıştırması çalışır.
+- Sekiz seviyenin içerik sayısı ve zorunlu alanları doğrulandı; yeni veri dosyası ve ana uygulamanın inline JavaScript sözdizimi derleme kontrolünden geçti. Aynı yazma çalışmasının art arda birden fazla kez puanlanmasını önleyen koruma eklendi.
+- Sentetik akış kontrolleri dışında tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+- Kod commit'leri: `cf37f7a1c77477a4e3ea03bdaa69013e52f71fbc` (içerik), `c3878b94b70fa889c079423a807c25e7411f1f76` (entegrasyon), `4a4ef52d1de7ab8661581be8b36162c61f129609` (hata defteri), `3ac405ab6ea61de15e54dbe232820d0220c59a7b` (çift değerlendirme koruması).
