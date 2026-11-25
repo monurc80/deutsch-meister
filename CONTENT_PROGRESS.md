@@ -214,3 +214,16 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Sentetik regresyonlar: B1.1–B2.2 sınav başlatma ve 16 soruluk set üretimi, tüm doğru yanıtlarla 100 puan, bir beceri alanı 10/20 altındayken başarı engeli, CEFR raporunda sekiz seviyenin görünmesi ve B2.2 son sınav puanının gösterilmesi başarılı. Ana uygulamanın inline JavaScript'i, yeni veri paketleri, Service Worker ve manifest sözdizimi kontrol edildi; yeni yerel scriptlerin tümü Service Worker varlık listesinde bulunuyor.
 - Tarayıcıda gerçek kullanım, iOS/Android çevrimdışı kurulum ve gerçek Supabase oturumuyla senkronizasyon testi henüz yapılmadı.
 - Kod commit'leri: `090892f38a769faa22e15f00155497a2446b1e34` (B ders/dil bilgisi/diyalog/metin paketi), `d7ee8b2019054e6d0151f302ebbeb08d2fd28df4` (B CEFR sınav bankası), `f61f182350dd4a023fd005651d0e0c2f5a61c0fc` (B yazma görevleri), `d0fe4baf5bb807a29039adae043fa3e58b76d1f8` (soru netliği), `477f0ff684ac9cc52ef6622acd53e6e50c6a6a20` (sınav/rapor entegrasyonu), `690978488a6ae405fa382ff84b44d0618db1cca9` (çevrimdışı önbellek).
+
+
+## 25 Kasım A1–A2 içerik ve tekrar sistemi düzeltmeleri
+
+- A1 kelime bankasında `aufhören` için Türkçe karşılık, fiilin bağlamdaki anlamını daha doğru verecek şekilde “bırakmak, sona ermek” olarak düzeltildi.
+- A2.2 `Ich freue mich darauf, dich wiederzusehen.` kalıbının Türkçe karşılığı daha doğal ve işlevsel biçimde “Seni tekrar görmeyi dört gözle bekliyorum.” olarak güncellendi.
+- Dil bilgisi alıştırmalarında doğru yanıtlar da aralıklı tekrar takvimine eklenir. Aynı sorunun doğru yanıtı art arda tıklanarak tekrar aralığının yanlışlıkla hızlandırılması engellendi; yeni soruya ve yeni seviyeye geçişte kontrol sıfırlanır.
+- Dinleme alıştırmalarında doğru yanıtlar da tekrar takvimine eklenir; tekrar kartında seslendirilecek Almanca metin saklanır. Yanlış kaydedilmiş aynı soru daha sonra doğru yanıtlandığında hata defterindeki açık kayıt otomatik olarak pekiştirilenlere taşınır. Aynı çözümleme dil bilgisi alıştırmalarına da uygulandı.
+- Dil bilgisi geri bildirimi sekme değişimi ve yeniden çizim sonrasında korunur; yeni soruya veya seviyeye geçildiğinde temizlenir.
+- Kontroller: uygulamanın iki inline JavaScript bloğu ve değişen A2 kalıp dosyası sözdizimi kontrolünden geçti. Sentetik testlerde yanlış yanıtın aynı gün tekrar kuyruğuna alınması, doğru yanıtın ileri tarihe planlanması, başarılı yanıtın yinelenen tıklamayla çoğaltılmaması, önceki hatanın otomatik çözülmesi, dinleme ses metninin saklanması ve dil bilgisi geri bildiriminin yeniden çizimde korunması doğrulandı.
+- Yerel kayıt anahtarı, Supabase veri modeli/senkronizasyonu, kelime-kalıp kimlikleri ve kullanıcı ilerlemesi şeması değiştirilmedi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test bu çalışmada yapılmadı.
+- Kod commit'leri: `065975ba75b1ccbd15708ec7ba14413cdfab2e5f` (A1 kelime karşılığı), `bcf137baf6eb8e305f785cd4d1e86bbefcc56cc2` (A2 kalıp çevirisi), `4a483e0420a481da1d2f79c4fccc541d4579b352` (dil bilgisi/dinleme tekrarları ve hata çözümleme), `3ceebb23a4b760dd4f71b805a901151a9b17b161` (dil bilgisi geri bildirimini koruma).
+- Bu çalışmada B1–B2 içerik veya özelliklerine yeni ekleme yapılmadı.
