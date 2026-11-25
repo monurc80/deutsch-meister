@@ -156,7 +156,7 @@ function searchResultsHtml(){
  if(!total)return '<p class="muted">Eşleşme bulunamadı. Yazımı veya arama filtresini değiştirebilirsin.</p>';
  return '<p class="tiny muted">'+total+' sonuç'+(total>shown.length?' · İlk '+shown.length+' sonuç gösteriliyor':'')+'</p>'+shown.map(x=>{
   const phrase=x.searchType==='phrase',key=x.searchKey,level=LEVELS[x.li]||'Özel',title=phrase?x.phrase:x.word,translation=x.tr||'',example=x.example||'',listenText=phrase?x.phrase:x.word,studyLabel=phrase?'Kalıpta çalış':'Kelime kartında çalış',fav=isFavorite(key);
-  return '<article class="card" style="margin:10px 0"><div class="row between"><span class="pill">'+level+' · '+(phrase?'Kalıp':'Kelime')+'</span>'+button(fav?'★ Favoride':'☆ Favorile','toggleFavorite('+errorActionArg(key)+')','secondary')+'</div><div class="big">'+esc(title)+'</div><div class="sub">'+esc(translation)+'</div>'+(example?'<p class="tiny muted">'+esc(example)+'</p>':'')+'<div class="row">'+button('🔊 Dinle','speak('+errorActionArg(listenText)+')','secondary')+button(studyLabel,'openSearchItem('+errorActionArg(x.searchType)+','+errorActionArg(x.id||x.phrase)+','+Number(x.li||0)+')','secondary')+'</div></article>';
+  return '<article class="card" style="margin:10px 0"><div class="row between"><span class="pill">'+level+' · '+(phrase?'Kalıp':'Kelime')+'</span>'+button(fav?'★ Favoride':'☆ Favorile','toggleFavorite('+errorActionArg(key)+')','secondary')+'</div><div class="big">'+esc(title)+'</div><div class="sub">'+esc(translation)+'</div>'+(example?'<p class="tiny muted">'+esc(example)+'</p>':'')+'<div class="row">'+button('🔊 Dinle','speak('+errorActionArg(listenText)+')','secondary')+button(studyLabel,'openSearchItem('+errorActionArg(x.searchType)+','+errorActionArg(phrase?phraseProgressId(x):x.id)+','+Number(x.li||0)+')','secondary')+'</div></article>';
  }).join('');
 }
 function renderSearchResults(){const el=document.getElementById('searchResults');if(el)el.innerHTML=searchResultsHtml()}
@@ -164,7 +164,7 @@ function openSearchItem(type,id,level){
  level=Number(level)||0;if(level>data.unlocked){alert('Bu içeriği çalışmak için önceki seviyeleri tamamlamalısın.');return}
  data.level=level;save();
  if(type==='phrase'){const items=phraseItemsForLevel(level);phraseIndex=Math.max(0,items.findIndex(x=>phraseProgressId(x)===id));phraseReviewOnly=false;tab='phrases'}
- else{const items=nwPool();nwIndex=Math.max(0,items.findIndex(x=>canonicalWordId(x.id)===canonicalWordId(id)));tab='newwords'}
+ else{const previousFilter=nwFilter;nwFilter='all';const items=nwPool();nwFilter=previousFilter;nwIndex=Math.max(0,items.findIndex(x=>canonicalWordId(x.id)===canonicalWordId(id)));tab='newwords'}
  render();
 }
 
