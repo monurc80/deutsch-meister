@@ -86,7 +86,7 @@ window.EXTRA19_PHRASES=[
   },
   {
     "phrase": "Ich freue mich darauf, dich wiederzusehen.",
-    "tr": "Seni tekrar göreceğim için seviniyorum.",
+    "tr": "Seni tekrar görmeyi dört gözle bekliyorum.",
     "example": "Wir sehen uns nächste Woche. Ich freue mich darauf, dich wiederzusehen.",
     "level": "A2.2",
     "li": 3
