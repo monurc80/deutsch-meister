@@ -39,7 +39,7 @@ function mergeDuplicateReviewRecords(a,b){
  if(!a)return {...b,type:'word'};
  if(!b)return {...a,type:'word'};
  const repetitions=Math.min(Number(a.repetitions)||0,Number(b.repetitions)||0),due=[a.due,b.due].filter(Boolean).map(String).sort()[0]||'',interval=Math.min(Number(a.interval)||0,Number(b.interval)||0),lastReviewed=[a.lastReviewed,b.lastReviewed].filter(Boolean).map(String).sort().slice(-1)[0]||'',status=repetitions>=6?'mastered':repetitions>=3?'reinforced':'learning';
- return {...(Number(a.repetitions)||0<=Number(b.repetitions)||0?a:b),type:'word',repetitions,interval,due,lastReviewed,correct:!!a.correct&&!!b.correct,status,correctStreak:repetitions};
+ return {...((Number(a.repetitions)||0)<=(Number(b.repetitions)||0)?a:b),type:'word',repetitions,interval,due,lastReviewed,correct:!!a.correct&&!!b.correct,status,correctStreak:repetitions};
 }
 function migrateDuplicateWordProgress(){
  if(!WORD_DUPLICATE_ALIASES.length)return false;
