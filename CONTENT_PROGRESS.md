@@ -159,5 +159,5 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Web Speech Recognition yalnızca konuşmayı metne dönüştürür. Uygulama bunu fonetik doğruluk veya aksan puanı olarak sunmaz; telaffuz puanlaması yapılmış gibi bir iddia eklenmedi.
 - Mevcut `data.review`, `data.errors` ve `moduleProgress.dialogue` alanları kullanıldı. Yerel kayıt anahtarı, Supabase şeması ve mevcut kullanıcı kayıtları değiştirilmedi. Eski `Dinleme` ve `Dil bilgisi` tekrarları aynı akışta kalır.
 - Ana `index.html` inline JavaScript sözdizimi doğrulandı. Sentetik regresyon kontrolleri; konuşma tekrar kaydı oluşturma, başarılı/başarısız öz değerlendirme, hata defterinden başarılı/başarısız tekrar ve konuşma kaydının vadesi geldiğinde akıllı tekrar kuyruğuna girmesi senaryolarında başarılı.
-- Kod commit'i: `7746a0628763a53d9e151dcc92ebfc20afca3240`.
+- Kod commit'leri: `7746a0628763a53d9e151dcc92ebfc20afca3240` (konuşma tekrar akışı), `59644a3462197f244c3e9d6c31000cc199ca0634` (değerlendirme kaydında mikrofonu güvenli kapatma).
 - Gerçek tarayıcı, mobil cihaz ve mikrofonla uçtan uca test henüz yapılmadı. Tarayıcı desteği bulunmayan ortamlarda metinle cevap verme seçeneği korunuyor.
