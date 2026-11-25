@@ -1,0 +1,19 @@
+{
+  "name": "Deutsch Meister – Almanca Öğren",
+  "short_name": "Deutsch Meister",
+  "description": "A1–B2 Almanca kelime, kalıp, ders, sınav ve tekrar çalışmaları.",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fc",
+  "theme_color": "#275ee7",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
