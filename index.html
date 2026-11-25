@@ -165,7 +165,7 @@ function openSearchItem(type,id,level){
  level=Number(level)||0;if(level>data.unlocked){alert('Bu içeriği çalışmak için önceki seviyeleri tamamlamalısın.');return}
  data.level=level;save();
  if(type==='phrase'){const items=phraseItemsForLevel(level);phraseIndex=Math.max(0,items.findIndex(x=>phraseProgressId(x)===id));phraseReviewOnly=false;tab='phrases'}
- else{const previousFilter=nwFilter;nwFilter='all';const items=nwPool();nwFilter=previousFilter;nwIndex=Math.max(0,items.findIndex(x=>canonicalWordId(x.id)===canonicalWordId(id)));tab='newwords'}
+ else{nwFilter='all';const items=nwPool();nwIndex=Math.max(0,items.findIndex(x=>canonicalWordId(x.id)===canonicalWordId(id)));tab='newwords'}
  render();
 }
 
