@@ -120,3 +120,15 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Güncellenen kelime ilerleme referanslarının tamamı kanonik kimlik kullanımı açısından tarandı; eski doğrudan `w.id/nw_w.id` ilerleme erişimi kalmadı.
 - Kod commit'leri: `8601babf557063ee0c0ded44e3ecfb084e29b14a`, `0f903141b03a6e3f5987134981655ad36f401c0a`.
 - Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+
+
+## 25 Kasım hata defteri yeniden çözme akışı
+
+- Hata defterindeki açık kelime, kalıp, ders, dil bilgisi, yazma ve dinleme kayıtları için doğrudan `Tekrar çöz` akışı eklendi. Kayıt türü ve özgün soru/cevap verisi korunur; mevcut `data.errors` yapısı geriye dönük uyumlu kalır.
+- Yanıt doğruysa hata otomatik olarak pekiştirilen kayıtlarına taşınır; yanlışsa aynı hata kaydının sayacı ve son yanıtı güncellenir. Tekrar denemeleri ayrıca `retryCount` alanında tutulur; mevcut kayıtlar için zorunlu migrasyon gerekmez.
+- Dinleme hatalarında, eski kayıtlarda tam cümle saklanmış olsa bile beklenen kelime soru görünümünde boşlukla maskelenir. Dinleme düğmesi cümlenin tam sesini çalar; yanıt kontrol edilmeden doğru kelime gösterilmez.
+- Açık hata listesindeki doğru yanıt varsayılan olarak gizlendi; isteyen kullanıcı ayrıntıyı açabilir. Önceki elle “Pekiştirdim” seçeneği korundu.
+- Hata kimlikleri buton olaylarına güvenli biçimde aktarılır; mevcut yerel kayıt anahtarı ve Supabase senkronizasyon akışı değiştirilmedi.
+- JavaScript sözdizimi, dinleme sorusunun maskelenmesi/seslendirmede geri kurulması, yanlış denemede kaydın açık kalması ve sayacın artması, doğru denemede kaydın kapanması, deneme/doğru sayaçları, doğru yanıtın varsayılan gizlenmesi ve özel karakter içeren kimliklerin HTML olay niteliğinde güvenli kodlanması için sentetik kontroller başarılı.
+- Kod commit'leri: `30fe6520940a86370af2c69f2000a228fe350c5a`, `64488c87f51ab573e58a05d507e9093fb30516eb`.
+- Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
