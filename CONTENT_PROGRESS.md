@@ -82,3 +82,13 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Dosya JavaScript sözdizimi, 110 kayıt sayısı, dört A1–A2 alt seviyesi, zorunlu alanlar ve örnek cümlelerin hedef kelimeyi içermesi bakımından yeniden doğrulandı.
 - Geniş taramada A1–A2 kelime kaynaklarında 18 yinelenen başlık bulundu. `index.html` içindeki kelime kimlikleri kayıt sırasına göre `w0`, `w1`… üretildiği için bu turda kayıt silinmedi veya sıralanmadı; aksi işlem mevcut kullanıcı ilerlemesini başka kelimelere bağlayabilir. Yinelenenleri güvenli biçimde birleştirmek için kimlik eşlemesi/migrasyonu ayrıca tasarlanmalı.
 - Kelime başlığı toplamı değişmedi; bu geliştirme yeni kelime değil, mevcut kartların örnek ve anlam kalitesini artırır.
+
+
+## 25 Kasım A1–A2 soru netliği denetimi
+
+- Tek yanıt alanında birebir cevap kontrolü yapılan ders ve dil bilgisi soruları, birden fazla makul cevaba açık olmaması için yeniden düzenlendi.
+- Olumsuzluk sorularına `sondern` karşıtlığı, artikel/iyelik sorularına temel biçim ipucu, modal fiil sorusuna `dürfen` fiil ipucu eklendi.
+- Dativ ve yer bildiren edat sorularında hedeflenen belirli artikelin cinsiyeti belirtildi; zaman ve sıfat sorularında hedeflenen fiil/temel sıfat açıkça verildi.
+- `a1-a2-completion.js` yeniden ayrıştırıldı: A1.1–A2.2 için 20 ders, 24 dil bilgisi sorusu, 16 diyalog ve 8 okuma metni korundu. 44 ders/dil bilgisi sorusunun her birinde tek boşluk ve boş olmayan cevap doğrulandı.
+- JavaScript sözdizimi ve veri grubu kontrolleri başarılı. Tarayıcıda, mobilde ve gerçek Supabase hesabıyla uçtan uca test yapılmadı.
+- Kod commit'i: `65ffac8aa07aacafda009fe978186c83e3452883`.
