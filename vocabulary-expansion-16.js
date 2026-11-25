@@ -164,7 +164,7 @@ window.EXTRA16_WORDS=[
   },
   {
     "word": "aufhören",
-    "tr": "bitirmek, durmak",
+    "tr": "bırakmak, sona ermek",
     "level": "A1.2",
     "example": "Wir müssen jetzt mit dem Lärm aufhören."
   },
