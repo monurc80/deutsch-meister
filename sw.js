@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-meister-shell-v1';
+const CACHE_NAME='deutsch-meister-shell-v2';
 const APP_ASSETS=[
   "./",
   "./index.html",
@@ -6,6 +6,7 @@ const APP_ASSETS=[
   "./icon.svg",
   "./design.css?v=7",
   "./b-levels.js?v=2",
+  "./b-levels-expansion.js?v=1",
   "./grammar-expansion-1.js?v=1",
   "./vocabulary-expansion.js?v=1",
   "./vocabulary-expansion-2.js?v=1",
@@ -43,6 +44,7 @@ const APP_ASSETS=[
   "./phrase-expansion-19.js?v=1",
   "./sentence-writing.js?v=1",
   "./cefr-assessment.js?v=1",
+  "./b-cefr-assessment.js?v=1",
   "./dashboard.js?v=1"
 ];
 self.addEventListener('install',event=>{
