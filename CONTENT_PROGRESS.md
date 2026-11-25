@@ -151,3 +151,13 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - JavaScript sözdizimi kontrolü başarılı. Sentetik regresyonlar; dinleme ve dil bilgisi kayıtlarının oluşturulması, tür/seviye çakışmasının önlenmesi, doğru yanıtla 1 günlük aralığa geçiş, due kuyruğunda görünme, dinleme boşluğunun maskelenmesi ve tam ses metninin korunması, yanlış kuyruk yanıtında yeni hata oluşturulması ve kaydın bugünkü kuyruğa dönmesi, eski kelime migrasyonunun `exercise:`/`phrase:` anahtarlarını koruması senaryolarında başarılı.
 - Kod commit'i: `1e9dc29d88b5fcdcd15595e774f465e080f780e9`.
 - Tarayıcı, mobil cihaz, mikrofon/ses motoru ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+
+## 25 Kasım konuşma çalışmasının kişisel tekrar takvimine bağlanması
+
+- Gerçek konuşma alıştırmalarında kullanıcı artık yanıtını yazabilir veya tarayıcı mikrofonuyla dikte edebilir; ardından kendi performansını açıkça değerlendirir. Başarılı öz değerlendirme diyalog modülünün ilerlemesini kaydeder ve `exercise:Konuşma` türünde mevcut aralıklı tekrar kaydını oluşturur/ilerletir. Tekrar çalışılması gerektiği seçilirse soru hata defterine eklenir ve bugünkü tekrar kuyruğuna alınır.
+- Konuşma tekrarları akıllı tekrar ekranında soru seslendirmesi ve örnek yanıtla çalışılabilir. Hata defterinden yeniden çalışırken de soru seslendirilir ve kullanıcı tekrarını kendi değerlendirir; serbest konuşma yanıtı örnek cümleyle birebir karşılaştırılmaz.
+- Web Speech Recognition yalnızca konuşmayı metne dönüştürür. Uygulama bunu fonetik doğruluk veya aksan puanı olarak sunmaz; telaffuz puanlaması yapılmış gibi bir iddia eklenmedi.
+- Mevcut `data.review`, `data.errors` ve `moduleProgress.dialogue` alanları kullanıldı. Yerel kayıt anahtarı, Supabase şeması ve mevcut kullanıcı kayıtları değiştirilmedi. Eski `Dinleme` ve `Dil bilgisi` tekrarları aynı akışta kalır.
+- Ana `index.html` inline JavaScript sözdizimi doğrulandı. Sentetik regresyon kontrolleri; konuşma tekrar kaydı oluşturma, başarılı/başarısız öz değerlendirme, hata defterinden başarılı/başarısız tekrar ve konuşma kaydının vadesi geldiğinde akıllı tekrar kuyruğuna girmesi senaryolarında başarılı.
+- Kod commit'i: `7746a0628763a53d9e151dcc92ebfc20afca3240`.
+- Gerçek tarayıcı, mobil cihaz ve mikrofonla uçtan uca test henüz yapılmadı. Tarayıcı desteği bulunmayan ortamlarda metinle cevap verme seçeneği korunuyor.
