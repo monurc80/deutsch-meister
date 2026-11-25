@@ -250,11 +250,11 @@ function cefrQuestionList(bank){
  const order=['vocabulary','grammar','reading','listening'];
  return order.flatMap(category=>(bank.sections?.[category]||[]).map((q,index)=>({...q,category,sectionIndex:index})));
 }
-function calculateCefrScore(bank,answers,writingScore){
+function calculateCefrScore(bank,answers,writingScore,questionSet){
  const order=['vocabulary','grammar','reading','listening'],skills={},details={};
  let correct=0,total=0;
  order.forEach(category=>{
-  const qs=bank.sections?.[category]||[],hits=qs.reduce((n,q,i)=>n+(answers[total+i]===q.answer?1:0),0);
+  const qs=Array.isArray(questionSet)?questionSet.filter(q=>q.category===category):(bank.sections?.[category]||[]),hits=qs.reduce((n,q,i)=>n+(answers[total+i]===q.answer?1:0),0);
   details[category]={correct:hits,total:qs.length};
   skills[category]=qs.length?Math.round(hits/qs.length*20):0;
   correct+=hits;total+=qs.length;
@@ -301,7 +301,7 @@ function finishCefrExam(){
  if(cefrWritingScore===null){alert('Yazma bölümünde kendini 0–4 arasında değerlendir.');return}
  const bank=window.CEFR_ASSESSMENT_BANK?.[cefrExamLevel];
  if(!bank)return;
- const scored=calculateCefrScore(bank,cefrExamAnswers,cefrWritingScore);
+ const scored=calculateCefrScore(bank,cefrExamAnswers,cefrWritingScore,cefrExamQs);
  const questions=cefrQuestionList(bank);
  let errorCount=0;
  questions.forEach((q,i)=>{
@@ -316,6 +316,7 @@ function finishCefrExam(){
  });
  const writing=bank.writing;
  if(cefrWritingScore<=1){
+  errorCount++;
   recordError('Yazma',cefrExamLevel,writing.prompt,writing.sample,cefrWritingDraft);
   scheduleExerciseReview({type:'Yazma',exerciseType:'Yazma',level:cefrExamLevel,prompt:writing.prompt,expected:writing.sample},false);
  }else{
