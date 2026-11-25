@@ -272,7 +272,7 @@ window.EXTRA16_WORDS=[
   },
   {
     "word": "die Hilfeleistung",
-    "tr": "yardım; yardım hizmeti",
+    "tr": "yardım etme; yardım",
     "level": "A2.1",
     "example": "Die schnelle Hilfeleistung war sehr wichtig."
   },
@@ -284,7 +284,7 @@ window.EXTRA16_WORDS=[
   },
   {
     "word": "die Hochschule",
-    "tr": "yüksekokul, üniversite",
+    "tr": "yükseköğretim kurumu; yüksekokul",
     "level": "A2.1",
     "example": "Er studiert an einer Hochschule in Berlin."
   },
@@ -430,7 +430,7 @@ window.EXTRA16_WORDS=[
     "word": "die Veranstaltungshalle",
     "tr": "etkinlik salonu",
     "level": "A2.1",
-    "example": "Die Veranstaltung findet in der Veranstaltungshalle statt."
+    "example": "Die Veranstaltungshalle bietet Platz für viele Gäste."
   },
   {
     "word": "die Verlängerung",
@@ -454,7 +454,7 @@ window.EXTRA16_WORDS=[
     "word": "die Forschung",
     "tr": "araştırma",
     "level": "A2.2",
-    "example": "Die Forschung sucht nach neuen Lösungen."
+    "example": "In der Forschung sucht man nach neuen Lösungen."
   },
   {
     "word": "die Gerechtigkeit",
@@ -502,7 +502,7 @@ window.EXTRA16_WORDS=[
     "word": "die Tatsache",
     "tr": "olgu; gerçek",
     "level": "A2.2",
-    "example": "Die Tatsache ist, dass wir mehr Zeit brauchen."
+    "example": "Es ist eine Tatsache, dass wir mehr Zeit brauchen."
   },
   {
     "word": "die Tätigkeit",
@@ -566,7 +566,7 @@ window.EXTRA16_WORDS=[
   },
   {
     "word": "die Anerkennung",
-    "tr": "takdir, kabul",
+    "tr": "takdir; takdir edilme",
     "level": "A2.2",
     "example": "Für ihre Arbeit bekam sie viel Anerkennung."
   },
@@ -646,7 +646,7 @@ window.EXTRA16_WORDS=[
     "word": "die Wiederholung",
     "tr": "tekrar",
     "level": "A2.2",
-    "example": "Nach einer Wiederholung verstehe ich die Regel besser."
+    "example": "Durch die Wiederholung verstehe ich die Regel besser."
   },
   {
     "word": "die Wohngegend",
