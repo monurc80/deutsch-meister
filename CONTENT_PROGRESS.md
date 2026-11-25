@@ -227,3 +227,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Yerel kayıt anahtarı, Supabase veri modeli/senkronizasyonu, kelime-kalıp kimlikleri ve kullanıcı ilerlemesi şeması değiştirilmedi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test bu çalışmada yapılmadı.
 - Kod commit'leri: `065975ba75b1ccbd15708ec7ba14413cdfab2e5f` (A1 kelime karşılığı), `bcf137baf6eb8e305f785cd4d1e86bbefcc56cc2` (A2 kalıp çevirisi), `4a483e0420a481da1d2f79c4fccc541d4579b352` (dil bilgisi/dinleme tekrarları ve hata çözümleme), `3ceebb23a4b760dd4f71b805a901151a9b17b161` (dil bilgisi geri bildirimini koruma).
 - Bu çalışmada B1–B2 içerik veya özelliklerine yeni ekleme yapılmadı.
+
+
+## 26 Kasım A1–A2 diyalog dil seviyesi düzeltmesi
+
+- A1.1 isim heceleme diyaloğundaki pasif `wird ... geschrieben` yapısı başlangıç seviyesini aşıyordu; yanıt doğal ve etkin A1 düzeyindeki `Ich buchstabiere: M-A-R-I-A.` biçimine çevrildi.
+- A1.2 kartla ödeme yanıtındaki isimleştirilmiş `Kartenzahlung ist möglich` ifadesi, seviyede öğretilen modal fiil yapısıyla `Ja, Sie können mit Karte bezahlen.` olarak sadeleştirildi.
+- Veri kontrolü: dört alt seviyede 4'er diyalog (16 toplam), tüm soru/çeviri/yanıt alanları dolu; 20 ders, 24 dil bilgisi sorusu ve 8 okuma metni sayıları korundu. JavaScript ayrıştırma ve hedefli regresyon kontrolleri başarılı.
+- Yerel ilerleme, kullanıcı kimlikleri, Supabase senkronizasyonu ve diğer modüller değiştirilmedi. Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test yapılmadı.

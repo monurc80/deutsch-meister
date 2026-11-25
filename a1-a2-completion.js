@@ -68,7 +68,7 @@ window.EXTRA_A_GRAMMAR = [
 
 window.EXTRA_A_DIALOGS = [
   [
-    ["Wie schreibt man deinen Namen?","Adın nasıl yazılıyor?","Mein Name wird M-A-R-I-A geschrieben."],
+    ["Wie schreibt man deinen Namen?","Adın nasıl yazılıyor?","Ich buchstabiere: M-A-R-I-A."],
     ["Welche Sprachen sprichst du?","Hangi dilleri konuşuyorsun?","Ich spreche Türkisch und ein bisschen Deutsch."],
     ["Was machst du beruflich?","Mesleğin ne?","Ich arbeite im Verkauf."],
     ["Wie ist deine Telefonnummer?","Telefon numaran nedir?","Meine Telefonnummer ist ..."]
@@ -77,7 +77,7 @@ window.EXTRA_A_DIALOGS = [
     ["Wie kommst du zur Arbeit?","İşe nasıl gidiyorsun?","Ich fahre mit dem Bus zur Arbeit."],
     ["Was möchtest du bestellen?","Ne sipariş etmek istersin?","Ich möchte eine Suppe und ein Wasser bestellen."],
     ["Wie viel kostet das zusammen?","Hepsi toplam ne kadar?","Das kostet zusammen zwanzig Euro."],
-    ["Kann ich mit Karte bezahlen?","Kartla ödeyebilir miyim?","Ja, Kartenzahlung ist möglich."]
+    ["Kann ich mit Karte bezahlen?","Kartla ödeyebilir miyim?","Ja, Sie können mit Karte bezahlen."]
   ],
   [
     ["Was hast du am Wochenende gemacht?","Hafta sonu ne yaptın?","Ich habe Freunde besucht und einen Film gesehen."],
