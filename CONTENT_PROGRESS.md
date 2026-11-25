@@ -141,3 +141,13 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Ana `index.html` içindeki inline JavaScript sözdizimi doğrulandı. Sentetik kontroller; kelime doğru/yanlış yanıtı, kanonik kimlik eşlemesi, kalıp doğru yanıtı ve eşleşmeyen eski kayıt davranışı için başarılı.
 - Kod commit'i: `e2be85f9ac4ac409d277cd363d143908574bc1ea`.
 - Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+
+## 25 Kasım dinleme ve dil bilgisi tekrar takvimi
+
+- Dinleme Laboratuvarı'nda yanlış yanıtlanan cloze soruları ve dil bilgisi bölümündeki yanlış yanıtlar, kelime/kalıp kayıtlarından ayrı `exercise:Dinleme` ve `exercise:Dil bilgisi` tekrar anahtarlarıyla mevcut `data.review` yapısına kaydedilir. Anahtar; alıştırma türü, alt seviye, normalize edilmiş soru ve doğru cevabı birlikte içerir.
+- İlk yanlış yanıt alıştırmayı bugünkü tekrar listesine ekler. Hata defterinden yeniden doğru çözüldüğünde veya akıllı tekrar kuyruğunda doğru yanıtlandığında mevcut 1–3–7–14–30–60 günlük aralık ilerler; yanlış yanıt aynı gün tekrarını açık tutar.
+- Akıllı tekrar kuyruğu artık kelime ve kalıplara ek olarak vadesi gelen dinleme ve dil bilgisi alıştırmalarını da gösterir. Dinleme sorusunda cevap metinde gizlenir; seslendirme için tam Almanca cümle korunur. Alıştırma tekrarları kelime sayaçlarına yazılmaz.
+- Eski kelime/kalıp kayıtları geriye dönük uyumlu tutuldu. Yinelenen kelime migrasyonu `exercise:` anahtarlarını açıkça atlar; böylece yeni alıştırma kayıtları yanlışlıkla `word:` kaydına dönüştürülmez. Yerel kayıt anahtarı, Supabase tablo/şeması ve mevcut kimlik doğrulama akışı değiştirilmedi.
+- JavaScript sözdizimi kontrolü başarılı. Sentetik regresyonlar; dinleme ve dil bilgisi kayıtlarının oluşturulması, tür/seviye çakışmasının önlenmesi, doğru yanıtla 1 günlük aralığa geçiş, due kuyruğunda görünme, dinleme boşluğunun maskelenmesi ve tam ses metninin korunması, yanlış kuyruk yanıtında yeni hata oluşturulması ve kaydın bugünkü kuyruğa dönmesi, eski kelime migrasyonunun `exercise:`/`phrase:` anahtarlarını koruması senaryolarında başarılı.
+- Kod commit'i: `1e9dc29d88b5fcdcd15595e774f465e080f780e9`.
+- Tarayıcı, mobil cihaz, mikrofon/ses motoru ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
