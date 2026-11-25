@@ -132,3 +132,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - JavaScript sözdizimi, dinleme sorusunun maskelenmesi/seslendirmede geri kurulması, yanlış denemede kaydın açık kalması ve sayacın artması, doğru denemede kaydın kapanması, deneme/doğru sayaçları, doğru yanıtın varsayılan gizlenmesi ve özel karakter içeren kimliklerin HTML olay niteliğinde güvenli kodlanması için sentetik kontroller başarılı.
 - Kod commit'leri: `30fe6520940a86370af2c69f2000a228fe350c5a`, `64488c87f51ab573e58a05d507e9093fb30516eb`.
 - Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+
+## 25 Kasım hata defteri ve aralıklı tekrar bağlantısı
+
+- Hata defterinde yeniden çözülen kelime kayıtları, `nwAll()` üzerinden özgün kelime kaydına eşlenerek kanonik `w*` kimliğiyle mevcut `known`, `seen`, `missed` ve `review` alanlarına yazılır. Kalıp kayıtları seviye kapsamı korunarak `phraseProgressId` ve mevcut kalıp tekrar anahtarıyla eşlenir.
+- Doğru tekrar, ilgili kelime/kalıp için mevcut 1–3–7–14–30–60 günlük aralıklı tekrar takvimindeki sıradaki vadeyi ilerletir. Yanlış tekrar, öğrenme durumunu yeniden `learning` yapar ve kartı bugünün tekrarına alır.
+- Eşleşmeyen eski/özel hata kayıtları güvenli biçimde mevcut hata defteri akışında kalır; yeni veri şeması, zorunlu migrasyon, yerel kayıt anahtarı veya Supabase şeması değişikliği gerekmez.
+- Ana `index.html` içindeki inline JavaScript sözdizimi doğrulandı. Sentetik kontroller; kelime doğru/yanlış yanıtı, kanonik kimlik eşlemesi, kalıp doğru yanıtı ve eşleşmeyen eski kayıt davranışı için başarılı.
+- Kod commit'i: `e2be85f9ac4ac409d277cd363d143908574bc1ea`.
+- Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
