@@ -1,6 +1,6 @@
 # Deutsch Meister — İçerik İlerleme Kaydı
 
-Son kontrol: 24 Kasım 2026
+Son kontrol: 25 Kasım 2026
 
 ## Hedefler ve mevcut durum
 
@@ -106,4 +106,17 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - 20 eski kimlik için örnek kullanıcı ilerlemesiyle migrasyon testi yapıldı: bilinen/yanlış/çalışma sayaçları, tekrar tarihi ve tekrar sayısı korundu; özel kullanıcı kelimelerine dokunulmadı.
 - Ana uygulama JavaScript sözdizimi, tüm A1–A2 havuzlarının tekilleştirilmesi, örnek cümle aktarımı, kimlik eşlemesi ve migrasyonun idempotent olması kontrol edildi.
 - Kod commit'leri: `6dbda86864bf6e2cdb3e370b58579ee39f98f366`, `ac020b839715c4e0eafa6bda3958f255a12ff406`.
+- Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
+
+
+## 25 Kasım kelime/kalıp tekrar ve hata defteri tutarlılığı
+
+- Kelime ilerlemesinde eski `w*`, `nw_w*` ve aynı alt seviyede DB ile eşleşen Kapitel 5 `k5_*` kimlikleri tek kanonik kimliğe bağlandı. Eşleştirme alt seviye sınırını korur; farklı seviyelerdeki aynı kelimeler ayrı öğrenme kayıtları olarak kalır.
+- Yerel kayıt, yedek geri yükleme ve Supabase'den yüklenen ilerleme için aynı migrasyon kullanılır. `known` kayıtları mantıksal OR ile, `seen` ve `missed` sayaçları toplanarak birleştirilir. Eski tekrar kayıtlarında daha düşük tekrar sayısı ve daha erken vade korunur; kalıp kayıtlarının anahtarlarına dokunulmaz.
+- Ana kelime kartları, Yeni Kelimeler, yazma modu, akıllı tekrar kuyruğu, seviye ilerlemesi ve sınav geçiş kontrolü aynı kanonik kimliği kullanır. Böylece bir ekranda bilinen/yanlış görünen kelimenin diğer ekranda yeni görünmesi ve aynı kelimenin iki kez sayılması engellenir.
+- Kelime havuzu artık tekrarları yalnızca aynı alt seviye içinde tekilleştirir. A1'de ve A2'de ayrı öğrenme basamağı olan aynı kelimeler akıllı tekrar kuyruğunda ayrı kalır.
+- Hata defteri kayıt eşlemesi doğru cevap bilgisini de dikkate alır. Aynı soru metninin farklı doğru cevapları tek kayıtta yanlışlıkla birleşmez; aynı doğru cevaba ait tekrarlar mevcut kaydın sayacını artırır.
+- JavaScript sözdizimi, eski kimliklerin birleştirilmesi, `known/seen/missed` değerlerinin korunması, tekrar kaydı birleştirmesi, migrasyonun ikinci çalıştırmada değişiklik yapmaması, farklı seviye tekrarlarının korunması ve hata defteri cevap ayrımı için sentetik regresyon kontrolleri başarılı.
+- Güncellenen kelime ilerleme referanslarının tamamı kanonik kimlik kullanımı açısından tarandı; eski doğrudan `w.id/nw_w.id` ilerleme erişimi kalmadı.
+- Kod commit'leri: `8601babf557063ee0c0ded44e3ecfb084e29b14a`, `0f903141b03a6e3f5987134981655ad36f401c0a`.
 - Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test henüz yapılmadı.
