@@ -78,23 +78,23 @@ window.EXTRA19_PHRASES=[
     "li": 3
   },
   {
-    "phrase": "Obwohl ich müde bin, gehe ich noch einkaufen.",
-    "tr": "Yorgun olmama rağmen alışverişe gidiyorum.",
-    "example": "Obwohl ich müde bin, gehe ich noch einkaufen.",
+    "phrase": "Ich bin müde, aber ich gehe noch einkaufen.",
+    "tr": "Yorgunum ama yine de alışverişe gidiyorum.",
+    "example": "Ich bin müde, aber ich gehe noch einkaufen.",
     "level": "A2.2",
     "li": 3
   },
   {
-    "phrase": "Ich freue mich darauf, dich wiederzusehen.",
-    "tr": "Seni tekrar görmeyi dört gözle bekliyorum.",
-    "example": "Wir sehen uns nächste Woche. Ich freue mich darauf, dich wiederzusehen.",
+    "phrase": "Ich freue mich auf unser Treffen nächste Woche.",
+    "tr": "Gelecek haftaki buluşmamızı dört gözle bekliyorum.",
+    "example": "Wir treffen uns nächste Woche. Ich freue mich auf unser Treffen.",
     "level": "A2.2",
     "li": 3
   },
   {
-    "phrase": "Wenn ich mehr Zeit hätte, würde ich öfter kochen.",
-    "tr": "Daha fazla zamanım olsaydı daha sık yemek yapardım.",
-    "example": "Wenn ich mehr Zeit hätte, würde ich öfter kochen.",
+    "phrase": "Wenn ich mehr Zeit habe, koche ich öfter selbst.",
+    "tr": "Daha fazla zamanım olduğunda daha sık kendim yemek yaparım.",
+    "example": "Wenn ich am Wochenende mehr Zeit habe, koche ich öfter selbst.",
     "level": "A2.2",
     "li": 3
   }
