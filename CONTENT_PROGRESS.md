@@ -1,6 +1,6 @@
 # Deutsch Meister — İçerik İlerleme Kaydı
 
-Son kontrol: 25 Kasım 2026
+Son kontrol: 26 Kasım 2026
 
 ## Hedefler ve mevcut durum
 
@@ -254,3 +254,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Hata kaydına isteğe bağlı `wordId` alanı eklendi; mevcut kayıtların alanları, kullanıcı ilerleme anahtarları ve Supabase tablo yapısı değiştirilmedi.
 - Çevrimdışı kabuk önbelleği `v4` sürümüne yükseltildi; yeni tekrar düzeltmesi güncel Service Worker kurulumu sırasında çevrimdışı ana sayfaya da alınır.
 - Doğrulama: ana HTML içi JavaScript ve Service Worker sözdizimi kontrol edildi; yeni kayıt kimliği, eski kayıttan güvenli çıkarım, doğru/yanlış tekrar ve genel cümle yazma gerileme testleri başarılı. Gerçek tarayıcı ve Supabase hesabıyla uçtan uca test yapılmadı.
+
+
+## 26 Kasım A1–A2 kelime örnek cümlelerinin doğallık denetimi
+
+- A1–A2 kelime bankasındaki 12 örnek cümle, hedef kelimeyi koruyarak daha doğal ve seviyeye daha uygun Almancayla yenilendi. Özellikle maaşın ödenmesi, düzen, kalite, kamuya açık konuşma, katılım koşulu, bağımsızlık, memnuniyetsizlik, algı ve takdir ifadeleri sadeleştirildi.
+- Kelime başlıkları, Türkçe karşılıklar, seviye atamaları, kayıt sırası ve toplam 110 kayıt değiştirilmedi; dolayısıyla mevcut kelime kimlikleri ve kullanıcı ilerleme anahtarları korunur.
+- Ana HTML ve Service Worker'da yalnızca bu veri paketinin sürüm referansı v1 → v2, önbellek kabuğu v4 → v5 yapıldı; çevrimdışı kurulum aynı güncel dosyayı alır.
+- Doğrulama: veri paketi JavaScript ayrıştırması, 110 kayıt ve zorunlu alan kontrolü, örnek cümle-hedef kelime eşleşmesi, alt seviye dağılımı, HTML/Service Worker sürüm eşleşmesi ve tüm yerel script kaynaklarının önbellek listesinde bulunması başarılı. Uygulama tarayıcısı ve gerçek Supabase oturumuyla uçtan uca test bu çalışmada yapılmadı.

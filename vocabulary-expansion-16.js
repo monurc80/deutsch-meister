@@ -262,7 +262,7 @@ window.EXTRA16_WORDS=[
     "word": "das Gehalt",
     "tr": "maaş",
     "level": "A2.1",
-    "example": "Das Gehalt kommt am Monatsende."
+    "example": "Ich bekomme mein Gehalt am Monatsende."
   },
   {
     "word": "die Gemeinschaft",
@@ -274,7 +274,7 @@ window.EXTRA16_WORDS=[
     "word": "die Hilfeleistung",
     "tr": "yardım etme; yardım",
     "level": "A2.1",
-    "example": "Die schnelle Hilfeleistung war sehr wichtig."
+    "example": "Nach dem Unfall war schnelle Hilfeleistung nötig."
   },
   {
     "word": "der Hinweis",
@@ -310,13 +310,13 @@ window.EXTRA16_WORDS=[
     "word": "die Öffentlichkeit",
     "tr": "kamu; kamuoyu",
     "level": "A2.1",
-    "example": "Die Entscheidung wurde in der Öffentlichkeit diskutiert."
+    "example": "Viele Menschen sprechen in der Öffentlichkeit über das Problem."
   },
   {
     "word": "die Ordnung",
     "tr": "düzen",
     "level": "A2.1",
-    "example": "In diesem Zimmer herrscht Ordnung."
+    "example": "Ordnung ist mir wichtig."
   },
   {
     "word": "die Pflicht",
@@ -340,7 +340,7 @@ window.EXTRA16_WORDS=[
     "word": "die Qualität",
     "tr": "kalite",
     "level": "A2.1",
-    "example": "Die Qualität des Produkts ist sehr gut."
+    "example": "Dieses Produkt hat eine gute Qualität."
   },
   {
     "word": "die Situation",
@@ -496,7 +496,7 @@ window.EXTRA16_WORDS=[
     "word": "die Selbstständigkeit",
     "tr": "bağımsızlık; kendi işini yapma",
     "level": "A2.2",
-    "example": "Selbstständigkeit bedeutet, ein eigenes Unternehmen zu führen."
+    "example": "Selbstständigkeit ist im Alltag sehr wichtig."
   },
   {
     "word": "die Tatsache",
@@ -508,7 +508,7 @@ window.EXTRA16_WORDS=[
     "word": "die Tätigkeit",
     "tr": "faaliyet; yapılan iş",
     "level": "A2.2",
-    "example": "Meine Tätigkeit umfasst viele verschiedene Aufgaben."
+    "example": "Meine Tätigkeit ist interessant."
   },
   {
     "word": "die Überlegung",
@@ -526,13 +526,13 @@ window.EXTRA16_WORDS=[
     "word": "die Unzufriedenheit",
     "tr": "memnuniyetsizlik",
     "level": "A2.2",
-    "example": "Die Unzufriedenheit im Team ist in letzter Zeit gestiegen."
+    "example": "Die Unzufriedenheit im Team ist groß."
   },
   {
     "word": "die Veränderung",
     "tr": "değişim",
     "level": "A2.2",
-    "example": "Die Veränderung war für alle deutlich zu sehen."
+    "example": "Ich sehe eine große Veränderung."
   },
   {
     "word": "die Wanderung",
@@ -616,7 +616,7 @@ window.EXTRA16_WORDS=[
     "word": "die Teilnahmebedingung",
     "tr": "katılım koşulu",
     "level": "A2.2",
-    "example": "Eine wichtige Teilnahmebedingung ist die rechtzeitige Anmeldung."
+    "example": "Eine Teilnahmebedingung ist die Anmeldung bis Freitag."
   },
   {
     "word": "die Verpflichtung",
@@ -634,13 +634,13 @@ window.EXTRA16_WORDS=[
     "word": "die Wahrnehmung",
     "tr": "algı, algılama",
     "level": "A2.2",
-    "example": "Die Wahrnehmung von Farben ist bei jedem Menschen anders."
+    "example": "Jeder Mensch hat eine andere Wahrnehmung."
   },
   {
     "word": "die Wertschätzung",
     "tr": "değer verme, takdir",
     "level": "A2.2",
-    "example": "Wertschätzung zeigt sich auch in kleinen Gesten."
+    "example": "Ich zeige meinen Kollegen Wertschätzung."
   },
   {
     "word": "die Wiederholung",
