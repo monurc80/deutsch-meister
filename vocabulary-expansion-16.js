@@ -3,7 +3,7 @@ window.EXTRA16_WORDS=[
   {
     "word": "der Bahnhofsvorplatz",
     "tr": "istasyon önü",
-    "level": "A1.1",
+    "level": "A2.2",
     "example": "Der Bahnhofsvorplatz ist heute sehr voll."
   },
   {
@@ -39,7 +39,7 @@ window.EXTRA16_WORDS=[
   {
     "word": "der Hausarzt",
     "tr": "aile hekimi",
-    "level": "A1.1",
+    "level": "A1.2",
     "example": "Mein Hausarzt arbeitet in der Stadt."
   },
   {
@@ -63,19 +63,19 @@ window.EXTRA16_WORDS=[
   {
     "word": "der Kassenzettel",
     "tr": "fiş",
-    "level": "A1.1",
+    "level": "A1.2",
     "example": "Bitte bewahren Sie den Kassenzettel auf."
   },
   {
     "word": "die Lebensmittel",
     "tr": "gıda ürünleri",
-    "level": "A1.1",
+    "level": "A1.2",
     "example": "Im Supermarkt kaufen wir frische Lebensmittel."
   },
   {
     "word": "die Notaufnahme",
     "tr": "acil servis",
-    "level": "A1.1",
+    "level": "A2.2",
     "example": "Bei einem Notfall fahren wir in die Notaufnahme."
   },
   {
