@@ -1,6 +1,6 @@
 # Deutsch Meister — İçerik İlerleme Kaydı
 
-Son kontrol: 26 Kasım 2026
+Son kontrol: 27 Kasım 2026
 
 ## Hedefler ve mevcut durum
 
@@ -13,10 +13,10 @@ Son kontrol: 26 Kasım 2026
 
 | Alt seviye | Erişilebilir kelime |
 |---|---:|
-| A1.1 | 378 |
-| A1.2 | 253 |
+| A1.1 | 373 |
+| A1.2 | 256 |
 | A2.1 | 211 |
-| A2.2 | 218 |
+| A2.2 | 220 |
 | B1.1 | 180 |
 | B1.2 | 169 |
 | B2.1 | 185 |
@@ -271,3 +271,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Ana HTML veri paketi sürümü v1 → v2, Service Worker kabuk önbelleği v5 → v6 yapıldı; çevrimdışı kaynak listesi güncellendi.
 - Doğrulama: 103/103 yeni örnek cümle hedef kelimeyi içeriyor; kelime/çeviri/seviye/sıra karşılaştırması, B1–B2 değişmezliği, veri JavaScript sözdizimi, Service Worker ve ana HTML inline script sözdizimi kontrolleri başarılı. Tarayıcı, mobil cihaz ve gerçek Supabase uçtan uca testi yapılmadı.
 - Kod commit'leri: `94b299b9befdff7ec55d3986b389945a110acad7`, `376412a07c97709463c6137d3cfbd2c7ef95b21d`, `1bb37f0a93c0150f36a418f7cd9ce333242d7f3b`.
+
+
+## 27 Kasım A1–A2 kelime seviye yerleşimi
+
+- `der Bahnhofsvorplatz` ve `die Notaufnahme` A1.1'den A2.2'ye; `der Kassenzettel`, `der Hausarzt` ve `die Lebensmittel` A1.1'den A1.2'ye taşındı.
+- 110 kelimelik bankanın kayıt sayısı ve sırası değişmedi. Uygulama kimlikleri kayıt sırasından üretildiği için kelime kimlikleri ve mevcut ilerleme anahtarları korundu.
+- Erişilebilir seviye toplamları A1.1: 373, A1.2: 256, A2.1: 211, A2.2: 220 olarak güncellendi. Genel toplam 1.799 olarak kaldı.
+- Bu yerleşimler pedagojik düzey tahminidir; resmî CEFR/Goethe sertifikasyonu iddiası değildir.
