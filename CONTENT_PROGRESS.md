@@ -262,3 +262,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Kelime başlıkları, Türkçe karşılıklar, seviye atamaları, kayıt sırası ve toplam 110 kayıt değiştirilmedi; dolayısıyla mevcut kelime kimlikleri ve kullanıcı ilerleme anahtarları korunur.
 - Ana HTML ve Service Worker'da yalnızca bu veri paketinin sürüm referansı v1 → v2, önbellek kabuğu v4 → v5 yapıldı; çevrimdışı kurulum aynı güncel dosyayı alır.
 - Doğrulama: veri paketi JavaScript ayrıştırması, 110 kayıt ve zorunlu alan kontrolü, örnek cümle-hedef kelime eşleşmesi, alt seviye dağılımı, HTML/Service Worker sürüm eşleşmesi ve tüm yerel script kaynaklarının önbellek listesinde bulunması başarılı. Uygulama tarayıcısı ve gerçek Supabase oturumuyla uçtan uca test bu çalışmada yapılmadı.
+
+
+## 26 Kasım A1–A2 kelime kartı örnek cümleleri
+
+- `vocabulary-expansion.js` içindeki 103 A1.1–A2.2 kelime kaydına kısa, doğal ve seviyeye uygun Almanca örnek cümle eklendi. Örnekler ev, ulaşım, alışveriş, sağlık, iş, seyahat ve günlük iletişim bağlamlarını kapsar.
+- Kelime başlıkları, Türkçe karşılıklar, seviye dağılımı, kayıt sırası ve toplam 192 kaynak kaydı aynen korundu. B1–B2 kayıtları değiştirilmedi; mevcut kelime kimlikleri ve kullanıcı ilerleme eşlemesi etkilenmez.
+- Ana HTML veri paketi sürümü v1 → v2, Service Worker kabuk önbelleği v5 → v6 yapıldı; çevrimdışı kaynak listesi güncellendi.
+- Doğrulama: 103/103 yeni örnek cümle hedef kelimeyi içeriyor; kelime/çeviri/seviye/sıra karşılaştırması, B1–B2 değişmezliği, veri JavaScript sözdizimi, Service Worker ve ana HTML inline script sözdizimi kontrolleri başarılı. Tarayıcı, mobil cihaz ve gerçek Supabase uçtan uca testi yapılmadı.
+- Kod commit'leri: `94b299b9befdff7ec55d3986b389945a110acad7`, `376412a07c97709463c6137d3cfbd2c7ef95b21d`, `1bb37f0a93c0150f36a418f7cd9ce333242d7f3b`.
