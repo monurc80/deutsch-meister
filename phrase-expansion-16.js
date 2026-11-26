@@ -1,8 +1,8 @@
 // Additional practical A1-A2 expressions.
 window.EXTRA16_PHRASES=[
 {"id":"xp20_A1_1_01","phrase":"Ich hätte gern ein frisches Brötchen.","tr":"Taze bir küçük ekmek istiyorum.","example":"Guten Morgen, ich hätte gern ein frisches Brötchen.","level":"A1.1","li":0},
-{"id":"xp20_A1_1_02","phrase":"Ist auch eine Zahlung mit Karte möglich?","tr":"Kartla ödeme de mümkün mü?","example":"Ich habe kein Bargeld dabei. Ist auch eine Zahlung mit Karte möglich?","level":"A1.1","li":0},
-{"id":"xp20_A1_1_03","phrase":"Die Heizung ist zu kalt eingestellt.","tr":"Kalorifer çok düşük ayarlanmış.","example":"Könnten Sie bitte nachsehen? Die Heizung ist zu kalt eingestellt.","level":"A1.1","li":0},
+{"id":"xp20_A1_1_02","phrase":"Wo ist die Kasse?","tr":"Kasa nerede?","example":"Entschuldigung, wo ist die Kasse?","level":"A1.1","li":0},
+{"id":"xp20_A1_1_03","phrase":"Es ist kalt im Zimmer.","tr":"Oda soğuk.","example":"Es ist kalt im Zimmer. Ich brauche eine Jacke.","level":"A1.1","li":0},
 {"id":"xp20_A1_1_04","phrase":"Ich suche die nächste Bäckerei.","tr":"En yakın fırını arıyorum.","example":"Entschuldigung, ich suche die nächste Bäckerei.","level":"A1.1","li":0},
 {"id":"xp20_A1_2_05","phrase":"Um wie viel Uhr kommt der nächste Bus?","tr":"Bir sonraki otobüs saat kaçta geliyor?","example":"Entschuldigung, um wie viel Uhr kommt der nächste Bus?","level":"A1.2","li":1},
 {"id":"xp20_A1_2_06","phrase":"Ich muss heute zum Arzt.","tr":"Bugün doktora gitmem gerekiyor.","example":"Ich muss heute zum Arzt, deshalb komme ich später.","level":"A1.2","li":1},
