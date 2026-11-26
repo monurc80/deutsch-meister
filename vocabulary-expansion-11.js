@@ -15,7 +15,7 @@ window.EXTRA11_WORDS=[
 {"word":"die Ermäßigung","tr":"indirim","level":"A2.2","example":"Studierende erhalten eine Ermäßigung."},
 {"word":"die Unterkunft","tr":"konaklama yeri","level":"A2.2","example":"Wir suchen eine günstige Unterkunft."},
 {"word":"die Veranstaltung","tr":"etkinlik","level":"A2.2","example":"Die Veranstaltung beginnt um 18 Uhr."},
-{"word":"die Anmeldung","tr":"kayıt, başvuru","level":"A2.2","example":"Die Anmeldung ist kostenlos."},
+{"word":"die Anmeldung","tr":"kayıt, başvuru","level":"A2.1","example":"Die Anmeldung ist kostenlos."},
 {"word":"die Rückmeldung","tr":"geri bildirim, yanıt","level":"B1.1","example":"Ich warte noch auf Ihre Rückmeldung."},
 {"word":"die Zuständigkeit","tr":"yetki alanı, sorumluluk","level":"B1.1","example":"Die Zuständigkeit liegt bei unserer Abteilung."},
 {"word":"der Aufwand","tr":"emek, çaba, masraf","level":"B1.1","example":"Der technische Aufwand ist gering."},
