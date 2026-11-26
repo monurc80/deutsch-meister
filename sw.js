@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-meister-shell-v6';
+const CACHE_NAME='deutsch-meister-shell-v7';
 const APP_ASSETS=[
   "./",
   "./index.html",
@@ -41,7 +41,7 @@ const APP_ASSETS=[
   "./phrase-expansion-18.js?v=1",
   "./a1-a2-completion.js?v=1",
   "./vocabulary-expansion-16.js?v=2",
-  "./phrase-expansion-19.js?v=1",
+  "./phrase-expansion-19.js?v=2",
   "./sentence-writing.js?v=1",
   "./cefr-assessment.js?v=1",
   "./b-cefr-assessment.js?v=1",
