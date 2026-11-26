@@ -235,3 +235,13 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - A1.2 kartla ödeme yanıtındaki isimleştirilmiş `Kartenzahlung ist möglich` ifadesi, seviyede öğretilen modal fiil yapısıyla `Ja, Sie können mit Karte bezahlen.` olarak sadeleştirildi.
 - Veri kontrolü: dört alt seviyede 4'er diyalog (16 toplam), tüm soru/çeviri/yanıt alanları dolu; 20 ders, 24 dil bilgisi sorusu ve 8 okuma metni sayıları korundu. JavaScript ayrıştırma ve hedefli regresyon kontrolleri başarılı.
 - Yerel ilerleme, kullanıcı kimlikleri, Supabase senkronizasyonu ve diğer modüller değiştirilmedi. Tarayıcı, mobil cihaz ve gerçek Supabase hesabıyla uçtan uca test yapılmadı.
+
+
+## 26 Kasım A1.1 kalıp seviyesi ve tekrar temizliği
+
+- A1.1'deki `Ist auch eine Zahlung mit Karte möglich?` ifadesi, aynı seviyede zaten bulunan `Kann ich mit Karte zahlen?` kalıbını anlamsal olarak tekrarlıyor ve isimleştirilmiş `Zahlung` yapısıyla gereksiz derecede ağır kalıyordu. Aynı kayıt kimliği korunarak `Wo ist die Kasse?` ile değiştirildi.
+- `Die Heizung ist zu kalt eingestellt.` ifadesi A1.1 için `eingestellt` yapısı ve sözcük yükü bakımından ileri seviyedeydi. Aynı kayıt kimliği korunarak günlük A1.1 cümlesi `Es ist kalt im Zimmer.` yapıldı.
+- Türkçe karşılıklar ve örnek cümleler yeni ifadelerle uyumlu hâle getirildi. Kayıt sayısı, `id`, seviye ve alt seviye indeksi değiştirilmedi.
+- HTML script sürümü `v2`, Service Worker önbellek sürümü `deutsch-meister-shell-v3` yapıldı; çevrimdışı kurulumda güncel kalıp paketi önbelleğe alınır.
+- Kontroller: A1–A2 kalıp paketlerinde 490 kayıt, alt seviye dağılımı (A1.1 110, A1.2 119, A2.1 127, A2.2 134) ve yinelenen ifade bulunmaması yeniden kontrol edildi. Güncellenen dosya, HTML içi JavaScript, Service Worker sözdizimi, 46 çevrimdışı kaynak ve sürüm referansları kontrol edildi.
+- Yerel ilerleme anahtarı, kalıp kimlikleri, kullanıcı verisi, Supabase senkronizasyonu ve B1–B2 içerikleri değiştirilmedi. Gerçek tarayıcı/cihaz ve Supabase uçtan uca testi yapılmadı.
