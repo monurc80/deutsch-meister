@@ -8,9 +8,9 @@ window.EXTRA19_PHRASES=[
     "li": 2
   },
   {
-    "phrase": "Ich hätte gern einen Termin nächste Woche.",
+    "phrase": "Ich hätte gern einen Termin für nächste Woche.",
     "tr": "Gelecek hafta için randevu almak istiyorum.",
-    "example": "Ich hätte gern einen Termin nächste Woche, wenn möglich.",
+    "example": "Ich hätte gern einen Termin für nächste Woche, wenn möglich.",
     "level": "A2.1",
     "li": 2
   },
