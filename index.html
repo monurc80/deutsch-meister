@@ -91,6 +91,33 @@ function resetErrorRetry(){errorRetryFeedback='';errorRetrySubmitted=false;rende
 function cancelErrorRetry(){errorRetryId=null;errorRetryFeedback='';errorRetrySubmitted=false;render()}
 function errorRetryPrompt(item){const prompt=String(item?.prompt??'');if(item?.type!=='Dinleme'||prompt.includes('_____'))return prompt;const expected=String(item?.expected??'');if(!expected)return prompt;const lower=prompt.toLocaleLowerCase('de'),needle=expected.toLocaleLowerCase('de'),at=lower.indexOf(needle);return at<0?prompt:prompt.slice(0,at)+'_____'+prompt.slice(at+expected.length)}
 function speakErrorRetry(){const item=(data.errors||[]).find(e=>e.id===errorRetryId);if(!item)return;if(item.audioText){speak(item.audioText);return}const prompt=errorRetryPrompt(item),text=item.type==='Dinleme'&&prompt.includes('_____')?prompt.replace('_____',String(item.expected??'')):prompt;speak(text)}
+function markExerciseModuleProgress(item){
+ const type=String(item?.exerciseType||item?.type||'');
+ const levelValue=item?.level??item?.li,level=Number(levelValue);
+ if(!Number.isInteger(level)||level<0||level>=LEVELS.length)return false;
+ const prompt=String(item?.fullPrompt??item?.prompt??''),expected=String(item?.expected??item?.answer??'');
+ if(!prompt||!expected)return false;
+ let marked=0;
+ const same=(a,b)=>norm(a)===norm(b);
+ const mark=(moduleType,index)=>{
+  if(!data.moduleProgress||typeof data.moduleProgress!=='object')data.moduleProgress={};
+  if(!data.moduleProgress[moduleType]||typeof data.moduleProgress[moduleType]!=='object')data.moduleProgress[moduleType]={};
+  data.moduleProgress[moduleType][progressKey(moduleType,level,index)]=true;
+  marked++;
+ };
+ if(type==='Ders'){
+  (LESSON_BANK[level]||[]).forEach((x,i)=>{if(same(x.q,prompt)&&same(x.a,expected)){if(!data.lesson||typeof data.lesson!=='object')data.lesson={};data.lesson[LEVELS[level]+'-'+i]=true;marked++}});
+ }else if(type==='Dil bilgisi'){
+  (GRAMMAR_BANK[level]||[]).forEach((x,i)=>{if(same(x[3],prompt)&&same(x[2],expected))mark('grammar',i)});
+ }else if(type==='Konuşma'){
+  (DIALOG_BANK[level]||[]).forEach((x,i)=>{if(same(x[0],prompt)&&same(x[2],expected))mark('dialogue',i)});
+ }else if(type==='Dinleme'){
+  listeningItems(level).forEach((x,i)=>{if(same(x.text,prompt)&&same(listeningCloze(x.text).answer,expected))mark('listening',i)});
+ }else if(type==='Yazma'){
+  (window.SENTENCE_WRITING_BANK?.[level]||[]).forEach((x,i)=>{if(same(x.task+' ('+x.scenario+')',prompt)&&same(x.sample,expected))mark('writing',i)});
+ }
+ return marked>0;
+}
 function syncErrorRetryReview(item,correct){
  const level=Number.isInteger(Number(item?.level))?Number(item.level):data.level;
  if(item?.type==='Kelime'){
@@ -111,7 +138,7 @@ function syncErrorRetryReview(item,correct){
   if(!correct)data.missed[id]=(Number(data.missed[id])||0)+1;
   scheduleReview(phrase.phrase,!!correct,'phrase',phrase.li);return true;
  }
- if(item?.type==='Ders'||item?.type==='Dinleme'||item?.type==='Dil bilgisi'||item?.type==='Konuşma'||item?.type==='Yazma'||item?.type==='Sınav')return scheduleExerciseReview(item,correct);
+ if(item?.type==='Ders'||item?.type==='Dinleme'||item?.type==='Dil bilgisi'||item?.type==='Konuşma'||item?.type==='Yazma'||item?.type==='Sınav'){const scheduled=scheduleExerciseReview(item,correct);if(correct)markExerciseModuleProgress(item);return scheduled;}
  return false;
 }
 function submitErrorRetry(){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved),input=document.getElementById('errorRetryAnswer');if(!item||!input||errorRetrySubmitted)return;const answer=input.value.trim();if(!answer){alert('Önce yanıtını yaz.');return}const ok=norm(answer)===norm(item.expected),linkedToReview=syncErrorRetryReview(item,ok);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=new Date().toISOString();item.lastSeen=item.resolvedAt;errorRetryFeedback='<div class="feedback goodtext">✓ Doğru! Bu hata pekiştirilen kayıtlarına taşındı.'+(linkedToReview?' İlgili tekrar takvimi de güncellendi.':'')+'</div>'}else{recordError(item.type,item.level,item.prompt,item.expected,answer,{audioText:item.audioText});errorRetryFeedback='<div class="feedback badtext">✗ Henüz doğru değil.'+(linkedToReview?' Kart bugünkü kuyruğa döndü.':'')+' Beklenen yanıt: <b>'+esc(item.expected)+'</b></div>'}errorRetrySubmitted=true;save();render()}
@@ -133,8 +160,8 @@ function syncWordWritingRetry(item,correct){
  return true;
 }
 function showWritingErrorExample(){const item=(data.errors||[]).find(e=>e.id===errorRetryId);if(!item)return;errorRetryFeedback='<div class="feedback">Örnek yanıt: <b>'+esc(item.expected)+'</b></div>';render()}
-function submitWritingErrorRetry(ok){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved),input=document.getElementById('errorRetryAnswer');if(!item||item.type!=='Yazma'||errorRetrySubmitted)return;const answer=String(input?.value||'').trim();if(answer.length<4){alert('Önce Almanca cümleni yaz.');return}const linked=syncWordWritingRetry(item,!!ok)||scheduleExerciseReview({type:'Yazma',exerciseType:'Yazma',level:item.level,prompt:item.prompt,expected:item.expected},!!ok);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;item.given=answer;item.lastSeen=new Date().toISOString();if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=item.lastSeen;errorRetryFeedback='<div class="feedback goodtext">✓ Yazma çalışmasını pekiştirilmiş olarak işaretledin.'+(linked?' Tekrar takvimi ilerletildi.':'')+'</div>'}else{recordError('Yazma',item.level,item.prompt,item.expected,answer,{wordId:item.wordId});errorRetryFeedback='<div class="feedback badtext">↻ Bu yazma çalışması bugünkü tekrar listesinde kaldı.</div>'}errorRetrySubmitted=true;save();render()}
-function submitSpeakingErrorRetry(ok){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved);if(!item||item.type!=='Konuşma'||errorRetrySubmitted)return;const linked=scheduleExerciseReview({exerciseType:'Konuşma',type:'Konuşma',level:item.level,prompt:item.prompt,expected:item.expected},!!ok);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=new Date().toISOString();item.lastSeen=item.resolvedAt;errorRetryFeedback='<div class="feedback goodtext">✓ Konuşma tekrarını pekiştirilmiş olarak işaretledin.'+(linked?' Tekrar takvimi ilerletildi.':'')+'</div>'}else{recordError('Konuşma',item.level,item.prompt,item.expected,'Tekrar çalışmalıyım');errorRetryFeedback='<div class="feedback badtext">↻ Bu konuşma çalışması bugünkü tekrar listesinde kaldı.</div>'}errorRetrySubmitted=true;save();render()}
+function submitWritingErrorRetry(ok){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved),input=document.getElementById('errorRetryAnswer');if(!item||item.type!=='Yazma'||errorRetrySubmitted)return;const answer=String(input?.value||'').trim();if(answer.length<4){alert('Önce Almanca cümleni yaz.');return}const linked=syncWordWritingRetry(item,!!ok)||scheduleExerciseReview({type:'Yazma',exerciseType:'Yazma',level:item.level,prompt:item.prompt,expected:item.expected},!!ok);if(ok)markExerciseModuleProgress(item);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;item.given=answer;item.lastSeen=new Date().toISOString();if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=item.lastSeen;errorRetryFeedback='<div class="feedback goodtext">✓ Yazma çalışmasını pekiştirilmiş olarak işaretledin.'+(linked?' Tekrar takvimi ilerletildi.':'')+'</div>'}else{recordError('Yazma',item.level,item.prompt,item.expected,answer,{wordId:item.wordId});errorRetryFeedback='<div class="feedback badtext">↻ Bu yazma çalışması bugünkü tekrar listesinde kaldı.</div>'}errorRetrySubmitted=true;save();render()}
+function submitSpeakingErrorRetry(ok){const item=(data.errors||[]).find(e=>e.id===errorRetryId&&!e.resolved);if(!item||item.type!=='Konuşma'||errorRetrySubmitted)return;const linked=scheduleExerciseReview({exerciseType:'Konuşma',type:'Konuşma',level:item.level,prompt:item.prompt,expected:item.expected},!!ok);if(ok)markExerciseModuleProgress(item);daily();data.answered=(Number(data.answered)||0)+1;item.retryCount=(Number(item.retryCount)||0)+1;if(ok){data.correct=(Number(data.correct)||0)+1;item.resolved=true;item.resolvedAt=new Date().toISOString();item.lastSeen=item.resolvedAt;errorRetryFeedback='<div class="feedback goodtext">✓ Konuşma tekrarını pekiştirilmiş olarak işaretledin.'+(linked?' Tekrar takvimi ilerletildi.':'')+'</div>'}else{recordError('Konuşma',item.level,item.prompt,item.expected,'Tekrar çalışmalıyım');errorRetryFeedback='<div class="feedback badtext">↻ Bu konuşma çalışması bugünkü tekrar listesinde kaldı.</div>'}errorRetrySubmitted=true;save();render()}
 function daily(){let d=new Date().toLocaleDateString('sv-SE');if(data.day!==d){let prior=new Date();prior.setDate(prior.getDate()-1);let yesterday=prior.toLocaleDateString('sv-SE');data.streak=data.day===yesterday?data.streak+1:1;data.day=d;save()}}
 function speakCurrentCard(){let p=mode==='write'?pool():orderedCards();if(p.length)speak(p[idx%p.length].word)}
 function speakLesson(){let a=LESSON_BANK[data.level];speak(a[lessonStep%a.length].ex)}
@@ -205,7 +232,7 @@ function reviewQueueMark(ok){
  if(w.type==='exercise'){
   if(!ok)recordError(w.exerciseType,level,w.fullPrompt||w.prompt,w.answer,'Tekrar etmeliyim',{audioText:w.audioText});
   else resolveMatchingError(w.exerciseType,level,w.fullPrompt||w.prompt,w.answer);
-  scheduleExerciseReview({...w,prompt:w.fullPrompt||w.prompt,expected:w.answer},!!ok);
+  const exercise={...w,prompt:w.fullPrompt||w.prompt,expected:w.answer};scheduleExerciseReview(exercise,!!ok);if(ok)markExerciseModuleProgress(exercise);
   data.answered++;if(ok)data.correct++;
  }else{
   const pid=canonicalWordId(w.progressId);
