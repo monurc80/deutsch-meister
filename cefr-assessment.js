@@ -667,12 +667,12 @@ window.CEFR_ASSESSMENT_BANK = [
           "answer": 0
         },
         {
-          "prompt": "Früher ___ ich in Bonn.",
+          "prompt": "Früher ___ wir einen großen Garten.",
           "options": [
-            "wohnte",
-            "wohne",
-            "gewohnt",
-            "wohnen"
+            "hatten",
+            "haben",
+            "hattet",
+            "hatte"
           ],
           "answer": 0
         }
