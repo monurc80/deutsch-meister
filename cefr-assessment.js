@@ -736,7 +736,7 @@ window.CEFR_ASSESSMENT_BANK = [
           "answer": 1
         },
         {
-          "audio": "Obwohl ich früh losgefahren bin, habe ich den Anschlusszug verpasst.",
+          "audio": "Ich bin früh losgefahren, aber ich habe den Anschlusszug verpasst.",
           "prompt": "Was ist passiert?",
           "options": [
             "Die Person hat den Anschlusszug verpasst.",
