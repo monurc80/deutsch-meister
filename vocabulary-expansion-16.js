@@ -451,16 +451,16 @@ window.EXTRA16_WORDS=[
     "example": "Durch den Rabatt hatten wir eine große Ersparnis."
   },
   {
-    "word": "die Forschung",
-    "tr": "araştırma",
+    "word": "die Werkstatt",
+    "tr": "tamirhane; atölye",
     "level": "A2.2",
-    "example": "In der Forschung sucht man nach neuen Lösungen."
+    "example": "Mein Auto ist in der Werkstatt."
   },
   {
-    "word": "die Gerechtigkeit",
-    "tr": "adalet",
+    "word": "der Vorschlag",
+    "tr": "öneri",
     "level": "A2.2",
-    "example": "Gerechtigkeit ist für alle Menschen wichtig."
+    "example": "Ich habe einen Vorschlag für das Wochenende."
   },
   {
     "word": "die Herkunft",
@@ -481,10 +481,10 @@ window.EXTRA16_WORDS=[
     "example": "Ich interessiere mich für die Kultur des Landes."
   },
   {
-    "word": "die Persönlichkeit",
-    "tr": "kişilik",
+    "word": "der Besuch",
+    "tr": "ziyaret; misafir",
     "level": "A2.2",
-    "example": "Jeder Mensch hat eine eigene Persönlichkeit."
+    "example": "Am Samstag bekomme ich Besuch von meiner Schwester."
   },
   {
     "word": "die Reiseversicherung",
@@ -493,16 +493,16 @@ window.EXTRA16_WORDS=[
     "example": "Eine Reiseversicherung kann im Urlaub hilfreich sein."
   },
   {
-    "word": "die Selbstständigkeit",
-    "tr": "bağımsızlık; kendi işini yapma",
+    "word": "die Arbeitszeit",
+    "tr": "çalışma saatleri",
     "level": "A2.2",
-    "example": "Selbstständigkeit ist im Alltag sehr wichtig."
+    "example": "Meine Arbeitszeit beginnt um acht Uhr."
   },
   {
-    "word": "die Tatsache",
-    "tr": "olgu; gerçek",
+    "word": "die Unterlagen",
+    "tr": "belgeler; evraklar",
     "level": "A2.2",
-    "example": "Es ist eine Tatsache, dass wir mehr Zeit brauchen."
+    "example": "Bitte bringen Sie alle Unterlagen zum Termin mit."
   },
   {
     "word": "die Tätigkeit",
@@ -511,10 +511,10 @@ window.EXTRA16_WORDS=[
     "example": "Meine Tätigkeit ist interessant."
   },
   {
-    "word": "die Überlegung",
-    "tr": "düşünce",
+    "word": "die Zutat",
+    "tr": "yemek malzemesi",
     "level": "A2.2",
-    "example": "Nach langer Überlegung habe ich zugesagt."
+    "example": "Für die Suppe brauche ich drei Zutaten."
   },
   {
     "word": "die Umfrage",
@@ -523,10 +523,10 @@ window.EXTRA16_WORDS=[
     "example": "An der Umfrage haben hundert Personen teilgenommen."
   },
   {
-    "word": "die Unzufriedenheit",
-    "tr": "memnuniyetsizlik",
+    "word": "die Bezahlung",
+    "tr": "ödeme",
     "level": "A2.2",
-    "example": "Die Unzufriedenheit im Team ist groß."
+    "example": "Die Bezahlung ist direkt an der Kasse möglich."
   },
   {
     "word": "die Veränderung",
@@ -553,10 +553,10 @@ window.EXTRA16_WORDS=[
     "example": "Die Wirtschaft des Landes wächst langsam."
   },
   {
-    "word": "die Wissenschaft",
-    "tr": "bilim",
+    "word": "der Wettbewerb",
+    "tr": "yarışma",
     "level": "A2.2",
-    "example": "Die Wissenschaft entwickelt ständig neue Methoden."
+    "example": "Mein Sohn nimmt an einem Wettbewerb teil."
   },
   {
     "word": "die Abwechslung",
@@ -601,10 +601,10 @@ window.EXTRA16_WORDS=[
     "example": "Eine kleine Minderheit war gegen den Vorschlag."
   },
   {
-    "word": "die Rücksichtnahme",
-    "tr": "başkalarını dikkate alma",
+    "word": "die Abholung",
+    "tr": "teslim alma; gelip alma",
     "level": "A2.2",
-    "example": "Rücksichtnahme ist im Straßenverkehr besonders wichtig."
+    "example": "Die Abholung des Pakets ist ab 16 Uhr möglich."
   },
   {
     "word": "die Selbsthilfe",
@@ -613,34 +613,34 @@ window.EXTRA16_WORDS=[
     "example": "Die Selbsthilfegruppe trifft sich jeden Dienstag."
   },
   {
-    "word": "die Teilnahmebedingung",
-    "tr": "katılım koşulu",
+    "word": "die Übernachtung",
+    "tr": "geceleme",
     "level": "A2.2",
-    "example": "Eine Teilnahmebedingung ist die Anmeldung bis Freitag."
+    "example": "Die Übernachtung im Hotel kostet 80 Euro."
   },
   {
-    "word": "die Verpflichtung",
-    "tr": "yükümlülük",
+    "word": "die Übersetzung",
+    "tr": "çeviri",
     "level": "A2.2",
-    "example": "Aus dem Vertrag entsteht eine Verpflichtung."
+    "example": "Ich brauche eine Übersetzung von diesem Brief."
   },
   {
-    "word": "die Wahrscheinlichkeit",
-    "tr": "olasılık",
+    "word": "der Service",
+    "tr": "hizmet",
     "level": "A2.2",
-    "example": "Die Wahrscheinlichkeit für Regen ist heute hoch."
+    "example": "Der Service in diesem Hotel ist sehr gut."
   },
   {
-    "word": "die Wahrnehmung",
-    "tr": "algı, algılama",
+    "word": "die Reisegruppe",
+    "tr": "seyahat grubu",
     "level": "A2.2",
-    "example": "Jeder Mensch hat eine andere Wahrnehmung."
+    "example": "Unsere Reisegruppe fährt morgen nach Wien."
   },
   {
-    "word": "die Wertschätzung",
-    "tr": "değer verme, takdir",
+    "word": "die Erklärung",
+    "tr": "açıklama",
     "level": "A2.2",
-    "example": "Ich zeige meinen Kollegen Wertschätzung."
+    "example": "Danke für die Erklärung. Jetzt verstehe ich alles."
   },
   {
     "word": "die Wiederholung",
