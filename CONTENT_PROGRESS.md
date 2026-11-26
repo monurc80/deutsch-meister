@@ -245,3 +245,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - HTML script sürümü `v2`, Service Worker önbellek sürümü `deutsch-meister-shell-v3` yapıldı; çevrimdışı kurulumda güncel kalıp paketi önbelleğe alınır.
 - Kontroller: A1–A2 kalıp paketlerinde 490 kayıt, alt seviye dağılımı (A1.1 110, A1.2 119, A2.1 127, A2.2 134) ve yinelenen ifade bulunmaması yeniden kontrol edildi. Güncellenen dosya, HTML içi JavaScript, Service Worker sözdizimi, 46 çevrimdışı kaynak ve sürüm referansları kontrol edildi.
 - Yerel ilerleme anahtarı, kalıp kimlikleri, kullanıcı verisi, Supabase senkronizasyonu ve B1–B2 içerikleri değiştirilmedi. Gerçek tarayıcı/cihaz ve Supabase uçtan uca testi yapılmadı.
+
+
+## 26 Kasım 2026 — Kelime yazma hatalarının akıllı tekrara bağlanması
+
+- Kelime kartlarının yazma modunda oluşan `Yazma` hataları artık ilgili kelimenin kanonik kimliğiyle saklanıyor. Hata defterinden doğru tekrar yapıldığında aynı kelimenin `seen/known/missed` ilerlemesi ve kelime tekrar takvimi güncelleniyor; yanlış tekrar kelimeyi bugünkü kuyruğa döndürüyor.
+- Önceden kaydedilmiş `Yazma` hataları için geriye dönük uyumlu çıkarım eklendi: yalnızca soru ve beklenen yanıt aynı kelime olduğunda kelime kartına bağlanır. Serbest cümle yazma görevleri mevcut alıştırma tekrar sistemini kullanmaya devam eder.
+- Hata kaydına isteğe bağlı `wordId` alanı eklendi; mevcut kayıtların alanları, kullanıcı ilerleme anahtarları ve Supabase tablo yapısı değiştirilmedi.
+- Çevrimdışı kabuk önbelleği `v4` sürümüne yükseltildi; yeni tekrar düzeltmesi güncel Service Worker kurulumu sırasında çevrimdışı ana sayfaya da alınır.
+- Doğrulama: ana HTML içi JavaScript ve Service Worker sözdizimi kontrol edildi; yeni kayıt kimliği, eski kayıttan güvenli çıkarım, doğru/yanlış tekrar ve genel cümle yazma gerileme testleri başarılı. Gerçek tarayıcı ve Supabase hesabıyla uçtan uca test yapılmadı.
