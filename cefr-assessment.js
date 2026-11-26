@@ -647,12 +647,12 @@ window.CEFR_ASSESSMENT_BANK = [
           "answer": 0
         },
         {
-          "prompt": "Obwohl es regnet, ___ wir spazieren.",
+          "prompt": "Ich bin müde, aber ich ___ noch einkaufen.",
           "options": [
-            "gehen",
-            "geht",
             "gehe",
-            "gehst"
+            "geht",
+            "gehst",
+            "gehen"
           ],
           "answer": 0
         },
