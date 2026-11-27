@@ -279,3 +279,13 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - 110 kelimelik bankanın kayıt sayısı ve sırası değişmedi. Uygulama kimlikleri kayıt sırasından üretildiği için kelime kimlikleri ve mevcut ilerleme anahtarları korundu.
 - Erişilebilir seviye toplamları A1.1: 373, A1.2: 256, A2.1: 211, A2.2: 220 olarak güncellendi. Genel toplam 1.799 olarak kaldı.
 - Bu yerleşimler pedagojik düzey tahminidir; resmî CEFR/Goethe sertifikasyonu iddiası değildir.
+
+
+## 27 Kasım — Hata defterinden manuel pekiştirmenin tekrar takvimine bağlanması
+
+- Açık hata kaydındaki “Pekiştirdim” eylemi artık yalnızca hatayı kapatmaz; ilgili kelime, kalıp veya alıştırmayı doğru tekrar olarak mevcut aralıklı tekrar sistemine de işler.
+- Kelime ve kalıplarda mevcut seen / known ilerlemesi güncellenir ve 1–3–7–14–30–60 günlük tekrar takviminin ilk uygun aralığı başlatılır. Alıştırma türlerinde mevcut exercise:* kaydı ve eşleşebilen modül ilerlemesi kullanılır.
+- wordId taşıyan veya eski kayıtlardan güvenle eşleştirilebilen kelime yazma hataları, serbest yazma alıştırması gibi değil ilgili kanonik kelime kartı üzerinden ilerletilir.
+- Aynı hata için yinelenen tıklama tekrar sayısını artırmaz. Eşleşmeyen eski/özel hata kayıtları silinmez; mevcut hata defteri davranışıyla kapatılabilir.
+- Yerel ilerleme anahtarları, data.errors / data.review yapısı, Supabase şeması ve mevcut kimlikler değiştirilmedi; zorunlu veri migrasyonu yoktur. Service Worker kabuk önbelleği v14 → v15 yapıldı.
+- Sentetik regresyon kontrolleri: kelime, kalıp, dil bilgisi alıştırması, kelimeye bağlı yazma hatası, yinelenen tıklama ve eşleşmeyen eski kayıt senaryoları başarılı. Ana HTML inline JavaScript blokları ve Service Worker JavaScript sözdizimi kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
