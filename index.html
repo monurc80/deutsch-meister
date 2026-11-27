@@ -124,7 +124,7 @@ function markExerciseModuleProgress(item){
   conversationTurnEntries(level).forEach(entry=>{if(same(entry.turn.prompt,prompt)&&entry.turn.answers.some(answer=>same(answer,expected)))mark('dialogue',entry.progressIndex)});
  }else if(type==='Dinleme'){
   listeningItems(level).forEach((x,i)=>{if(same(x.text,prompt)&&same(listeningCloze(x.text).answer,expected))mark('listening',i)});
-  (window.PRONUNCIATION_DRILLS?.[level]||[]).forEach((x,i)=>{const pairPrompt='Ses ayrımı: '+x.focus+' ('+x.options.map(o=>o.word).join(' / ')+')';if(same(pairPrompt,prompt)&&x.options.some(o=>same(o.word,expected)))mark('pronunciation',i)});
+  (window.PRONUNCIATION_DRILLS?.[level]||[]).forEach((x,i)=>{const pairPrompt='Ses ayrımı: '+x.id+' — '+x.focus;if(same(pairPrompt,prompt)&&x.options.some(o=>same(o.word,expected)))mark('pronunciation',i)});
  }else if(type==='Yazma'){
   (window.SENTENCE_WRITING_BANK?.[level]||[]).forEach((x,i)=>{if(same(x.task+' ('+x.scenario+')',prompt)&&same(x.sample,expected))mark('writing',i)});
  }
@@ -752,7 +752,7 @@ function answerPronunciation(optionIndex){
  const items=pronunciationItems(),item=items[pronunciationIndex%items.length];if(!item||pronunciationAnswered)return;
  if(!pronunciationPlayed||pronunciationTarget<0){pronunciationFeedback='Önce kelimeyi dinle.';render();return}
  const selected=item.options[optionIndex],target=item.options[pronunciationTarget];if(!selected||!target)return;
- const prompt='Ses ayrımı: '+item.focus+' ('+item.options.map(o=>o.word).join(' / ')+')';
+ const prompt='Ses ayrımı: '+item.id+' — '+item.focus;
  const exercise={type:'Dinleme',exerciseType:'Dinleme',level:data.level,prompt,expected:target.word,audioText:target.word};
  const correct=optionIndex===pronunciationTarget;
  if(correct){setModuleDone('pronunciation',data.level,pronunciationIndex);scheduleExerciseReview(exercise,true);resolveMatchingError('Dinleme',data.level,prompt,target.word);pronunciationFeedback='✓ Doğru! Duyduğun kelime: '+target.word+'. Tekrar takvimine eklendi.'}
