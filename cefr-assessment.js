@@ -7,12 +7,12 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „der Bahnhof“?",
           "options": [
-            "Tren istasyonu",
             "Havalimanı",
             "Hastane",
+            "Tren istasyonu",
             "Okul"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Welche Begrüßung passt am Morgen?",
@@ -27,34 +27,34 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was kaufst du normalerweise beim Bäcker?",
           "options": [
-            "Ein Brot",
             "Ein Ticket",
             "Ein Bett",
-            "Eine Fahrkarte"
+            "Eine Fahrkarte",
+            "Ein Brot"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Was bedeutet „heute“?",
           "options": [
-            "bugün",
             "yarın",
+            "bugün",
             "dün",
             "şimdi"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "grammar": [
         {
           "prompt": "Ich ___ 13 Jahre alt.",
           "options": [
-            "bin",
             "bist",
             "ist",
+            "bin",
             "sind"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Das ist ___ Mutter.",
@@ -69,22 +69,22 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Wir ___ aus der Türkei.",
           "options": [
-            "kommen",
             "kommt",
             "komme",
-            "kommst"
+            "kommst",
+            "kommen"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "___ du in Berlin?",
           "options": [
-            "Wohnst",
             "Wohnt",
+            "Wohnst",
             "Wohne",
             "Wohnen"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "reading": [
@@ -103,12 +103,12 @@ window.CEFR_ASSESSMENT_BANK = [
           "context": "Hallo! Ich bin Leon. Ich bin 14 Jahre alt und wohne in Bonn. Jeden Morgen fahre ich mit dem Bus zur Schule. Am Nachmittag spiele ich Fußball.",
           "prompt": "Wo wohnt Leon?",
           "options": [
-            "In Berlin",
             "In Bonn",
+            "In Berlin",
             "In Hamburg",
             "In Wien"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "context": "Hallo! Ich bin Leon. Ich bin 14 Jahre alt und wohne in Bonn. Jeden Morgen fahre ich mit dem Bus zur Schule. Am Nachmittag spiele ich Fußball.",
@@ -116,21 +116,21 @@ window.CEFR_ASSESSMENT_BANK = [
           "options": [
             "Mit dem Fahrrad",
             "Mit dem Zug",
-            "Mit dem Bus",
-            "Zu Fuß"
+            "Zu Fuß",
+            "Mit dem Bus"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "context": "Hallo! Ich bin Leon. Ich bin 14 Jahre alt und wohne in Bonn. Jeden Morgen fahre ich mit dem Bus zur Schule. Am Nachmittag spiele ich Fußball.",
           "prompt": "Was macht Leon am Nachmittag?",
           "options": [
-            "Er spielt Fußball.",
             "Er kocht.",
+            "Er spielt Fußball.",
             "Er liest.",
             "Er arbeitet."
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "listening": [
@@ -139,11 +139,11 @@ window.CEFR_ASSESSMENT_BANK = [
           "prompt": "Wann fährt der Bus?",
           "options": [
             "Um sieben Uhr",
-            "Um acht Uhr",
             "Um neun Uhr",
+            "Um acht Uhr",
             "Um zehn Uhr"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "audio": "Anna kauft zwei Brötchen und einen Kaffee.",
@@ -162,10 +162,10 @@ window.CEFR_ASSESSMENT_BANK = [
           "options": [
             "In München",
             "In Bonn",
-            "In Hamburg",
-            "In Köln"
+            "In Köln",
+            "In Hamburg"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "audio": "Heute ist Dienstag.",
@@ -203,12 +203,12 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „der Fahrplan“?",
           "options": [
-            "Sefer tarifesi",
             "Alışveriş listesi",
             "Kimlik kartı",
+            "Sefer tarifesi",
             "Ders kitabı"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Wo kaufst du Medikamente?",
@@ -223,34 +223,34 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was fragst du im Geschäft?",
           "options": [
-            "Was kostet das?",
             "Wie spät ist es gestern?",
             "Wo wohnst du morgen?",
-            "Wie heißt dein Bruder gestern?"
+            "Wie heißt dein Bruder gestern?",
+            "Was kostet das?"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Was bedeutet „um halb acht“?",
           "options": [
-            "07.30",
             "07.15",
+            "07.30",
             "08.30",
             "08.15"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "grammar": [
         {
           "prompt": "Ich besuche ___ Großmutter am Sonntag.",
           "options": [
-            "meine",
             "mein",
             "meinen",
+            "meine",
             "meinem"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Du ___ heute für die Prüfung lernen.",
@@ -265,22 +265,22 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Ich rufe dich heute Abend ___.",
           "options": [
-            "an",
             "auf",
             "aus",
-            "ein"
+            "ein",
+            "an"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Am Samstag ___ ich meine Freunde.",
           "options": [
-            "besuche",
             "besucht",
+            "besuche",
             "besuchen",
             "besuchst"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "reading": [
@@ -289,33 +289,33 @@ window.CEFR_ASSESSMENT_BANK = [
           "prompt": "Wann kommt Ninas Zug an?",
           "options": [
             "Um 9.20 Uhr",
-            "Um 10.20 Uhr",
             "Um 10.30 Uhr",
+            "Um 10.20 Uhr",
             "Um 11.20 Uhr"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "context": "Hallo Sara, mein Zug kommt am Samstag um 10.20 Uhr in Köln an. Treffen wir uns um 10.30 Uhr vor dem Bahnhof? Danach können wir zusammen frühstücken. Bitte bring das Buch mit. Viele Grüße, Nina",
           "prompt": "Wo möchte Nina Sara treffen?",
           "options": [
-            "Im Café",
             "Vor dem Bahnhof",
+            "Im Café",
             "Im Museum",
             "Zu Hause"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "context": "Hallo Sara, mein Zug kommt am Samstag um 10.20 Uhr in Köln an. Treffen wir uns um 10.30 Uhr vor dem Bahnhof? Danach können wir zusammen frühstücken. Bitte bring das Buch mit. Viele Grüße, Nina",
           "prompt": "Was soll Sara mitbringen?",
           "options": [
-            "Das Buch",
             "Die Fahrkarte",
             "Einen Kuchen",
-            "Eine Tasche"
+            "Eine Tasche",
+            "Das Buch"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "context": "Hallo Sara, mein Zug kommt am Samstag um 10.20 Uhr in Köln an. Treffen wir uns um 10.30 Uhr vor dem Bahnhof? Danach können wir zusammen frühstücken. Bitte bring das Buch mit. Viele Grüße, Nina",
@@ -335,11 +335,11 @@ window.CEFR_ASSESSMENT_BANK = [
           "prompt": "Wann schließt der Supermarkt?",
           "options": [
             "Um 18.00 Uhr",
-            "Um 18.30 Uhr",
             "Um 19.30 Uhr",
+            "Um 18.30 Uhr",
             "Um 20.00 Uhr"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "audio": "Für die Reise brauche ich meinen Pass und eine Fahrkarte.",
@@ -358,21 +358,21 @@ window.CEFR_ASSESSMENT_BANK = [
           "options": [
             "Gleis zwei",
             "Gleis drei",
-            "Gleis vier",
-            "Gleis fünf"
+            "Gleis fünf",
+            "Gleis vier"
           ],
-          "answer": 2
+          "answer": 3
         },
         {
           "audio": "Am Freitag habe ich keine Zeit. Können wir uns am Samstag treffen?",
           "prompt": "An welchem Tag möchte die Person sich treffen?",
           "options": [
             "Am Donnerstag",
-            "Am Freitag",
             "Am Samstag",
+            "Am Freitag",
             "Am Sonntag"
           ],
-          "answer": 2
+          "answer": 1
         }
       ]
     },
@@ -400,12 +400,12 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „die Verspätung“?",
           "options": [
-            "Gecikme",
             "Randevu",
             "İndirim",
+            "Gecikme",
             "Başvuru"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Was bedeutet „einen Termin vereinbaren“?",
@@ -420,34 +420,34 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „sich erkälten“?",
           "options": [
-            "Soğuk algınlığına yakalanmak",
             "İşe başlamak",
             "Yolunu kaybetmek",
-            "Erken uyanmak"
+            "Erken uyanmak",
+            "Soğuk algınlığına yakalanmak"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Was bedeutet „die Umgebung“?",
           "options": [
-            "Çevre, yakın çevre",
             "Gelecek hafta",
+            "Çevre, yakın çevre",
             "Başvuru formu",
             "Toplantı saati"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "grammar": [
         {
           "prompt": "Gestern ___ ich meine Tante besucht.",
           "options": [
-            "habe",
             "bin",
             "hat",
+            "habe",
             "ist"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Ich helfe ___ Nachbarin.",
@@ -462,22 +462,22 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Er interessiert ___ für Musik.",
           "options": [
-            "sich",
             "mich",
             "dich",
-            "uns"
+            "uns",
+            "sich"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "___ das Wetter gut ist, fahren wir ans Meer.",
           "options": [
-            "Wenn",
             "Weil",
+            "Wenn",
             "Dass",
             "Ob"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "reading": [
@@ -485,45 +485,45 @@ window.CEFR_ASSESSMENT_BANK = [
           "context": "Liebe Emma, am Wochenende war ich in Leipzig. Am Samstag bin ich mit dem Zug gefahren und habe zuerst die Altstadt besucht. Danach habe ich im Museum eine Ausstellung gesehen. Am Sonntag habe ich meine Cousine getroffen. Am Abend bin ich müde, aber sehr zufrieden nach Hause gefahren. Viele Grüße, Nina",
           "prompt": "Wohin ist Nina am Wochenende gefahren?",
           "options": [
-            "Nach Leipzig",
             "Nach Dresden",
             "Nach Hamburg",
+            "Nach Leipzig",
             "Nach Bonn"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "context": "Liebe Emma, am Wochenende war ich in Leipzig. Am Samstag bin ich mit dem Zug gefahren und habe zuerst die Altstadt besucht. Danach habe ich im Museum eine Ausstellung gesehen. Am Sonntag habe ich meine Cousine getroffen. Am Abend bin ich müde, aber sehr zufrieden nach Hause gefahren. Viele Grüße, Nina",
           "prompt": "Wie ist Nina gereist?",
           "options": [
-            "Mit dem Auto",
             "Mit dem Zug",
+            "Mit dem Auto",
             "Mit dem Fahrrad",
             "Mit dem Flugzeug"
           ],
-          "answer": 1
+          "answer": 0
         },
         {
           "context": "Liebe Emma, am Wochenende war ich in Leipzig. Am Samstag bin ich mit dem Zug gefahren und habe zuerst die Altstadt besucht. Danach habe ich im Museum eine Ausstellung gesehen. Am Sonntag habe ich meine Cousine getroffen. Am Abend bin ich müde, aber sehr zufrieden nach Hause gefahren. Viele Grüße, Nina",
           "prompt": "Was hat Nina im Museum gemacht?",
           "options": [
-            "Sie hat eine Ausstellung gesehen.",
             "Sie hat ihre Cousine getroffen.",
             "Sie hat gearbeitet.",
-            "Sie hat eingekauft."
+            "Sie hat eingekauft.",
+            "Sie hat eine Ausstellung gesehen."
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "context": "Liebe Emma, am Wochenende war ich in Leipzig. Am Samstag bin ich mit dem Zug gefahren und habe zuerst die Altstadt besucht. Danach habe ich im Museum eine Ausstellung gesehen. Am Sonntag habe ich meine Cousine getroffen. Am Abend bin ich müde, aber sehr zufrieden nach Hause gefahren. Viele Grüße, Nina",
           "prompt": "Wen hat Nina am Sonntag getroffen?",
           "options": [
             "Ihre Lehrerin",
-            "Ihre Schwester",
             "Ihre Cousine",
+            "Ihre Schwester",
             "Ihre Freundin"
           ],
-          "answer": 2
+          "answer": 1
         }
       ],
       "listening": [
@@ -553,23 +553,23 @@ window.CEFR_ASSESSMENT_BANK = [
           "audio": "Der Arzttermin ist am Mittwoch um halb elf.",
           "prompt": "Wann ist der Arzttermin?",
           "options": [
-            "Mittwoch um 10.30 Uhr",
             "Mittwoch um 11.30 Uhr",
             "Donnerstag um 10.30 Uhr",
-            "Dienstag um 10.00 Uhr"
+            "Dienstag um 10.00 Uhr",
+            "Mittwoch um 10.30 Uhr"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "audio": "Bitte bringen Sie Ihre Versicherungskarte und die Liste Ihrer Medikamente mit.",
           "prompt": "Was soll man mitbringen?",
           "options": [
-            "Versicherungskarte und Medikamentenliste",
             "Reisepass und Fahrkarte",
+            "Versicherungskarte und Medikamentenliste",
             "Geld und Schlüssel",
             "Buch und Notizheft"
           ],
-          "answer": 0
+          "answer": 1
         }
       ]
     },
@@ -597,12 +597,12 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „die Rückerstattung“?",
           "options": [
-            "Para iadesi",
             "İş görüşmesi",
             "Gecikme",
+            "Para iadesi",
             "Ulaşım kartı"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Was bedeutet „die Voraussetzung“?",
@@ -617,34 +617,34 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Was bedeutet „die Entscheidung“?",
           "options": [
-            "Karar",
             "Davetiye",
             "Fatura",
-            "Alışkanlık"
+            "Alışkanlık",
+            "Karar"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Was bedeutet „sich beschweren“?",
           "options": [
-            "Şikâyet etmek",
             "Tebrik etmek",
+            "Şikâyet etmek",
             "Taşınmak",
             "Öneri kabul etmek"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "grammar": [
         {
           "prompt": "Ich glaube, dass er heute ___ .",
           "options": [
-            "kommt",
             "kommen",
             "kommst",
+            "kommt",
             "komme"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "prompt": "Ich bin müde, aber ich ___ noch einkaufen.",
@@ -659,22 +659,22 @@ window.CEFR_ASSESSMENT_BANK = [
         {
           "prompt": "Das Auto ist ___ als das Fahrrad.",
           "options": [
-            "schneller",
             "schnell",
             "am schnellsten",
-            "schnelle"
+            "schnelle",
+            "schneller"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "prompt": "Früher ___ wir einen großen Garten.",
           "options": [
-            "hatten",
             "haben",
+            "hatten",
             "hattet",
             "hatte"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "reading": [
@@ -682,12 +682,12 @@ window.CEFR_ASSESSMENT_BANK = [
           "context": "Sehr geehrte Damen und Herren, ich habe am 12. Mai einen Kopfhörer bei Ihnen bestellt. Das Paket ist zwar angekommen, aber ein Teil fehlt. Ich bitte Sie deshalb um eine Ersatzlieferung oder eine Rückerstattung. Bitte informieren Sie mich bis Ende der Woche über die nächsten Schritte. Mit freundlichen Grüßen, Lara Demir",
           "prompt": "Was hat Lara bestellt?",
           "options": [
-            "Einen Kopfhörer",
             "Ein Handy",
             "Einen Laptop",
+            "Einen Kopfhörer",
             "Eine Kamera"
           ],
-          "answer": 0
+          "answer": 2
         },
         {
           "context": "Sehr geehrte Damen und Herren, ich habe am 12. Mai einen Kopfhörer bei Ihnen bestellt. Das Paket ist zwar angekommen, aber ein Teil fehlt. Ich bitte Sie deshalb um eine Ersatzlieferung oder eine Rückerstattung. Bitte informieren Sie mich bis Ende der Woche über die nächsten Schritte. Mit freundlichen Grüßen, Lara Demir",
@@ -704,23 +704,23 @@ window.CEFR_ASSESSMENT_BANK = [
           "context": "Sehr geehrte Damen und Herren, ich habe am 12. Mai einen Kopfhörer bei Ihnen bestellt. Das Paket ist zwar angekommen, aber ein Teil fehlt. Ich bitte Sie deshalb um eine Ersatzlieferung oder eine Rückerstattung. Bitte informieren Sie mich bis Ende der Woche über die nächsten Schritte. Mit freundlichen Grüßen, Lara Demir",
           "prompt": "Welche Lösung schlägt Lara vor?",
           "options": [
-            "Ersatzlieferung oder Rückerstattung",
             "Eine neue Bestellung ohne Bezahlung",
             "Eine telefonische Beratung",
-            "Eine spätere Lieferung"
+            "Eine spätere Lieferung",
+            "Ersatzlieferung oder Rückerstattung"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "context": "Sehr geehrte Damen und Herren, ich habe am 12. Mai einen Kopfhörer bei Ihnen bestellt. Das Paket ist zwar angekommen, aber ein Teil fehlt. Ich bitte Sie deshalb um eine Ersatzlieferung oder eine Rückerstattung. Bitte informieren Sie mich bis Ende der Woche über die nächsten Schritte. Mit freundlichen Grüßen, Lara Demir",
           "prompt": "Bis wann möchte Lara eine Information?",
           "options": [
-            "Bis Ende der Woche",
             "Bis morgen früh",
+            "Bis Ende der Woche",
             "Bis zum Monatsende",
             "Bis nächste Woche"
           ],
-          "answer": 0
+          "answer": 1
         }
       ],
       "listening": [
@@ -729,11 +729,11 @@ window.CEFR_ASSESSMENT_BANK = [
           "prompt": "Wann beginnt die Veranstaltung?",
           "options": [
             "Um 19.00 Uhr",
-            "Um 19.30 Uhr",
             "Um 20.00 Uhr",
+            "Um 19.30 Uhr",
             "Um 18.30 Uhr"
           ],
-          "answer": 1
+          "answer": 2
         },
         {
           "audio": "Ich bin früh losgefahren, aber ich habe den Anschlusszug verpasst.",
@@ -750,23 +750,23 @@ window.CEFR_ASSESSMENT_BANK = [
           "audio": "Bitte schicken Sie uns die fehlenden Unterlagen spätestens bis kommenden Freitag.",
           "prompt": "Bis wann sollen die Unterlagen geschickt werden?",
           "options": [
-            "Bis kommenden Freitag",
             "Bis heute Abend",
             "Bis nächsten Monat",
-            "Bis kommenden Montag"
+            "Bis kommenden Montag",
+            "Bis kommenden Freitag"
           ],
-          "answer": 0
+          "answer": 3
         },
         {
           "audio": "Ich würde den Termin gern verschieben, weil ich am Donnerstag beruflich unterwegs bin.",
           "prompt": "Warum möchte die Person den Termin verschieben?",
           "options": [
-            "Sie ist am Donnerstag beruflich unterwegs.",
             "Sie ist krank.",
+            "Sie ist am Donnerstag beruflich unterwegs.",
             "Sie hat den Termin vergessen.",
             "Sie fährt in den Urlaub."
           ],
-          "answer": 0
+          "answer": 1
         }
       ]
     },
