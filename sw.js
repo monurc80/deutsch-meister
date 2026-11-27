@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-meister-shell-v15';
+const CACHE_NAME='deutsch-meister-shell-v16';
 const APP_ASSETS=[
   "./",
   "./index.html",
