@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-meister-shell-v19';
+const CACHE_NAME='deutsch-meister-shell-v20';
 const APP_ASSETS=[
   "./",
   "./index.html",

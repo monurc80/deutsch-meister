@@ -420,6 +420,7 @@ function evaluateConversationTurn(ok){
  scheduleExerciseReview(exercise,!!ok);daily();data.answered=(Number(data.answered)||0)+1;
  if(ok){
   data.correct=(Number(data.correct)||0)+1;
+  resolveMatchingError('Konuşma',data.level,turn.prompt,expected);
   setModuleDone('dialogue',data.level,conversationProgressIndex(data.level,conversationScenarioIndex,conversationTurnIndex));
   feedback='Yanıtını yeterli olarak değerlendirdin. Bu replik tamamlandı ve tekrar takvimine eklendi.';
  }else feedback='Bu replik hata defterine ve tekrar listene eklendi.';
