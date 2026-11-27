@@ -298,3 +298,14 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Eski ilk 5 senaryonun sırası ve indeksleri değişmedi; yeni kayıtlar her A1–A2 seviyesinin sonuna eklendi. Bu nedenle mevcut yazma ilerleme anahtarları korunur. B1–B2 yazma bankası aynen bırakıldı; yeni kelime/kalıp kimliği, Supabase alanı veya veri migrasyonu eklenmedi.
 - `sentence-writing.js` varlık referansı v3 → v4, Service Worker kabuk önbelleği v20 → v21 yapıldı.
 - Doğrulama: A1–A2 seviyelerinin her birinde 7, B1–B2 seviyelerinin her birinde 5 senaryo olduğu; B1–B2 verisinin değişmediği; zorunlu alanlar ve senaryo benzersizliği; ana HTML inline JavaScript blokları ve Service Worker sözdizimi kontrol edildi. Kelime sıralama için eksik seçim, doğru sıra, yanlış sıra, kelimeyi geri alma ve benzersiz parça havuzu sentetik testleri başarılı. Gerçek tarayıcı, iPhone ve Supabase oturumuyla uçtan uca test yapılmadı.
+
+
+## 27 Kasım A1–A2 karşılıklı konuşma senaryoları
+
+- Dalın güncel HTML dosyası `conversation-expansion.js?v=1` dosyasını yüklüyordu; ancak dosya depoda bulunmadığından rol yapma senaryoları boş dönüyor ve konuşma ekranı kısa soru moduna düşüyordu.
+- Eksik varlık yeniden oluşturuldu: A1.1, A1.2, A2.1 ve A2.2 seviyelerinin her birinde iki günlük senaryo ve üçer öğrenci repliği bulunur; toplam 8 senaryo ve 24 replik.
+- Her replikte Almanca soru, Türkçe anlam, en az iki kabul edilebilir örnek yanıt ve karşı tarafın devam cümlesi bulunur.
+- Eski kısa konuşma bankasının ilerleme indeksleri korunur; yeni rol yapma replikleri mevcut diyalog ilerleme anahtarlarının sonuna eklenir. Kullanıcı ilerlemesi veya Supabase veri şeması değiştirilmedi.
+- HTML varlık sürümü `v2`, Service Worker önbelleği `v22` yapıldı ve yeni dosya çevrimdışı varlık listesine eklendi.
+- JavaScript sözdizimi, 8 senaryo/24 replik veri yapısı, alternatif yanıtlar, seviye kapsamı, eski ilerleme indekslerinin korunması ve çevrimdışı dosya referansları doğrulandı.
+- Gerçek tarayıcı, mikrofon ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
