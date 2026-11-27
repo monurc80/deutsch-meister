@@ -1,4 +1,4 @@
-const CACHE_NAME='deutsch-meister-shell-v22';
+const CACHE_NAME='deutsch-meister-shell-v23';
 const APP_ASSETS=[
   "./",
   "./index.html",
@@ -41,12 +41,12 @@ const APP_ASSETS=[
   "./phrase-expansion-18.js?v=1",
   "./a1-a2-completion.js?v=1",
   "./conversation-expansion.js?v=2",
-  "./conversation-expansion.js?v=1",
   "./vocabulary-expansion-16.js?v=4",
   "./phrase-expansion-19.js?v=2",
   "./sentence-writing.js?v=4",
   "./cefr-assessment.js?v=4",
   "./b-cefr-assessment.js?v=1",
+  "./cefr-speaking.js?v=1",
   "./dashboard.js?v=1"
 ];
 self.addEventListener('install',event=>{

@@ -309,3 +309,16 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - HTML varlık sürümü `v2`, Service Worker önbelleği `v22` yapıldı ve yeni dosya çevrimdışı varlık listesine eklendi.
 - JavaScript sözdizimi, 8 senaryo/24 replik veri yapısı, alternatif yanıtlar, seviye kapsamı, eski ilerleme indekslerinin korunması ve çevrimdışı dosya referansları doğrulandı.
 - Gerçek tarayıcı, mikrofon ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
+
+
+## 27 Kasım — A1–A2 CEFR sınavına konuşma becerisinin eklenmesi
+
+- A1.1, A1.2, A2.1 ve A2.2 için seviyeye uygun birer sözlü anlatım görevi eklendi: kendini tanıtma, günlük rutin, geçmiş hafta sonu ve bir gecikmeyi açıklama. B1–B2 için yeni içerik eklenmedi; bu seviyelerdeki mevcut beş becerili sınav akışı korundu.
+- A1–A2 CEFR sınavı artık kelime, dil bilgisi, okuma, dinleme, konuşma ve yazma olmak üzere altı alanı ayrı ayrı gösterir. Her beceri 20 üzerinden raporlanır; genel sonuç altı alanın ortalaması alınarak 100 puana normalize edilir. Geçme koşulu tüm alanlarda en az 10/20 ve genel sonuçta en az 70/100 olarak korunur.
+- Konuşma görevi sözlü yanıt ve 0–4 öz değerlendirme gerektirir. Tarayıcı SpeechRecognition destekliyorsa isteğe bağlı transkript alınır; desteklemiyorsa öğrenci yanıtı cihazına sesli verip tamamlandı olarak işaretleyebilir. Transkript uzunluğu dışında ses veya transkript metni ilerleme kaydına yazılmaz. Bu mekanizma fonetik telaffuz veya otomatik dil doğruluğu puanı iddiasında bulunmaz.
+- Düşük konuşma öz değerlendirmesi mevcut hata defterine “Konuşma” türünde eklenir ve mevcut egzersiz tekrar takvimine bağlanır. Başarılı konuşma öz değerlendirmesi de tekrar planına kaydedilir.
+- Eski `data.cefrAssessments` sonuçları silinmedi veya dönüştürülmedi. Yeni A1–A2 sonuçları `assessmentVersion: 2` etiketi taşır. Önceki sonuçlarda bulunmayan konuşma becerisi “Bu sınav modelinde ölçülmedi” olarak gösterilir ve eski raporların zayıf alan önerisini yanlışlıkla sıfır konuşma puanına yönlendirmesi engellenir.
+- B1–B2 sınavlarında önceki beş becerili puanlama korunur; konuşma alanı henüz puanlanmaz. Beş becerili modelde genel puan hesabı önceki formülle matematiksel olarak aynı kalır.
+- Yerel kayıt anahtarı, mevcut `data.cefrAssessments` dizisi, `moduleProgress`, hata/tekrar kayıtları ve Supabase şeması değişmedi; veritabanı migrasyonu gerekmez. Çevrimdışı kabuk önbelleği v22 → v23 yükseltildi; yeni A1–A2 konuşma sınavı paketi önbelleğe eklendi ve eski kullanılmayan konuşma varlığı referansı kaldırıldı.
+- Kontroller: sekiz seviyenin mevcut 16 çoktan seçmeli soruları ve yazma görevleri; dört A1–A2 sözlü görevin alanları/seviye sırası; doğru yanıt indeksleri ve seçenek benzersizliği; altı becerili 100 puan, düşük konuşma puanında geçememe; B1–B2 eski beş becerili puanının aynı kalması; eski sonuç uyumluluğu; script/çevrimdışı varlık eşleşmesi; ana HTML inline JavaScript ve Service Worker sözdizimi doğrulandı. Sentetik puanlama regresyonları başarılı.
+- Gerçek tarayıcı, mikrofon, iPhone/Android ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
