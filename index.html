@@ -229,15 +229,50 @@ function setModuleDone(type,level,index){if(!data.moduleProgress)data.moduleProg
 function phraseItemsForLevel(level){const all=(window.B_PHRASES||[]).concat(window.EXTRA_PHRASES||[],window.EXTRA3_PHRASES||[],window.EXTRA4_PHRASES||[],window.EXTRA5_PHRASES||[],window.EXTRA6_PHRASES||[],window.EXTRA7_PHRASES||[],window.EXTRA8_PHRASES||[],window.EXTRA9_PHRASES||[],window.EXTRA10_PHRASES||[],window.EXTRA11_PHRASES||[],window.EXTRA12_PHRASES||[],window.EXTRA13_PHRASES||[],window.EXTRA14_PHRASES||[],window.EXTRA15_PHRASES||[],window.EXTRA16_PHRASES||[],window.EXTRA17_PHRASES||[],window.EXTRA18_PHRASES||[],window.EXTRA19_PHRASES||[]);const scoped=all.filter(p=>p.li===level),seen=new Set();return scoped.filter(p=>{const k=norm(p.phrase).replace(/[.!?;:]+$/,'');if(seen.has(k))return false;seen.add(k);return true})}
 function phraseProgressId(w){return reviewKey(w.phrase,'phrase',w.li)}
 function allPhraseItems(){return LEVELS.flatMap((_,li)=>phraseItemsForLevel(li).map(p=>({...p,li})))}
+function fairReviewOrder(items,rotation=0){
+ const groups=new Map();
+ (items||[]).forEach(item=>{
+  const due=String(item?.due||'');
+  if(!groups.has(due))groups.set(due,{word:[],phrase:[],exercise:[],other:[]});
+  const bucket=groups.get(due),type=['word','phrase','exercise'].includes(item?.type)?item.type:'other';
+  bucket[type].push(item);
+ });
+ const result=[],types=['word','phrase','exercise'],start=((Number(rotation)||0)%types.length+types.length)%types.length;
+ Array.from(groups.keys()).sort((a,b)=>a.localeCompare(b)).forEach(due=>{
+  const bucket=groups.get(due);
+  let left=types.reduce((sum,type)=>sum+bucket[type].length,0),cursor=start;
+  while(left>0){
+   let selected=-1;
+   for(let offset=0;offset<types.length;offset++){
+    const candidate=(cursor+offset)%types.length;
+    if(bucket[types[candidate]].length){selected=candidate;break;}
+   }
+   if(selected<0)break;
+   result.push(bucket[types[selected]].shift());
+   cursor=(selected+1)%types.length;
+   left--;
+  }
+  result.push(...bucket.other);
+ });
+ return result;
+}
 function reviewQueueItems(){
  const words=nwAll().filter(w=>isReviewDue(w.id,'word')).map(w=>({...w,type:'word',prompt:w.word,answer:w.tr,progressId:canonicalWordId(w.id),due:reviewRecord(w.id,'word')?.due||''}));
  const phrases=allPhraseItems().filter(p=>isReviewDue(p.phrase,'phrase',p.li)).map(p=>({...p,type:'phrase',prompt:p.phrase,answer:p.tr,progressId:phraseProgressId(p),due:reviewRecord(p.phrase,'phrase',p.li)?.due||''}));
  const exercises=Object.values(data.review||{}).filter(x=>x&&String(x.type||'').startsWith('exercise:')&&x.due&&x.due<=reviewToday()&&x.prompt&&x.answer).map(x=>{const exerciseType=x.exerciseType||String(x.type).slice(9);return {...x,type:'exercise',exerciseType,reviewType:x.type,li:Number(x.level)||0,fullPrompt:x.prompt,prompt:exerciseType==='Dinleme'?errorRetryPrompt({type:'Dinleme',prompt:x.prompt,expected:x.answer}):x.prompt,due:String(x.due)}});
- return words.concat(phrases,exercises).sort((a,b)=>String(a.due).localeCompare(String(b.due)));
+ const rotation=Number(reviewToday().slice(-2))%3;
+ return fairReviewOrder(words.concat(phrases,exercises),rotation);
+}
+function reviewQueueItemKey(item){
+ if(!item)return '';
+ if(item.type==='word')return reviewKey(item.progressId||item.id,'word');
+ if(item.type==='phrase')return phraseProgressId(item);
+ if(item.type==='exercise')return 'exercise:'+String(item.reviewType||'')+':'+String(item.li??'')+':'+String(item.reviewId||JSON.stringify([item.exerciseType,item.li,norm(item.fullPrompt||item.prompt),norm(item.answer)]));
+ return String(item.type)+':'+String(item.id||item.prompt||'');
 }
 function reviewQueueMark(ok){
  const items=reviewQueueItems();if(!items.length)return;
- const w=items[reviewIndex%items.length],level=Number.isInteger(w.li)?w.li:0;
+ const currentIndex=((reviewIndex%items.length)+items.length)%items.length,w=items[currentIndex],nextItem=items[(currentIndex+1)%items.length],nextKey=reviewQueueItemKey(nextItem),level=Number.isInteger(w.li)?w.li:0;
  if(w.type==='exercise'){
   if(!ok)recordError(w.exerciseType,level,w.fullPrompt||w.prompt,w.answer,'Tekrar etmeliyim',{audioText:w.audioText});
   else resolveMatchingError(w.exerciseType,level,w.fullPrompt||w.prompt,w.answer);
@@ -253,7 +288,10 @@ function reviewQueueMark(ok){
   if(!ok)data.missed[pid]=(data.missed[pid]||0)+1;
   data.answered++;if(ok)data.correct++;
  }
- daily();reviewIndex++;reviewRevealed=false;save();const remaining=reviewQueueItems();if(remaining.length)reviewIndex%=remaining.length;else reviewIndex=0;render();
+ daily();reviewRevealed=false;save();
+ const remaining=reviewQueueItems(),nextIndex=remaining.findIndex(item=>reviewQueueItemKey(item)===nextKey);
+ reviewIndex=nextIndex>=0?nextIndex:0;
+ render();
 }
 function reviewQueueView(){
  const items=reviewQueueItems();
