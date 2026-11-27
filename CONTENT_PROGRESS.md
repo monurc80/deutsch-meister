@@ -337,8 +337,9 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - A1.1, A1.2, A2.1 ve A2.2 seviyelerine beşer ses ayrımı çalışması eklendi; toplam 20 çalışma ve 40 farklı Almanca hedef kelime bulunur. Kısa/uzun ünlüler, umlautlar ve başlangıç ünsüzleri gibi temel ayrımlar çalışılır.
 - Yeni Telaffuz sekmesi, cihazın Almanca metin-seslendirme özelliğiyle her turda iki kelimeden birini rastgele okur. Öğrenci duyduğu kelimeyi seçer; doğru yanıtta örnek cümleleri dinleyebilir.
 - Yanlış seçimler mevcut hata defterine Dinleme türünde, hedef ses metniyle kaydedilir ve mevcut aralıklı tekrar kuyruğuna eklenir. Hata defterinden veya tekrar kuyruğundan doğru pekiştirme, ilgili telaffuz çalışmasının ilerlemesini de tamamlar.
+- Hata defteri ve tekrar istemlerinde kelime metnini doğrudan birleştirmek yerine sabit çalışma kimliği kullanılır; böylece Kamm/kam gibi bir kelimenin diğerinin içinde geçmesi yanlış boşluk oluşturmaz.
 - Çalışma yalnızca A1–A2 içindir. Fonetik doğruluk puanı iddia edilmez; tarayıcı SpeechRecognition veya yapay zekâ gerekmez. Seslendirme cihazın Almanca TTS sesine bağlıdır.
 - Yeni veri dosyası pronunciation-drills.js eklendi; index.html ve Service Worker güncellendi. Çevrimdışı kabuk önbelleği v26 → v27 oldu.
 - Veri kontrolleri: 4 seviye × 5 çalışma, 20 benzersiz çalışma kimliği, 40 benzersiz kelime, her seçenek için Türkçe anlam ve hedef kelimeyi içeren Almanca örnek cümle doğrulandı. Yeni veri dosyası, ana HTML içindeki iki inline JavaScript bloğu ve Service Worker sözdizimi kontrol edildi; HTML script referansı ve çevrimdışı önbellek girdisi eşleşti.
 - Mevcut moduleProgress, review ve errors alanları kullanıldı; Supabase tablo şeması, eski ilerleme anahtarları ve B1–B2 içerikleri değiştirilmedi. Gerçek tarayıcı, cihaz TTS sesi ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
-- Kod commit'leri: dba14ddab963fea8d6b234f74bff298ed1d74469, 70a7c868d416761ebecada0debc85352f1928695, b9155c1b3be8a7c756be915acd2713c3f95f17cc.
+- Kod commit'leri: dba14ddab963fea8d6b234f74bff298ed1d74469, 70a7c868d416761ebecada0debc85352f1928695, 23f49eb5fe282aec3e7d6ecbd4f6f6d72df7150f, b9155c1b3be8a7c756be915acd2713c3f95f17cc.
