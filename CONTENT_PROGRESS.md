@@ -289,3 +289,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Aynı hata için yinelenen tıklama tekrar sayısını artırmaz. Eşleşmeyen eski/özel hata kayıtları silinmez; mevcut hata defteri davranışıyla kapatılabilir.
 - Yerel ilerleme anahtarları, data.errors / data.review yapısı, Supabase şeması ve mevcut kimlikler değiştirilmedi; zorunlu veri migrasyonu yoktur. Service Worker kabuk önbelleği v14 → v15 yapıldı.
 - Sentetik regresyon kontrolleri: kelime, kalıp, dil bilgisi alıştırması, kelimeye bağlı yazma hatası, yinelenen tıklama ve eşleşmeyen eski kayıt senaryoları başarılı. Ana HTML inline JavaScript blokları ve Service Worker JavaScript sözdizimi kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
+
+## 27 Kasım — A1–A2 cümle kurma ve günlük yazma pratiği
+
+- A1.1, A1.2, A2.1 ve A2.2 yazma bankalarının her birine iki yeni günlük senaryo eklendi. Her seviyede 5 olan senaryo sayısı 7'ye çıktı; toplam 8 yeni görev telefon numarası sorma, aileyi tanıtma, market alışverişi, iş günü, doktora şikâyet anlatma, ev arama, gecikmeyi açıklama ve sinemaya davet konularını kapsıyor.
+- A1–A2 cümle kurma ekranına çevrimdışı çalışan kelime sıralama adımı eklendi. Öğrenci örnek cümlenin parçalarını dokunarak dizer, yanlış seçtiği parçayı geri alabilir, sıralamayı kontrol edip yeniden karıştırabilir; doğru sıralamadan sonra aynı cümleyi serbest metin alanında kendisi yazar.
+- Serbest yazma hâlâ öz değerlendirmeye dayanır; otomatik dil doğruluğu veya CEFR puanı üretilmez. Tamamlandı/tekrar kayıtları mevcut `moduleProgress.writing`, `data.errors` ve egzersiz tekrar takvimini kullanır.
+- Eski ilk 5 senaryonun sırası ve indeksleri değişmedi; yeni kayıtlar her A1–A2 seviyesinin sonuna eklendi. Bu nedenle mevcut yazma ilerleme anahtarları korunur. B1–B2 yazma bankası aynen bırakıldı; yeni kelime/kalıp kimliği, Supabase alanı veya veri migrasyonu eklenmedi.
+- `sentence-writing.js` varlık referansı v3 → v4, Service Worker kabuk önbelleği v20 → v21 yapıldı.
+- Doğrulama: A1–A2 seviyelerinin her birinde 7, B1–B2 seviyelerinin her birinde 5 senaryo olduğu; B1–B2 verisinin değişmediği; zorunlu alanlar ve senaryo benzersizliği; ana HTML inline JavaScript blokları ve Service Worker sözdizimi kontrol edildi. Kelime sıralama için eksik seçim, doğru sıra, yanlış sıra, kelimeyi geri alma ve benzersiz parça havuzu sentetik testleri başarılı. Gerçek tarayıcı, iPhone ve Supabase oturumuyla uçtan uca test yapılmadı.
