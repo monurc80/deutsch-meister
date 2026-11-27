@@ -322,3 +322,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Yerel kayıt anahtarı, mevcut `data.cefrAssessments` dizisi, `moduleProgress`, hata/tekrar kayıtları ve Supabase şeması değişmedi; veritabanı migrasyonu gerekmez. Çevrimdışı kabuk önbelleği v22 → v23 yükseltildi; yeni A1–A2 konuşma sınavı paketi önbelleğe eklendi ve eski kullanılmayan konuşma varlığı referansı kaldırıldı.
 - Kontroller: sekiz seviyenin mevcut 16 çoktan seçmeli soruları ve yazma görevleri; dört A1–A2 sözlü görevin alanları/seviye sırası; doğru yanıt indeksleri ve seçenek benzersizliği; altı becerili 100 puan, düşük konuşma puanında geçememe; B1–B2 eski beş becerili puanının aynı kalması; eski sonuç uyumluluğu; script/çevrimdışı varlık eşleşmesi; ana HTML inline JavaScript ve Service Worker sözdizimi doğrulandı. Sentetik puanlama regresyonları başarılı.
 - Gerçek tarayıcı, mikrofon, iPhone/Android ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
+
+## 27 Kasım — A1.1–A1.2 kelime kartlarında örnek cümle tamamlama
+
+- `vocabulary-expansion-2.js` içindeki 41, `vocabulary-expansion-3.js` içindeki 24 ve `vocabulary-expansion-4.js` içindeki 18 A1.1–A1.2 kelime kaydına toplam **83** kısa, doğal Almanca örnek cümle eklendi (A1.1: 29; A1.2: 54).
+- Kelime başlıkları, Türkçe karşılıklar, seviyeler, kayıt sayıları ve sıraları değiştirilmedi; mevcut kayıt indeksleri ve kullanıcı ilerleme anahtarları korundu. Yeni kelime veya kalıp eklenmedi.
+- HTML veri sürümleri sırasıyla v3, v3 ve v2 yapıldı; Service Worker çevrimdışı kabuğu v26'ya yükseltildi ve aynı sürümler önbellek listesine işlendi.
+- Doğrulama: üç bankanın JSON veri yapısı yeniden ayrıştırıldı; 83 hedef kaydın tamamında örnek cümle bulundu, A1.1/A1.2 kayıt sayıları ve sıraları korundu; HTML/Service Worker sürüm referansları ve çevrimdışı önbellek eşleşmesi doğrulandı. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
+- Kod commit'leri: `b8677abcd352ab7e82522650e91f86617bc10810`, `e551b41a141bb27a41b95a940167ca397feb0510`, `3ec1ab7854ed77d289e418b45a51822ac6d92613`, `2450fb9de4d7fa2e0124a0d61f883508f3d6ca40`, `45e2187a6b35a90b01ba676598dd56608d57b07a`.
