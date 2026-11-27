@@ -330,3 +330,15 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - HTML veri sürümleri sırasıyla v3, v3 ve v2 yapıldı; Service Worker çevrimdışı kabuğu v26'ya yükseltildi ve aynı sürümler önbellek listesine işlendi.
 - Doğrulama: üç bankanın JSON veri yapısı yeniden ayrıştırıldı; 83 hedef kaydın tamamında örnek cümle bulundu, A1.1/A1.2 kayıt sayıları ve sıraları korundu; HTML/Service Worker sürüm referansları ve çevrimdışı önbellek eşleşmesi doğrulandı. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
 - Kod commit'leri: `b8677abcd352ab7e82522650e91f86617bc10810`, `e551b41a141bb27a41b95a940167ca397feb0510`, `3ec1ab7854ed77d289e418b45a51822ac6d92613`, `2450fb9de4d7fa2e0124a0d61f883508f3d6ca40`, `45e2187a6b35a90b01ba676598dd56608d57b07a`.
+
+
+## 27 Kasım — A1–A2 telaffuz atölyesi
+
+- A1.1, A1.2, A2.1 ve A2.2 seviyelerine beşer ses ayrımı çalışması eklendi; toplam 20 çalışma ve 40 farklı Almanca hedef kelime bulunur. Kısa/uzun ünlüler, umlautlar ve başlangıç ünsüzleri gibi temel ayrımlar çalışılır.
+- Yeni Telaffuz sekmesi, cihazın Almanca metin-seslendirme özelliğiyle her turda iki kelimeden birini rastgele okur. Öğrenci duyduğu kelimeyi seçer; doğru yanıtta örnek cümleleri dinleyebilir.
+- Yanlış seçimler mevcut hata defterine Dinleme türünde, hedef ses metniyle kaydedilir ve mevcut aralıklı tekrar kuyruğuna eklenir. Hata defterinden veya tekrar kuyruğundan doğru pekiştirme, ilgili telaffuz çalışmasının ilerlemesini de tamamlar.
+- Çalışma yalnızca A1–A2 içindir. Fonetik doğruluk puanı iddia edilmez; tarayıcı SpeechRecognition veya yapay zekâ gerekmez. Seslendirme cihazın Almanca TTS sesine bağlıdır.
+- Yeni veri dosyası pronunciation-drills.js eklendi; index.html ve Service Worker güncellendi. Çevrimdışı kabuk önbelleği v26 → v27 oldu.
+- Veri kontrolleri: 4 seviye × 5 çalışma, 20 benzersiz çalışma kimliği, 40 benzersiz kelime, her seçenek için Türkçe anlam ve hedef kelimeyi içeren Almanca örnek cümle doğrulandı. Yeni veri dosyası, ana HTML içindeki iki inline JavaScript bloğu ve Service Worker sözdizimi kontrol edildi; HTML script referansı ve çevrimdışı önbellek girdisi eşleşti.
+- Mevcut moduleProgress, review ve errors alanları kullanıldı; Supabase tablo şeması, eski ilerleme anahtarları ve B1–B2 içerikleri değiştirilmedi. Gerçek tarayıcı, cihaz TTS sesi ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
+- Kod commit'leri: dba14ddab963fea8d6b234f74bff298ed1d74469, 70a7c868d416761ebecada0debc85352f1928695, b9155c1b3be8a7c756be915acd2713c3f95f17cc.
