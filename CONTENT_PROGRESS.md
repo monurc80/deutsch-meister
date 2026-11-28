@@ -380,3 +380,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Hata defterinde başarısız yeniden denemeler de mevcut `wordId` değerini korur. Yerel veri alanları, Supabase şeması, mevcut kullanıcı ilerlemesi ve kelime/kalıp tekrar anahtarları değiştirilmedi.
 - Doğrulama: içerik JSON ayrıştırma ve kayıt sayısı/sırası; kanonik eski kimlik ve prompt tabanlı eski kayıt için sentetik hata-tekrar regresyonları; kart/yeni kelime/akıllı tekrar hata kaydı kimlik bağlantıları; HTML inline JavaScript ve Service Worker sözdizimi; HTML–Service Worker sürüm eşleşmesi kontrol edildi.
 - Çevrimdışı kabuk önbelleği v31 → v32 yükseltildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
+
+
+## 28 Kasım — Kelime yazarak öğren modülünde hata defteri eşitlemesi
+
+- `checkWrite()` içinde doğru Almanca yanıt verildiğinde, aynı kelime için daha önce açılmış `Kelime` hataları (Türkçe anlam eşleşmesiyle) ve `Yazma` hataları (kelime + seviye eşleşmesiyle) çözülür. Yanlış kelime veya yanlış artikel bu kayıtları çözmez.
+- Mevcut `known/seen/missed`, aralıklı tekrar kaydı ve hata defteri alanları korunmuştur; yeni veri şeması veya Supabase değişikliği yoktur.
+- Regresyon testleri: doğru yanıt iki ilgili açık hata kaydını çözer; yanlış kelime ve yanlış artikel hiçbirini çözmez, yanlış sayacı/ilerleme davranışı korunur. Ana HTML inline JavaScript blokları ve Service Worker sözdizimi kontrol edildi.
+- Çevrimdışı kabuk önbelleği v32 → v33 yükseltildi. Gerçek cihaz ve Supabase uçtan uca testi henüz yapılmadı.
