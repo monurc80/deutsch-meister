@@ -1,6 +1,6 @@
 # Deutsch Meister — İçerik İlerleme Kaydı
 
-Son kontrol: 27 Kasım 2026
+Son kontrol: 28 Kasım 2026
 
 ## Hedefler ve mevcut durum
 
@@ -343,3 +343,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Veri kontrolleri: 4 seviye × 5 çalışma, 20 benzersiz çalışma kimliği, 40 benzersiz kelime, her seçenek için Türkçe anlam ve hedef kelimeyi içeren Almanca örnek cümle doğrulandı. Yeni veri dosyası, ana HTML içindeki iki inline JavaScript bloğu ve Service Worker sözdizimi kontrol edildi; HTML script referansı ve çevrimdışı önbellek girdisi eşleşti.
 - Mevcut moduleProgress, review ve errors alanları kullanıldı; Supabase tablo şeması, eski ilerleme anahtarları ve B1–B2 içerikleri değiştirilmedi. Gerçek tarayıcı, cihaz TTS sesi ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
 - Kod commit'leri: dba14ddab963fea8d6b234f74bff298ed1d74469, 70a7c868d416761ebecada0debc85352f1928695, 23f49eb5fe282aec3e7d6ecbd4f6f6d72df7150f, b9155c1b3be8a7c756be915acd2713c3f95f17cc.
+
+
+## 28 Kasım — A1–A2 kelime örnek cümlesi tamamlama denetimi
+
+- A1–A2 kapsamındaki ilk sekiz kelime genişletme bankasında 431 kayıt kontrol edildi; aynı alt seviyede yinelenen başlık bulunmadı.
+- `vocabulary-expansion-3.js` ve `vocabulary-expansion-4.js` dosyalarında örnek cümlesi eksik 34 A1–A2 kaydı tamamlandı (13 + 21). Bu iki dosyadaki toplam 76 A1–A2 kaydının tamamında artık Almanca örnek cümle bulunuyor.
+- Kelime başlıkları, Türkçe karşılıklar, seviyeler, kayıt sayısı ve sıra korunmuştur; yalnızca eksik `example` alanları eklendi. Yeni kelime veya ilerleme kimliği oluşturulmadı.
+- HTML ve Service Worker varlık referansları sırasıyla v4/v3 olarak güncellendi; çevrimdışı kabuk önbelleği v28 → v29 yükseltildi.
+- Kontroller: iki veri dizisi yeniden ayrıştırıldı; 34 hedef kaydın tamamı bulundu; diğer alanların ve kayıt sırasının değişmediği; iki dosyada A1–A2 örnek cümlesi eksiği kalmadığı; HTML/Service Worker sürüm referanslarının eşleştiği doğrulandı. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
