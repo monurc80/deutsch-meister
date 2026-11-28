@@ -6,24 +6,24 @@ Son kontrol: 28 Kasım 2026
 
 | İçerik | Hedef | Mevcut | İlerleme | Kalan |
 |---|---:|---:|---:|---:|
-| Benzersiz kelime başlıkları | 5.200 | 1.799 | %34,6 | 3.401 |
+| Benzersiz kelime başlıkları | 5.200 | 1.814 | %34,9 | 3.386 |
 | Benzersiz kalıp / ifade | 1.400 | 962 | %68,7 | 438 |
 
 ### Kelimeler — alt seviyelere göre
 
 | Alt seviye | Erişilebilir kelime |
 |---|---:|
-| A1.1 | 373 |
-| A1.2 | 256 |
-| A2.1 | 211 |
+| A1.1 | 378 |
+| A1.2 | 264 |
+| A2.1 | 213 |
 | A2.2 | 220 |
 | B1.1 | 180 |
 | B1.2 | 169 |
 | B2.1 | 185 |
 | B2.2 | 205 |
-| **Toplam** | **1.799** |
+| **Toplam** | **1.814** |
 
-Kelime bankalarında 1.733 kaynak kaydı bulunur. KAPITEL5 listesindeki 105 kayıt da korunur; uygulamanın mevcut birleştirme ve tekrar ayıklama mantığıyla toplam erişilebilir kelime sayısı 1.799'dur.
+Kelime bankalarında 1.733 kaynak kaydı bulunur. KAPITEL5 listesindeki 105 kayıt da korunur; uygulamanın mevcut birleştirme ve tekrar ayıklama mantığıyla toplam erişilebilir kelime sayısı 1.814'tür.
 
 ### Kalıplar — alt seviyelere göre
 
@@ -352,3 +352,14 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Kelime başlıkları, Türkçe karşılıklar, seviyeler, kayıt sayısı ve sıra korunmuştur; yalnızca eksik `example` alanları eklendi. Yeni kelime veya ilerleme kimliği oluşturulmadı.
 - HTML ve Service Worker varlık referansları sırasıyla v4/v3 olarak güncellendi; çevrimdışı kabuk önbelleği v28 → v29 yükseltildi.
 - Kontroller: iki veri dizisi yeniden ayrıştırıldı; 34 hedef kaydın tamamı bulundu; diğer alanların ve kayıt sırasının değişmediği; iki dosyada A1–A2 örnek cümlesi eksiği kalmadığı; HTML/Service Worker sürüm referanslarının eşleştiği doğrulandı. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
+
+
+## 28 Kasım — A1–A2 kelime bankasında yinelenen başlıkların güvenli temizliği
+
+- 16 kelime genişletme bankasındaki 706 A1–A2 kaydı aynı alt seviye ve artikelden bağımsız başlık normalizasyonuyla denetlendi. 15 fazla kayıt oluşturan yinelenen başlık bulundu: A1.1'de 5, A1.2'de 8, A2.1'de 2. Bu kayıtlar aynı seviyeye uygun, bankada daha önce bulunmayan 15 günlük kelimeyle değiştirildi; A1–A2 genişletme bankalarında artık aynı alt seviyede yinelenen başlık kalmadı.
+- Yeni kelimeler: A1.1 — der Kleiderbügel, die Türklingel, die Fernbedienung, die Zimmerpflanze, die Mülltonne; A1.2 — der Zebrastreifen, das Verkehrsschild, der Radweg, der Sicherheitsgurt, die Einbahnstraße, der Bahnübergang, die Fußgängerbrücke, der Gehweg; A2.1 — die Anfrage, die Wohnlage.
+- Her iki veri dosyasındaki kayıt sayısı, sıra ve seviye korundu. Yeni kelimelere sabit progressId verildi; böylece eski indeks tabanlı kimliklerin yeni kelimelere yanlışlıkla aktarılması önlendi.
+- Eski yinelenen kayıt kimlikleri için 15 açık alias eklendi. Yerel kayıt, yedek ve Supabase'den yüklenen ilerlemede eski known, seen, missed ve tekrar kayıtları önceki kanonik kelimeye taşınır; eski favoriler ve kelimeye bağlı hata kayıtları da aynı kanonik kimliğe yönlendirilir. Yeni kelimeler temiz ilerlemeyle başlar. Supabase tablo/şeması ve kullanıcı veri nesnesinin mevcut alanları değiştirilmedi.
+- A1.1 erişilebilir kelime sayısı 373 → 378, A1.2 256 → 264, A2.1 211 → 213 oldu; A1–A2 toplamı 1.060 → 1.075, genel erişilebilir toplam 1.799 → 1.814. Kalıp sayısı değişmedi.
+- Ana uygulama dosyası yeni sabit kimlikleri ve eski kimlik alias'larını kullanacak şekilde güncellendi. Veri dosyası sürümleri ve Service Worker önbelleği v29 → v30 yükseltildi.
+- Doğrulama: 706 A1–A2 genişletme kaydı, zorunlu alanlar ve örnek cümleler; aynı alt seviyede tekrar bulunmaması; yeni kimliklerin benzersizliği; 15 eski kimliğin kanonik eşlemesi; known/seen/missed/review/favorites/errors.wordId sentetik migrasyonu ve migrasyonun tekrar çalıştırıldığında değişiklik yapmaması; HTML/Service Worker varlık sürümleri kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
