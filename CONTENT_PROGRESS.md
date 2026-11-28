@@ -388,3 +388,11 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Mevcut `known/seen/missed`, aralıklı tekrar kaydı ve hata defteri alanları korunmuştur; yeni veri şeması veya Supabase değişikliği yoktur.
 - Regresyon testleri: doğru yanıt iki ilgili açık hata kaydını çözer; yanlış kelime ve yanlış artikel hiçbirini çözmez, yanlış sayacı/ilerleme davranışı korunur. Ana HTML inline JavaScript blokları ve Service Worker sözdizimi kontrol edildi.
 - Çevrimdışı kabuk önbelleği v32 → v33 yükseltildi. Gerçek cihaz ve Supabase uçtan uca testi henüz yapılmadı.
+
+## 28 Kasım — A1–A2 kalıp örnek cümlelerinin kalite düzeltmesi
+
+- 962 kalıplık genişletme bankası denetlendi; 490 A1–A2 kaydında zorunlu alan, sabit kimlik ve seviye/indeks eşleşmesi kontrol edildi. Aynı alt seviyede birebir yinelenen kalıp bulunmadı.
+- İki kaydın Almanca örnek cümlesi kalıp ifadesinin aynısıydı. A2.1 `Könnten Sie mir eine Bescheinigung ausstellen?` için işveren bağlamı eklenerek doğal bir örnek oluşturuldu; A2.2 `Ich bin müde, aber ich gehe noch einkaufen.` için bu cümleyi günlük bir gerekçeyle tamamlayan `weil` yan cümlesi eklendi.
+- Kalıp kimlikleri, başlıkları, Türkçe karşılıkları, seviyeleri, sıra ve kayıt sayıları değiştirilmedi. Yerel kullanıcı ilerlemesi, tekrar/hata kayıtları ve Supabase veri şeması etkilenmedi.
+- HTML varlık sürümleri phrase-expansion-3 v1→v2 ve phrase-expansion-19 v3→v4; çevrimdışı kabuk önbelleği v34→v35 güncellendi.
+- Doğrulama: iki hedef kimliğin korunması, örneklerin kalıptan farklı ve bağlama uygun olması, kayıt sayısı/sırası ve seviye alanlarının korunması, HTML–Service Worker URL eşleşmesi ve önbellek sürümü kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
