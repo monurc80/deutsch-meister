@@ -396,3 +396,16 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Kalıp kimlikleri, başlıkları, Türkçe karşılıkları, seviyeleri, sıra ve kayıt sayıları değiştirilmedi. Yerel kullanıcı ilerlemesi, tekrar/hata kayıtları ve Supabase veri şeması etkilenmedi.
 - HTML varlık sürümleri phrase-expansion-3 v1→v2 ve phrase-expansion-19 v3→v4; çevrimdışı kabuk önbelleği v34→v35 güncellendi.
 - Doğrulama: iki hedef kimliğin korunması, örneklerin kalıptan farklı ve bağlama uygun olması, kayıt sayısı/sırası ve seviye alanlarının korunması, HTML–Service Worker URL eşleşmesi ve önbellek sürümü kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test yapılmadı.
+
+
+## 28 Kasım — A1–A2 kalıp örneklerinde doğallık ve bağlam düzeltmeleri
+
+- 17 kalıp genişletme dosyasındaki 490 A1–A2 kayıt; zorunlu alanlar, aynı alt seviyede yinelenen ifade ve eksik örnek açısından tarandı. Beş örnek cümlede belirgin dil veya bağlam sorunu bulundu ve düzeltildi:
+  - A1.1 `Das weiß ich nicht.`: yanlış virgül kullanımı kaldırılarak `Das weiß ich leider nicht.` yapıldı.
+  - A1.1 `Was kostet das?`: birbirini tekrar eden iki fiyat sorusu yerine kitap satın alma bağlamı eklendi.
+  - A1.1 `Ich habe heute frei.`: `Am Sonntag` ve `heute` çelişkisi giderildi.
+  - A1.1 `Ich brauche einen Stift.`: aynı cümlenin gereksiz tekrarı yerine ev ödevi bağlamı eklendi.
+  - A1.2 `Ich steige hier aus.`: `nächsten Haltestelle` ile `hier` arasındaki konum çelişkisi giderildi.
+- Yalnızca beş `example` alanı değiştirildi. Kalıp kimlikleri, başlıkları, Türkçe karşılıkları, seviyeleri, indeksleri, kayıt sayıları ve sıraları korundu; kullanıcı ilerlemesi, hata/tekrar kayıtları ve Supabase şeması değiştirilmedi.
+- Veri dosyası sürümleri phrase-expansion-3 v2→v3, phrase-expansion-4 v1→v2 ve phrase-expansion-6 v1→v2; çevrimdışı kabuk önbelleği v35→v36 güncellendi.
+- Doğrulama: değiştirilen üç bankanın kayıt sayısı/sırası ve değişmeyen alanları; hedef kimliklerin tekilliği; JSON ve JavaScript sözdizimi; ana HTML klasik inline script sözdizimi; HTML–Service Worker varlık sürümü eşleşmesi ve önbellek adı kontrol edildi. Gerçek tarayıcı, mobil cihaz, ses ve Supabase oturumuyla uçtan uca test yapılmadı.
