@@ -393,7 +393,9 @@ function checkWrite(){
   let ans=el.value.trim();
   if(!ans){alert('Önce Almanca yanıtını yaz.');return}
   let art=article(w),articleOK=!art||norm(writeArticleChoice)===norm(art),wordOK=norm(ans)===norm(art?strip(w.word):w.word),ok=articleOK&&wordOK;
-  if(!ok)recordError('Yazma',data.level,w.word,w.word,ans,{wordId:canonicalWordId(w.id)});daily();const pid=canonicalWordId(w.id);data.seen[pid]=(data.seen[pid]||0)+1;data.known[pid]=ok;scheduleReview(pid,ok,'word',w.li??data.level);
+  if(!ok)recordError('Yazma',data.level,w.word,w.word,ans,{wordId:canonicalWordId(w.id)});
+  else{const wordLevel=w.li??data.level;resolveWordErrors(wordLevel,w.word,w.tr);resolveMatchingError('Yazma',wordLevel,w.word,w.word)}
+  daily();const pid=canonicalWordId(w.id);data.seen[pid]=(data.seen[pid]||0)+1;data.known[pid]=ok;scheduleReview(pid,ok,'word',w.li??data.level);
   if(!ok)data.missed[pid]=(data.missed[pid]||0)+1;
   data.answered++;if(ok)data.correct++;
   feedback=`<span class="${ok?'goodtext':'badtext'}">${ok?'✓ Doğru':'✗ Tekrar et'}</span><p>Artikel: <b>${art?esc(art):'Gerekli değil'}</b> ${art?(articleOK?'✓':'✗'):''}</p><p>İsim: <b>${esc(strip(w.word))}</b> ${wordOK?'✓':'✗'}</p><p>Doğru cevap: <b>${esc(w.word)}</b></p>`;
