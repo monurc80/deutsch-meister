@@ -371,3 +371,12 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Mevcut tekrar kaydı varsa onun durumu önceliklidir; kelime/kalıp tekrar anahtarları, `known/seen/missed` verileri, hata defteri ve Supabase veri şeması değişmedi.
 - Regresyon kontrolleri: kanonik eski kayıt, ön ekli eski kayıt, bilinmeyen kart, kayıtlı “mastered” durumu ve kalıp ilerleme geri dönüşü başarılı. Ana HTML inline JavaScript ve Service Worker sözdizimi kontrol edildi; çevrimdışı kabuk v30 → v31 yükseltildi.
 - Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
+
+
+## 28 Kasım — A1–A2 kalıp çevirisi ve hata defterinde kararlı kelime kimliği
+
+- A1.1 düzeyindeki `Das ist sehr nett.` kalıbının Türkçe karşılığı, bağlama uygun ve doğal kullanım için “Bu çok nazik bir davranış.” olarak düzeltildi. Kalıp kimliği, seviyesi, örnek cümlesi, kayıt sayısı ve sırası korunmuştur.
+- Kelime kartı, yeni kelime yazma ve akıllı tekrar akışlarında oluşturulan `Kelime` hata kayıtlarına kanonik `wordId` eklenir. Hata defterinden yeniden çözüm sırasında önce bu kimlik kullanılır; eski kayıtlarda kimlik yoksa mevcut seviye + Almanca başlık eşlemesi geri dönüş olarak korunur.
+- Hata defterinde başarısız yeniden denemeler de mevcut `wordId` değerini korur. Yerel veri alanları, Supabase şeması, mevcut kullanıcı ilerlemesi ve kelime/kalıp tekrar anahtarları değiştirilmedi.
+- Doğrulama: içerik JSON ayrıştırma ve kayıt sayısı/sırası; kanonik eski kimlik ve prompt tabanlı eski kayıt için sentetik hata-tekrar regresyonları; kart/yeni kelime/akıllı tekrar hata kaydı kimlik bağlantıları; HTML inline JavaScript ve Service Worker sözdizimi; HTML–Service Worker sürüm eşleşmesi kontrol edildi.
+- Çevrimdışı kabuk önbelleği v31 → v32 yükseltildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
