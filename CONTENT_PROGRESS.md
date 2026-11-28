@@ -364,3 +364,10 @@ Kalıp kaynaklarında 962 kayıt ve 962 benzersiz ifade bulunur. Tekrarlar temiz
 - Ana uygulama dosyası yeni sabit kimlikleri ve eski kimlik alias'larını kullanacak şekilde güncellendi. Veri dosyası sürümleri ve Service Worker önbelleği v29 → v30 yükseltildi.
 - Doğrulama: 706 A1–A2 genişletme kaydı, zorunlu alanlar ve örnek cümleler; aynı alt seviyede tekrar bulunmaması; yeni kimliklerin benzersizliği; 15 eski kimliğin kanonik eşlemesi; known/seen/missed/review/favorites/errors.wordId sentetik migrasyonu ve migrasyonun tekrar çalıştırıldığında değişiklik yapmaması; HTML/Service Worker varlık sürümleri kontrol edildi. Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
 - Kod commit'leri: `5a7004157ce19ad63a03cc9de362a16588a8a695`, `ca1f0ea8a1424fd75c6d8ef1743e5cb628d560ce`, `294b3ce0c968eced9bc925565626a2ca1ab90723`, `8e3b2ca255bf022451b683e31d17050cbf244b55`, `f67ace0f053c311ba4d435a1f83fe101160a14b5`, `2dc612be07532255847d0559f6dc1817d7ba678c`, `1ef8d7414753840a70c758439fc7c706a2ed8b30`.
+
+## 28 Kasım — Eski kelime ilerlemesinde tekrar durumu etiketi düzeltmesi
+
+- Tekrar kuyruğunda `nw_` ön ekli kelime kimliğiyle gösterilen kartların, eski kullanıcı verisinde `known` kaydı kanonik (ön eksiz) kimlikle taşınmışsa durum rozeti yanlışlıkla “Yeni” görünebiliyordu. `reviewStatus` artık önce kanonik kimliği, ardından geriye dönük uyumluluk için ham kimliği kontrol eder.
+- Mevcut tekrar kaydı varsa onun durumu önceliklidir; kelime/kalıp tekrar anahtarları, `known/seen/missed` verileri, hata defteri ve Supabase veri şeması değişmedi.
+- Regresyon kontrolleri: kanonik eski kayıt, ön ekli eski kayıt, bilinmeyen kart, kayıtlı “mastered” durumu ve kalıp ilerleme geri dönüşü başarılı. Ana HTML inline JavaScript ve Service Worker sözdizimi kontrol edildi; çevrimdışı kabuk v30 → v31 yükseltildi.
+- Gerçek tarayıcı, mobil cihaz ve Supabase oturumuyla uçtan uca test henüz yapılmadı.
