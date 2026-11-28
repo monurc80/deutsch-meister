@@ -91,7 +91,7 @@ window.EXTRA19_PHRASES=[
   {
     "phrase": "Ich bin müde, aber ich gehe noch einkaufen.",
     "tr": "Yorgunum ama yine de alışverişe gidiyorum.",
-    "example": "Ich bin müde, aber ich gehe noch einkaufen.",
+    "example": "Ich bin müde, aber ich gehe noch einkaufen, weil der Kühlschrank fast leer ist.",
     "level": "A2.2",
     "li": 3,
     "id": "xp23_A2_2_05"
