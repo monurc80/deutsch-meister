@@ -86,6 +86,21 @@ function migrateDuplicateWordProgress(){
   data.review[target]=mergeDuplicateReviewRecords(data.review[target],data.review[source]);
   delete data.review[source];changed=true;
  });
+ if(Array.isArray(data.favorites)){
+  const normalized=[...new Set(data.favorites.map(value=>{
+   const key=String(value??'');
+   return key.startsWith('w:')?'w:'+canonicalWordId(key.slice(2)):key;
+  }))];
+  if(normalized.length!==data.favorites.length||normalized.some((value,index)=>value!==data.favorites[index])){
+   data.favorites=normalized;changed=true;
+  }
+ }
+ (data.errors||[]).forEach(item=>{
+  if(item?.wordId){
+   const next=canonicalWordId(item.wordId);
+   if(next!==item.wordId){item.wordId=next;changed=true}
+  }
+ });
  return changed;
 }
 if(migrateDuplicateWordProgress())save();
